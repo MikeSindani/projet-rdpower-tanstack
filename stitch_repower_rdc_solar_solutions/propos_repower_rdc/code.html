@@ -1,0 +1,548 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              tertiary: '#05080a',
+              'primary-fixed': '#d9e2ff',
+              'outline-variant': '#c5c6cf',
+              'surface-container-high': '#dee8ff',
+              'surface-tint': '#4c5e88',
+              'on-primary-container': '#7587b3',
+              'on-error': '#ffffff',
+              'on-secondary': '#ffffff',
+              surface: '#f9f9ff',
+              secondary: '#b90c09',
+              'on-error-container': '#93000a',
+              'on-secondary-container': '#fffbff',
+              'surface-container-low': '#f0f3ff',
+              'inverse-primary': '#b4c6f6',
+              'surface-variant': '#d8e3fa',
+              'surface-container': '#e7eeff',
+              'tertiary-container': '#1d2022',
+              'on-tertiary-container': '#85878a',
+              'secondary-fixed': '#ffdad5',
+              'on-tertiary': '#ffffff',
+              outline: '#75777f',
+              'surface-container-highest': '#d8e3fa',
+              'primary-fixed-dim': '#b4c6f6',
+              'on-surface': '#111c2c',
+              'surface-container-lowest': '#ffffff',
+              'on-background': '#111c2c',
+              'surface-bright': '#f9f9ff',
+              'primary-container': '#081e45',
+              'inverse-on-surface': '#ebf1ff',
+              'error-container': '#ffdad6',
+              error: '#ba1a1a',
+              'surface-dim': '#cfdaf1',
+              'secondary-fixed-dim': '#ffb4a9',
+              'on-tertiary-fixed-variant': '#44474a',
+              'on-primary-fixed-variant': '#34466f',
+              'inverse-surface': '#263142',
+              'tertiary-fixed-dim': '#c4c7ca',
+              'on-primary-fixed': '#031a41',
+              primary: '#00061c',
+              background: '#f9f9ff',
+              'on-primary': '#ffffff',
+              'secondary-container': '#de2e21',
+              'on-secondary-fixed-variant': '#930002',
+              'on-secondary-fixed': '#410000',
+              'on-tertiary-fixed': '#191c1e',
+              'on-surface-variant': '#44464e',
+              'tertiary-fixed': '#e0e3e6',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            spacing: {
+              'max-width': '1280px',
+              'margin-mobile': '16px',
+              'gutter-sm': '16px',
+              'gutter-md': '24px',
+              'margin-desktop': '64px',
+              unit: '8px',
+            },
+            fontFamily: {
+              'headline-lg-mobile': ['Hanken Grotesk'],
+              'headline-md': ['Hanken Grotesk'],
+              'body-md': ['Hanken Grotesk'],
+              'label-md': ['Hanken Grotesk'],
+              'headline-xl': ['Hanken Grotesk'],
+              'body-lg': ['Hanken Grotesk'],
+              'headline-lg': ['Hanken Grotesk'],
+            },
+            fontSize: {
+              'headline-lg-mobile': [
+                '28px',
+                { lineHeight: '36px', fontWeight: '700' },
+              ],
+              'headline-md': [
+                '24px',
+                { lineHeight: '32px', fontWeight: '700' },
+              ],
+              'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+              'label-md': [
+                '14px',
+                {
+                  lineHeight: '20px',
+                  letterSpacing: '0.05em',
+                  fontWeight: '600',
+                },
+              ],
+              'headline-xl': [
+                '48px',
+                {
+                  lineHeight: '56px',
+                  letterSpacing: '-0.02em',
+                  fontWeight: '800',
+                },
+              ],
+              'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+              'headline-lg': [
+                '32px',
+                {
+                  lineHeight: '40px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '700',
+                },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid #e2e8f0;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-white"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="bg-surface dark:bg-tertiary border-b border-outline-variant dark:border-outline fixed w-full top-0 z-50"
+    >
+      <nav
+        class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="REPOWER-RDC Logo"
+            class="h-10 object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmr9G__AJBZriT919t1DFLuVagoXysW-tlmQB97kLTQWzd3692FCRLByN7mKkmiC5LCPQyYyZ1hFCbZkwggkX_wYI_bFDazY0lPoZMX4d-dWQor0i-gY-wBD-ZlLNBN32F6HaqGsSQ7aLgUMV6NoZlKr1RJGBYY3ioAZV4jQDFySwpU-jzSNtjNjnPC7sWsQ8-BBEpmCI9gRlvR67DfIVCOaik1qBH3KknJKGkOocNL_0g5UmCIPxr0ER5jc9sAiss7ivN3qdEfmfR"
+          />
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-on-surface dark:text-on-tertiary-container font-body-md text-body-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-on-surface dark:text-on-tertiary-container font-body-md text-body-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+            href="#"
+            >Products</a
+          >
+          <a
+            class="text-on-surface dark:text-on-tertiary-container font-body-md text-body-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+            href="#"
+            >Services</a
+          >
+          <a
+            class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary font-body-md text-body-md"
+            href="#"
+            >About Us</a
+          >
+        </div>
+        <button
+          class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-md text-label-md active:scale-95 transition-transform"
+        >
+          Request Quote
+        </button>
+      </nav>
+    </header>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[60vh] flex items-center overflow-hidden bg-primary-container"
+      >
+        <div class="absolute inset-0 opacity-40">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="A high-resolution industrial shot of a massive solar farm sprawling across a sun-drenched landscape under a clear blue sky. The scene is clean and professional, using a cool blue and deep navy color palette that highlights modern renewable energy infrastructure. Soft morning light casts long shadows, emphasizing the precision and scale of the solar panels."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcodBO8HxSxGvkpKX8JRjB1OAXy2es1xaYA_acBnn7fmVugNtdst8MzzP9koEuTSYgR71vXSOtKmLw9p2az-um8IqzjJfdiUHzaMVDkjhbNJ1lo3PSh5oP0nQrPSNcik2jsXtj02QxKLHRrqeR-mlpJKzwpLwnS4KP6ALULBVDGYiVO0borPbK1EXmXU0l7PG-AUXaoklcveZb7xaJK-jFS4i2kirJrtrie9FxbimZZG6lby8x3_kLQQubCkuouxOaov552FwVNjFI"
+          />
+        </div>
+        <div
+          class="relative z-10 px-margin-desktop max-w-max-width mx-auto w-full"
+        >
+          <div class="max-w-3xl">
+            <span
+              class="inline-block px-4 py-1 bg-secondary-container text-white text-label-md font-label-md rounded mb-6"
+              >À PROPOS DE NOUS</span
+            >
+            <h1 class="font-headline-xl text-headline-xl text-white mb-6">
+              Notre Mission : Électrifier l'avenir de la RDC
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-primary-fixed mb-8 max-w-2xl"
+            >
+              REPOWER-RDC s'engage à transformer le paysage énergétique de la
+              République Démocratique du Congo grâce à des solutions solaires
+              durables, innovantes et accessibles.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- History & Region Section (Asymmetric) -->
+      <section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-md items-center"
+        >
+          <div class="lg:col-span-5">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-6">
+              Ancrage Local, Ambition Nationale
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+              Basés au cœur industriel de la RDC à **Lubumbashi**, nous
+              rayonnons sur toute la région du Katanga et au-delà. Notre
+              histoire est celle d'une proximité indéfectible avec les acteurs
+              économiques et résidentiels locaux.
+            </p>
+            <div
+              class="flex flex-col gap-4 border-l-4 border-secondary pl-6 py-2"
+            >
+              <div class="text-headline-md font-headline-md text-primary">
+                Lubumbashi
+              </div>
+              <p class="text-body-md text-on-surface-variant italic">
+                Notre centre opérationnel stratégique pour le développement
+                énergétique du pays.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-7 relative h-[400px]">
+            <div
+              class="absolute inset-0 border border-outline-variant bg-surface-container-low rounded-lg p-2"
+            >
+              <img
+                class="w-full h-full object-cover rounded shadow-sm"
+                data-alt="A detailed map-like aerial photograph of a bustling African city during the golden hour, showcasing the contrast between traditional architecture and modern industrial zones. The lighting is warm and inviting, representing Lubumbashi's growth and energy potential. The composition is clean and professional, aligning with a high-tech corporate identity."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcg_LP6Wm_QTDz9Xf8-473bCP2v7FUeoF_OgRBbfpXPDRKnYgKHdIQLU10I4LiAVP4KnBRx_32auo7q0lzBNYCbZqbw6DdX3lMWAczBOeZog63RFaIXbJA77zifEieANCJQ_MZKDjuraCcPxEGmWN86xtgcA3cAPFpE8CrVraf2MWIy4kZvkdIG4PGvmgZdBQSom4QPY02E88dCmU_3Aywb9w7LRSliT-M8kvlRUdvc2QNcXjvy8Y_qwabIMTznrq9TtLQK-f0Qw-"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Expertise & Equipment (Bento Grid) -->
+      <section class="py-24 bg-surface-container-low">
+        <div class="px-margin-desktop max-w-max-width mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+              Une Expertise Sans Compromis
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto"
+            >
+              Nous fusionnons la connaissance profonde du terrain congolais avec
+              les standards technologiques internationaux les plus rigoureux.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md">
+            <!-- Tech Card -->
+            <div
+              class="md:col-span-2 glass-card p-8 rounded-lg flex flex-col justify-between"
+            >
+              <div>
+                <span
+                  class="material-symbols-outlined text-secondary text-4xl mb-6"
+                  >high_quality</span
+                >
+                <h3 class="font-headline-md text-headline-md text-primary mb-4">
+                  Équipements de Classe Mondiale
+                </h3>
+                <p class="text-body-md text-on-surface-variant mb-6">
+                  Nous sélectionnons exclusivement des composants certifiés
+                  Tier-1. Nos onduleurs, batteries et panneaux solaires sont
+                  conçus pour résister aux conditions climatiques spécifiques de
+                  la RDC tout en garantissant un rendement optimal sur des
+                  décennies.
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <span
+                  class="px-3 py-1 bg-primary-container text-white text-label-md rounded"
+                  >Photovoltaïque</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-container text-white text-label-md rounded"
+                  >Stockage Lithium</span
+                >
+              </div>
+            </div>
+            <!-- Local Card -->
+            <div class="bg-primary-container p-8 rounded-lg text-white">
+              <span
+                class="material-symbols-outlined text-secondary-fixed text-4xl mb-6"
+                >engineering</span
+              >
+              <h3 class="font-headline-md text-headline-md mb-4">
+                Ingénierie de Précision
+              </h3>
+              <p class="text-body-md text-primary-fixed opacity-90">
+                Chaque installation est précédée d'un audit technique complet
+                pour adapter la solution aux besoins réels de consommation,
+                minimisant les pertes et maximisant l'investissement.
+              </p>
+            </div>
+            <!-- Reliability Card -->
+            <div class="bg-white border border-outline-variant p-8 rounded-lg">
+              <span class="material-symbols-outlined text-primary text-4xl mb-6"
+                >verified_user</span
+              >
+              <h4 class="font-headline-md text-headline-md text-primary mb-2">
+                Fiabilité
+              </h4>
+              <p class="text-body-md text-on-surface-variant">
+                Maintenance proactive et support technique local 24/7.
+              </p>
+            </div>
+            <!-- Innovation Card -->
+            <div
+              class="bg-white border border-outline-variant p-8 rounded-lg md:col-span-2 flex flex-col md:flex-row gap-8 items-center"
+            >
+              <div class="flex-1">
+                <span
+                  class="material-symbols-outlined text-primary text-4xl mb-4"
+                  >lightbulb</span
+                >
+                <h4 class="font-headline-md text-headline-md text-primary mb-2">
+                  Innovation Continue
+                </h4>
+                <p class="text-body-md text-on-surface-variant">
+                  Intégration de systèmes de monitoring intelligents pour un
+                  suivi en temps réel de votre production énergétique.
+                </p>
+              </div>
+              <div
+                class="w-full md:w-48 h-32 bg-surface-container rounded overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  data-alt="Close-up of a high-tech digital monitoring interface showing energy production graphs and battery status. The aesthetic is clean, professional, and data-driven, using deep navy backgrounds with bright, glowing data points in white and red. The lighting is low-key, emphasizing the screen's glow in a modern industrial setting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDngz-kTwFQbxC-JIAdEmWd7ZuLwgycEbCfkCtBM-JxFSk3NofkHh-TtC4SZ1tHiFXhb9P2a_N48nHzXuWQ_al-CjMArhR8I9xlE6XVw74dv0r8AdvqclmAl5Sjw_tmVmULVVOq5PX5lL7S75Kxdktpsb0TPJ1ZOQ642RygLLcrVrJptmNidoHR094bNQYQuSlAfiJgLsciT3llcOUXipwW2nOIRmiZrlXSxD34ZS73OsjmQ7loczo-9Zq3VS_pe30uUfbWtgtWAPAP"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team Strength & Values -->
+      <section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"
+        >
+          <div class="max-w-2xl">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+              La Force de Notre Équipe
+            </h2>
+            <p class="text-body-md text-on-surface-variant">
+              Plus que des techniciens, nos collaborateurs sont des ambassadeurs
+              de la transition énergétique en RDC.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md"
+        >
+          <!-- Quality -->
+          <div
+            class="group p-8 border border-outline-variant hover:bg-primary-container transition-colors duration-300"
+          >
+            <h5
+              class="font-headline-md text-headline-md text-primary group-hover:text-white mb-4"
+            >
+              Qualité
+            </h5>
+            <p
+              class="text-body-md text-on-surface-variant group-hover:text-primary-fixed"
+            >
+              L'excellence comme standard minimal pour chaque panneau posé.
+            </p>
+          </div>
+          <!-- Professionalism -->
+          <div
+            class="group p-8 border border-outline-variant hover:bg-primary-container transition-colors duration-300"
+          >
+            <h5
+              class="font-headline-md text-headline-md text-primary group-hover:text-white mb-4"
+            >
+              Professionnalisme
+            </h5>
+            <p
+              class="text-body-md text-on-surface-variant group-hover:text-primary-fixed"
+            >
+              Une rigueur méthodologique héritée des standards industriels
+              mondiaux.
+            </p>
+          </div>
+          <!-- Engagement -->
+          <div
+            class="group p-8 border border-outline-variant hover:bg-primary-container transition-colors duration-300"
+          >
+            <h5
+              class="font-headline-md text-headline-md text-primary group-hover:text-white mb-4"
+            >
+              Engagement
+            </h5>
+            <p
+              class="text-body-md text-on-surface-variant group-hover:text-primary-fixed"
+            >
+              Une passion pour le développement de notre nation par l'énergie.
+            </p>
+          </div>
+          <!-- Innovation -->
+          <div
+            class="group p-8 border border-outline-variant hover:bg-primary-container transition-colors duration-300"
+          >
+            <h5
+              class="font-headline-md text-headline-md text-primary group-hover:text-white mb-4"
+            >
+              Innovation
+            </h5>
+            <p
+              class="text-body-md text-on-surface-variant group-hover:text-primary-fixed"
+            >
+              Recherche constante de solutions plus performantes et adaptées.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section class="py-24 bg-tertiary">
+        <div class="px-margin-desktop max-w-max-width mx-auto text-center">
+          <h2 class="font-headline-xl text-headline-xl text-white mb-8">
+            Prêt à transformer votre consommation énergétique ?
+          </h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              class="bg-secondary text-white px-10 py-4 rounded font-label-md text-label-md hover:opacity-90 transition-opacity"
+              href="#"
+            >
+              Contactez notre équipe
+            </a>
+            <a
+              class="border border-white text-white px-10 py-4 rounded font-label-md text-label-md hover:bg-white hover:text-tertiary transition-all"
+              href="#"
+            >
+              Découvrir nos projets
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-tertiary dark:bg-tertiary-container border-t border-outline py-margin-desktop text-tertiary-fixed dark:text-on-tertiary-container"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter-md px-margin-desktop max-w-max-width mx-auto"
+      >
+        <div class="md:col-span-1">
+          <div
+            class="font-headline-md text-headline-md font-extrabold text-white mb-6"
+          >
+            REPOWER-RDC
+          </div>
+          <p class="font-body-md text-body-md text-tertiary-fixed-dim mb-4">
+            Solutions solaires industrielles et résidentielles.
+          </p>
+          <p class="font-body-md text-body-md text-tertiary-fixed-dim italic">
+            © 2024 REPOWER-RDC. All rights reserved. Lubumbashi, DRC.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h6 class="text-white font-bold mb-2">Produits &amp; Services</h6>
+          <a
+            class="text-tertiary-fixed-dim hover:text-secondary-fixed transition-colors"
+            href="#"
+            >Product Catalog</a
+          >
+          <a
+            class="text-tertiary-fixed-dim hover:text-secondary-fixed transition-colors"
+            href="#"
+            >Solar Services</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <h6 class="text-white font-bold mb-2">Entreprise</h6>
+          <a class="text-white underline" href="#">About Our Mission</a>
+          <a
+            class="text-tertiary-fixed-dim hover:text-secondary-fixed transition-colors"
+            href="#"
+            >Contact Support</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <h6 class="text-white font-bold mb-2">Légal</h6>
+          <a
+            class="text-tertiary-fixed-dim hover:text-secondary-fixed transition-colors"
+            href="#"
+            >Privacy Policy</a
+          >
+          <div class="flex gap-4 mt-4">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed"
+              >language</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed"
+              >share</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

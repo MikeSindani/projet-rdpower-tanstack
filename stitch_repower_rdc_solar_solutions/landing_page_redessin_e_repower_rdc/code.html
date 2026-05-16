@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>REPOWER-RDC - L'Énergie Solaire de Haute Qualité en RDC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#081e45",
+                        "secondary": "#ee3a2b",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "background": "#f9f9ff",
+                        "surface": "#f9f9ff",
+                        "on-surface": "#111c2c",
+                        "surface-container": "#e7eeff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-container-high": "#dee8ff",
+                        "surface-container-highest": "#d8e3fa",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#75777f",
+                        "outline-variant": "#c5c6cf",
+                        "on-surface-variant": "#44464e",
+                        "tertiary": "#05080a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#1d2022"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "max-width": "1280px",
+                        "gutter-md": "24px",
+                        "unit": "8px",
+                        "gutter-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(to right, rgba(8, 30, 69, 0.9) 30%, rgba(8, 30, 69, 0.4) 100%); }
+        .section-padding { padding-top: 100px; padding-bottom: 100px; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar Component Consistency -->
+<header class="bg-surface border-b border-outline-variant w-full px-margin-mobile md:px-margin-desktop h-20 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full max-w-max-width mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="REPOWER-RDC Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTmcKkOo6bvxihBHl2KrvrigWa9031s9nsYNLDw2g_Jk81-G_vU0kJDOVZs7km7j2BA3Cvv5EW2NDJNj2ivxyAyWbsRLLPaVhJJ72Tc43dQ87iE7ChppaddUc63Mhd7a7ciPStvh8WxcJMofqTt4uLPQZCHaR1WJQrI86IBa81KI8-cMn9v1PA-W-DyjdE4erECjTpEicyOKRAV7F0kpp_aKFZwgRa9TYvghYjNXm6nGFx4TL_OcOT_iqAJ8TrHv6-GWlxYwA1a5c"/>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1 transition-transform duration-150 active:scale-95" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95" href="#products">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95" href="#about">About</a>
+</nav>
+<a class="bg-secondary text-on-secondary font-label-md text-label-md py-2.5 px-6 rounded-lg hover:shadow-lg transition-all duration-200 active:scale-95 hidden md:block" href="#contact">
+            Request Quote
+        </a>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Modern Immersive Hero Section -->
+<section class="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
+<img alt="Industrial Solar Installation" class="absolute inset-0 w-full h-full object-cover z-0" src="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"/>
+<div class="absolute inset-0 hero-gradient z-10"></div>
+<div class="relative z-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1.5 bg-secondary/10 text-secondary border border-secondary/20 rounded-full font-label-md text-label-md mb-6 uppercase tracking-widest">Énergie Durable RDC</span>
+<h1 class="font-headline-xl text-headline-xl md:text-[64px] md:leading-[72px] text-on-primary mb-8">Électrifier l'avenir de la RDC avec précision.</h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 mb-10 max-w-xl leading-relaxed">
+                    Leader du solaire à Lubumbashi. Nous concevons des infrastructures énergétiques résilientes pour les industries minières et les grands ensembles résidentiels.
+                </p>
+<div class="flex flex-col sm:flex-row gap-5">
+<a class="bg-secondary text-on-secondary font-label-md text-label-md py-4 px-10 rounded-lg shadow-xl hover:-translate-y-1 transition-all text-center flex items-center justify-center gap-2" href="#services">
+                        Nos Solutions <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</a>
+<a class="bg-white/10 backdrop-blur-md border border-white/30 text-on-primary font-label-md text-label-md py-4 px-10 rounded-lg hover:bg-white/20 transition-all text-center" href="#contact">
+                        Consulter un Expert
+                    </a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce hidden md:block">
+<span class="material-symbols-outlined text-on-primary text-3xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- About Section: High Impact -->
+<section class="section-padding px-margin-mobile md:px-margin-desktop bg-surface" id="about">
+<div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">L'Expertise Solaire de Lubumbashi</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+                        REPOWER-RDC n'est pas seulement un fournisseur ; nous sommes un partenaire stratégique. Basés au cœur du Haut-Katanga, nous maîtrisons les contraintes techniques et logistiques uniques de la région.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant hover:border-secondary/30 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">verified</span>
+<h3 class="font-label-md text-label-md text-primary mb-2">Normes ISO</h3>
+<p class="text-sm text-on-surface-variant">Installations certifiées conformes aux standards internationaux de sécurité.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant hover:border-secondary/30 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">support_agent</span>
+<h3 class="font-label-md text-label-md text-primary mb-2">Support 24/7</h3>
+<p class="text-sm text-on-surface-variant">Équipes de maintenance locales pour une réactivité sans précédent.</p>
+</div>
+</div>
+<div class="flex items-center gap-10 pt-4">
+<div>
+<span class="block font-headline-md text-headline-md text-primary">150+</span>
+<span class="text-sm text-on-surface-variant uppercase tracking-wider">Projets Réussis</span>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div>
+<span class="block font-headline-md text-headline-md text-primary">5MW+</span>
+<span class="text-sm text-on-surface-variant uppercase tracking-wider">Capacité Installée</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/5 rounded-2xl -z-10 group-hover:bg-secondary/10 transition-colors"></div>
+<img alt="Expertise technique" class="w-full aspect-[4/5] object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJTDFwY_qw_d5jWv5fL2evQ5xZPrewHxVvX78MqvwLZ3E8UMv-qdqpHKUBxYgf1IwHYQdE5YmhxwZdLvf0afxkES7aXIxCiONbYGsUmpzLR2SVqe-Z1UWPXXyphnhfohPalyFBwaZQVWOhVQ6HSM1xmtBnJSom5Qfa4OQHH0yAJ3s8KMkupy7buIkC-y0UhC8veA7OHFP4uzAgmgtWSvNXGV1uWTB2ntGS2ACHg6GfDe0Y7yt8C0kSp9dd2es3L5eXkW3LWgZ5idVB"/>
+</div>
+</div>
+</section>
+<!-- Services Grid: Technical & Modern -->
+<section class="section-padding px-margin-mobile md:px-margin-desktop bg-primary text-on-primary" id="services">
+<div class="max-w-max-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-6">Solutions Énergétiques Industrielles</h2>
+<p class="font-body-md text-body-md text-on-primary/70">Nous couvrons l'intégralité du cycle de vie énergétique, de l'étude de faisabilité à la gestion opérationnelle à long terme.</p>
+</div>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-2 group hover:translate-x-1 transition-transform" href="#">
+                    Voir tout le détail <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-secondary transition-all duration-300">
+<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">solar_power</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-xl">Ingénierie Solaire</h3>
+<p class="text-on-primary/60 text-sm leading-relaxed mb-6">Conception de systèmes PV haute performance adaptés aux climats tropicaux.</p>
+<ul class="text-xs space-y-2 text-on-primary/40">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Études d'irradiation</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Modélisation 3D</li>
+</ul>
+</div>
+<div class="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-secondary transition-all duration-300">
+<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">battery_charging_full</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-xl">Stockage BESS</h3>
+<p class="text-on-primary/60 text-sm leading-relaxed mb-6">Systèmes de stockage par batterie (BESS) pour une autonomie totale 24/7.</p>
+<ul class="text-xs space-y-2 text-on-primary/40">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Lithium-Ion LFP</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Gestion Peak-Shaving</li>
+</ul>
+</div>
+<div class="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-secondary transition-all duration-300">
+<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-xl">Smart Monitoring</h3>
+<p class="text-on-primary/60 text-sm leading-relaxed mb-6">Suivi en temps réel de la production et de la consommation d'énergie.</p>
+<ul class="text-xs space-y-2 text-on-primary/40">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Alertes instantanées</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Rapports de rendement</li>
+</ul>
+</div>
+<div class="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-secondary transition-all duration-300">
+<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">build_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-xl">Maintenance O&amp;M</h3>
+<p class="text-on-primary/60 text-sm leading-relaxed mb-6">Contrats de maintenance préventive et curative sur site.</p>
+<ul class="text-xs space-y-2 text-on-primary/40">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Nettoyage spécialisé</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>Pièces de rechange</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- High-End Product Showcase -->
+<section class="section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="products">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Équipements Haute Performance</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Product 1: Panels -->
+<div class="group bg-surface border border-outline-variant overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img alt="Panneaux Photovoltaïques" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-primary font-label-md py-2 px-6 rounded-lg">Spécifications</button>
+</div>
+</div>
+<div class="p-8">
+<span class="text-[10px] uppercase font-bold text-secondary tracking-[0.2em] mb-2 block">Solaire de Classe A</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-3">Panneaux Mono-PERC 550W+</h4>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">Rendement exceptionnel même par forte chaleur. Garantie de performance 25 ans.</p>
+<div class="pt-6 border-t border-outline-variant flex justify-between items-center">
+<span class="text-primary font-bold">Ultra-Efficience</span>
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+</div>
+</div>
+<!-- Product 2: Inverters -->
+<div class="group bg-surface border border-outline-variant overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="aspect-[4/3] overflow-hidden relative bg-surface-container-low">
+<img alt="Onduleur Industriel" class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ugpKRCqu6AZQi0X2W5CpFu8smqw_A4aNHw1Qqy5eKwICVns-5teVsli3ZJJfC_E6a5j_iliPKPSDEC55Yh8ncZAB_L6pT4YsRLEgnnQ_SjGGpaPqg7NFM1PxOOLwBNZGVpym0siyohX3dliDrg29-u2opf7HDpHsFzAx6GaXd12c3nwOrzFDfUEEiI_a6XacwFfsZZOuDo-38d2GUKcapP_wHpy2HiDsbSle7uFmdxGuowQDV_kQpvTzHU"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-primary font-label-md py-2 px-6 rounded-lg">Spécifications</button>
+</div>
+</div>
+<div class="p-8">
+<span class="text-[10px] uppercase font-bold text-secondary tracking-[0.2em] mb-2 block">Conversion de Puissance</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-3">Onduleurs Hybrides Smart</h4>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">Gestion intelligente des flux d'énergie entre le solaire, le réseau et les batteries.</p>
+<div class="pt-6 border-t border-outline-variant flex justify-between items-center">
+<span class="text-primary font-bold">Technologie de Pointe</span>
+<span class="material-symbols-outlined text-secondary">settings_input_component</span>
+</div>
+</div>
+</div>
+<!-- Product 3: Batteries -->
+<div class="group bg-surface border border-outline-variant overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="aspect-[4/3] overflow-hidden relative bg-surface-container-low">
+<img alt="Stockage Lithium" class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhJAwITZfJXTebCl0EcMbPtezYzsYJH-6nNYth-JNif7ZdoqU7rs3mGk35Kzpv-bseLDpS9_dGy7c0x-1801u89quYofo51IXRmM62LtXngsrlo9iYjkz6mQZkBOBFDMFFP4TEaEoq9s1nOueUoJ3dN4ikUk0LA1-ARg4S1xSeqeQcaVWQVYgSBjlhF7ptxpVMvxfoBOCDrcBlHxeBav-C0tRQoRQ9xEhiqHbjuxg6XZKsXtiI4NifzL78"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-primary font-label-md py-2 px-6 rounded-lg">Spécifications</button>
+</div>
+</div>
+<div class="p-8">
+<span class="text-[10px] uppercase font-bold text-secondary tracking-[0.2em] mb-2 block">Stockage Lithium</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-3">Unités de Stockage LFP</h4>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">Haute densité énergétique et sécurité maximale. Plus de 6000 cycles de vie.</p>
+<div class="pt-6 border-t border-outline-variant flex justify-between items-center">
+<span class="text-primary font-bold">Cycle Profond</span>
+<span class="material-symbols-outlined text-secondary">battery_full</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="inline-flex items-center gap-3 bg-primary text-on-primary font-label-md py-4 px-12 rounded-lg hover:shadow-xl transition-all" href="#">
+                    Télécharger le Catalogue Industriel <span class="material-symbols-outlined">download</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Force of the Team Section -->
+<section class="section-padding px-margin-mobile md:px-margin-desktop bg-surface" id="team">
+<div class="max-w-max-width mx-auto relative overflow-hidden rounded-3xl bg-primary text-on-primary">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 md:p-20 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">La Force de l'équipe REPOWER-RDC</h2>
+<p class="font-body-md text-body-md text-on-primary/80 mb-10 leading-relaxed">
+                        Notre équipe est composée d'ingénieurs et techniciens locaux formés aux dernières technologies solaires mondiales. Nous allions rigueur technique et connaissance parfaite du terrain congolais.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-secondary/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">handshake</span>
+</div>
+<div>
+<h4 class="font-label-md font-bold">Engagement Durable</h4>
+<p class="text-sm text-on-primary/60">Nous bâtissons des infrastructures pour les décennies à venir.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-secondary/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">engineering</span>
+</div>
+<div>
+<h4 class="font-label-md font-bold">Excellence Technique</h4>
+<p class="text-sm text-on-primary/60">Une précision d'installation sans compromis sur la sécurité.</p>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 border-l-4 border-secondary bg-white/5 rounded-r-lg italic text-on-primary/90">
+                        "Notre expertise technique au service du développement économique de la RDC est notre moteur quotidien."
+                    </div>
+</div>
+<div class="relative h-[400px] lg:h-auto min-h-[500px]">
+<img alt="Notre équipe sur le terrain" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj_dm8gjhiEhS3Ob2uVsVINsMa1juoK7mICdHS0D6EK5jxjt3p9TkcPUZcpq2u7VMK_wkyWm2yRhKtWaxv6EJ_OU_koGryjHw0RhmdvwxSyuAeqtgKd4l_7agkT0r7r_kRR1lOtmL966G0ffEKELDt2LY43f19iM9DMNGkras2_A2fUL0CL7S7rc1v3nZsmbvEhItAe0f2bFtfffh_zX0w3peGu57jGfTeIx8F_D2nrWlOBF1D-CXfpuD4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-12 text-center text-primary">Expertise &amp; Réponses</h2>
+<div class="space-y-4">
+<details class="bg-surface border border-outline-variant rounded-xl p-8 group cursor-pointer" open="">
+<summary class="font-headline-md text-xl text-primary flex justify-between items-center list-none">
+                        L'énergie solaire est-elle fiable pour les mines en RDC ?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-6 pt-6 border-t border-outline-variant/50">
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                            Absolument. Avec un dimensionnement correct et des systèmes de stockage BESS, le solaire peut supporter des charges critiques 24h/24. Nos solutions sont conçues pour pallier l'instabilité du réseau national tout en réduisant considérablement les coûts opérationnels liés au diesel.
+                        </p>
+</div>
+</details>
+<details class="bg-surface border border-outline-variant rounded-xl p-8 group cursor-pointer">
+<summary class="font-headline-md text-xl text-primary flex justify-between items-center list-none">
+                        Quel est le retour sur investissement (ROI) moyen ?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-6 pt-6 border-t border-outline-variant/50">
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                            Pour les installations commerciales et industrielles en RDC, le ROI se situe généralement entre 3 et 5 ans, grâce aux économies immédiates sur les factures d'électricité et/ou la consommation de carburant des générateurs.
+                        </p>
+</div>
+</details>
+<details class="bg-surface border border-outline-variant rounded-xl p-8 group cursor-pointer">
+<summary class="font-headline-md text-xl text-primary flex justify-between items-center list-none">
+                        Gérez-vous la logistique complexe vers l'intérieur du pays ?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-6 pt-6 border-t border-outline-variant/50">
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                            Oui, REPOWER-RDC dispose d'une chaîne logistique robuste capable de livrer et d'installer du matériel sur des sites reculés, même dans des conditions d'accès difficiles, en s'appuyant sur notre base opérationnelle de Lubumbashi.
+                        </p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="section-padding px-margin-mobile md:px-margin-desktop bg-surface" id="contact">
+<div class="max-w-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
+<div class="lg:col-span-2 space-y-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Contactez un Spécialiste</h2>
+<p class="font-body-md text-on-surface-variant mb-8">Nous analysons vos besoins énergétiques pour vous proposer une solution sur mesure, économiquement et techniquement optimisée.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+<div>
+<h4 class="font-label-md font-bold text-primary">Siège Social</h4>
+<p class="text-on-surface-variant text-sm">Lubumbashi, Haut-Katanga, République Démocratique du Congo</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">mail</span>
+<div>
+<h4 class="font-label-md font-bold text-primary">Email Pro</h4>
+<p class="text-on-surface-variant text-sm">contact@repower-rdc.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">phone_in_talk</span>
+<div>
+<h4 class="font-label-md font-bold text-primary">Assistance Technique</h4>
+<p class="text-on-surface-variant text-sm">+243 (0) XX XXX XXX</p>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<div class="flex gap-4">
+<a class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 bg-surface-container-low p-10 md:p-14 rounded-3xl border border-outline-variant">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-widest ml-1" for="name">Nom complet</label>
+<input class="w-full bg-surface border-none rounded-xl px-5 py-4 text-body-md focus:ring-2 focus:ring-secondary/50 focus:outline-none shadow-sm transition-all" id="name" placeholder="Ex: Jean Mukendi" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-widest ml-1" for="email">E-mail Professionnel</label>
+<input class="w-full bg-surface border-none rounded-xl px-5 py-4 text-body-md focus:ring-2 focus:ring-secondary/50 focus:outline-none shadow-sm transition-all" id="email" placeholder="nom@entreprise.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-widest ml-1" for="type">Type de projet</label>
+<select class="w-full bg-surface border-none rounded-xl px-5 py-4 text-body-md focus:ring-2 focus:ring-secondary/50 focus:outline-none shadow-sm transition-all appearance-none" id="type">
+<option>Industriel / Minier</option>
+<option>Commercial / Bureaux</option>
+<option>Résidentiel de Luxe</option>
+<option>Autre</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-widest ml-1" for="message">Description du besoin</label>
+<textarea class="w-full bg-surface border-none rounded-xl px-5 py-4 text-body-md focus:ring-2 focus:ring-secondary/50 focus:outline-none shadow-sm transition-all" id="message" placeholder="Détaillez vos besoins énergétiques..." rows="5"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-label-md py-5 rounded-xl hover:shadow-2xl hover:opacity-95 transform active:scale-95 transition-all text-lg font-bold" type="submit">
+                            Envoyer la demande de devis
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component Consistency -->
+<footer class="bg-tertiary text-on-tertiary w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-md px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-tertiary mb-6">REPOWER-RDC</div>
+<p class="font-body-md text-body-md text-on-tertiary-container mt-4 leading-relaxed opacity-80">Votre partenaire de confiance pour des solutions d'énergie solaire industrielles et résidentielles en RDC. Basé à Lubumbashi.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md font-bold mb-6 text-on-tertiary uppercase tracking-wider">Liens Rapides</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="#products">Products</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="#about">About</a>
+</nav>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md font-bold mb-6 text-on-tertiary uppercase tracking-wider">Légal</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="#contact">Contact Us</a>
+</nav>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md font-bold mb-6 text-on-tertiary uppercase tracking-wider">Contact</h4>
+<div class="space-y-4">
+<p class="font-body-md text-body-md text-on-tertiary-container opacity-80">Lubumbashi, Haut-Katanga, République Démocratique du Congo.</p>
+<div class="flex gap-4 mt-6">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="text-xs font-label-md text-on-tertiary opacity-60">Certifié ISO &amp; Normes Locales</span>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-body-md text-body-md text-on-tertiary-container opacity-50">© 2024 REPOWER-RDC. Lubumbashi, Democratic Republic of Congo.</p>
+</div>
+</div>
+</footer>
+</body></html>

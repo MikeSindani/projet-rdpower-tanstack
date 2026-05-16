@@ -1,0 +1,875 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'inverse-primary': '#b4c6f6',
+              'surface-variant': '#d8e3fa',
+              'surface-container': '#e7eeff',
+              'tertiary-container': '#1d2022',
+              'on-tertiary-container': '#85878a',
+              'on-secondary-container': '#fffbff',
+              'surface-container-low': '#f0f3ff',
+              outline: '#75777f',
+              'surface-container-highest': '#d8e3fa',
+              'primary-fixed-dim': '#b4c6f6',
+              'secondary-fixed': '#ffdad5',
+              'on-tertiary': '#ffffff',
+              'outline-variant': '#c5c6cf',
+              'surface-container-high': '#dee8ff',
+              'surface-tint': '#4c5e88',
+              tertiary: '#05080a',
+              'primary-fixed': '#d9e2ff',
+              surface: '#f9f9ff',
+              secondary: '#b90c09',
+              'on-error-container': '#93000a',
+              'on-primary-container': '#7587b3',
+              'on-error': '#ffffff',
+              'on-secondary': '#ffffff',
+              primary: '#00061c',
+              background: '#f9f9ff',
+              'on-primary': '#ffffff',
+              'surface-dim': '#cfdaf1',
+              'secondary-fixed-dim': '#ffb4a9',
+              'on-tertiary-fixed-variant': '#44474a',
+              'on-primary-fixed-variant': '#34466f',
+              'inverse-surface': '#263142',
+              'tertiary-fixed-dim': '#c4c7ca',
+              'on-primary-fixed': '#031a41',
+              'on-secondary-fixed': '#410000',
+              'on-tertiary-fixed': '#191c1e',
+              'on-surface-variant': '#44464e',
+              'tertiary-fixed': '#e0e3e6',
+              'secondary-container': '#de2e21',
+              'on-secondary-fixed-variant': '#930002',
+              'surface-container-lowest': '#ffffff',
+              'on-background': '#111c2c',
+              'on-surface': '#111c2c',
+              'primary-container': '#081e45',
+              'inverse-on-surface': '#ebf1ff',
+              'error-container': '#ffdad6',
+              error: '#ba1a1a',
+              'surface-bright': '#f9f9ff',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            spacing: {
+              'margin-desktop': '64px',
+              unit: '8px',
+              'gutter-md': '24px',
+              'max-width': '1280px',
+              'margin-mobile': '16px',
+              'gutter-sm': '16px',
+            },
+            fontFamily: {
+              'body-lg': ['Hanken Grotesk'],
+              'headline-lg': ['Hanken Grotesk'],
+              'headline-lg-mobile': ['Hanken Grotesk'],
+              'headline-md': ['Hanken Grotesk'],
+              'body-md': ['Hanken Grotesk'],
+              'label-md': ['Hanken Grotesk'],
+              'headline-xl': ['Hanken Grotesk'],
+            },
+            fontSize: {
+              'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+              'headline-lg': [
+                '32px',
+                {
+                  lineHeight: '40px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '700',
+                },
+              ],
+              'headline-lg-mobile': [
+                '28px',
+                { lineHeight: '36px', fontWeight: '700' },
+              ],
+              'headline-md': [
+                '24px',
+                { lineHeight: '32px', fontWeight: '700' },
+              ],
+              'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+              'label-md': [
+                '14px',
+                {
+                  lineHeight: '20px',
+                  letterSpacing: '0.05em',
+                  fontWeight: '600',
+                },
+              ],
+              'headline-xl': [
+                '48px',
+                {
+                  lineHeight: '56px',
+                  letterSpacing: '-0.02em',
+                  fontWeight: '800',
+                },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Hanken Grotesk', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .bento-card {
+        border: 1px solid #c5c6cf;
+        transition: all 0.2s ease-in-out;
+      }
+      .bento-card:hover {
+        border-color: #081e45;
+        box-shadow: 4px 4px 0px 0px #081e45;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-background">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface dark:bg-primary-container border-b border-outline-variant dark:border-outline shadow-sm"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-max-width mx-auto"
+      >
+        <img
+          alt="REPOWER-RDC Logo"
+          class="h-12 object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1vT-0rx9iCFDDC22d563aKtyXfwa4IGAMRBuXndhEXtqyNfI_DLXRw4rTFL9xCViebyIkRqDMcYdr9Ot2FG7hsy2LbsrLJVt7wHOxJLYz47lYsRR_99ePAX51VA5LFTMhS8O-XcL-InW-U-x9_biSYcJ5UcJZzodF0K4-AulmSz34Tsrv0reRGons5-h46EuiyaxoO_VzYkYwsnF2yaLKrl2HY3glZg8SthT59Xy3WthLcttzOz1j8Vm9-wyliXVUxwHKPOa64QOP"
+        />
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary"
+            href="#"
+            >About</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary"
+            href="#"
+            >Services</a
+          >
+          <a
+            class="font-body-md text-body-md text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1"
+            href="#"
+            >Products</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary"
+            href="#"
+            >Team</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-secondary transition-colors uppercase tracking-widest"
+        >
+          Request Quote
+        </button>
+      </div>
+    </nav>
+    <main class="pt-32 pb-20 px-margin-desktop max-w-max-width mx-auto">
+      <!-- Hero Section -->
+      <header class="mb-16">
+        <h1 class="font-headline-xl text-headline-xl text-primary mb-4">
+          Catalogue de Solutions Énergétiques
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          L'excellence technique au service de votre autonomie. Découvrez notre
+          sélection rigoureuse d'équipements solaires industriels et
+          résidentiels.
+        </p>
+      </header>
+      <!-- Section 1: Panneaux (Asymmetric Layout) -->
+      <section class="mb-20">
+        <div class="flex items-center gap-4 mb-8">
+          <span
+            class="material-symbols-outlined text-secondary"
+            data-icon="solar_power"
+            >solar_power</span
+          >
+          <h2
+            class="font-headline-lg text-headline-lg uppercase tracking-tight"
+          >
+            Panneaux Solaires
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-md">
+          <div
+            class="md:col-span-7 bg-white p-8 bento-card flex flex-col justify-between"
+          >
+            <div>
+              <span
+                class="text-secondary font-label-md text-label-md uppercase mb-2 block"
+                >High Efficiency</span
+              >
+              <h3 class="font-headline-md text-headline-md mb-4">
+                Panneau Solaire 450W Monocristallin
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Technologie demi-cellule pour une performance accrue par faible
+                luminosité et une résistance thermique supérieure.
+              </p>
+              <ul class="space-y-2 mb-8">
+                <li
+                  class="flex items-center gap-2 font-label-md text-label-md text-on-surface"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-sm"
+                    data-icon="check_circle"
+                    >check_circle</span
+                  >
+                  Efficacité conversion: 20.9%
+                </li>
+                <li
+                  class="flex items-center gap-2 font-label-md text-label-md text-on-surface"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-sm"
+                    data-icon="check_circle"
+                    >check_circle</span
+                  >
+                  Garantie de performance: 25 ans
+                </li>
+              </ul>
+            </div>
+            <button
+              class="bg-primary text-white py-3 px-6 w-fit font-label-md text-label-md hover:bg-secondary transition-all"
+            >
+              Demander un devis
+            </button>
+          </div>
+          <div
+            class="md:col-span-5 bg-primary-container p-8 border border-outline text-white flex flex-col justify-between relative overflow-hidden"
+          >
+            <div class="relative z-10">
+              <span
+                class="text-secondary-fixed font-label-md text-label-md uppercase mb-2 block"
+                >New Technology</span
+              >
+              <h3 class="font-headline-md text-headline-md mb-4">
+                Bifacial 600W
+              </h3>
+              <p class="font-body-md text-body-md text-surface-variant mb-6">
+                Double face active pour capturer l'albédo du sol, augmentant le
+                rendement jusqu'à 25%.
+              </p>
+            </div>
+            <button
+              class="bg-white text-primary py-3 px-6 w-fit font-label-md text-label-md hover:bg-secondary hover:text-white transition-all relative z-10"
+            >
+              Demander un devis
+            </button>
+            <div class="absolute -bottom-10 -right-10 opacity-10">
+              <span
+                class="material-symbols-outlined text-[200px]"
+                data-icon="wb_sunny"
+                >wb_sunny</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2: Convertisseurs (Grid) -->
+      <section class="mb-20">
+        <div class="flex items-center gap-4 mb-8">
+          <span
+            class="material-symbols-outlined text-secondary"
+            data-icon="settings_input_component"
+            >settings_input_component</span
+          >
+          <h2
+            class="font-headline-lg text-headline-lg uppercase tracking-tight"
+          >
+            Convertisseurs &amp; Onduleurs
+          </h2>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-md"
+        >
+          <!-- Hybride 6kW -->
+          <div class="bento-card bg-white p-6 flex flex-col h-full">
+            <div class="mb-4">
+              <span
+                class="bg-surface-container text-primary px-2 py-1 font-label-md text-[10px] uppercase"
+                >Monophasé</span
+              >
+              <h3 class="font-headline-md text-headline-md mt-2">
+                Hybride 6kW
+              </h3>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm"
+              >
+                Idéal pour résidences moyennes.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <button
+                class="w-full bg-surface-container-high text-primary py-2 font-label-md text-label-md hover:bg-primary hover:text-white transition-all"
+              >
+                Détails
+              </button>
+            </div>
+          </div>
+          <!-- Deye 6kW -->
+          <div
+            class="bento-card bg-primary-container text-white p-6 flex flex-col h-full"
+          >
+            <div class="mb-4">
+              <span
+                class="bg-secondary px-2 py-1 font-label-md text-[10px] uppercase"
+                >Référence</span
+              >
+              <h3 class="font-headline-md text-headline-md mt-2">Deye 6kW</h3>
+              <p
+                class="font-body-md text-body-md text-on-primary-container mt-2 text-sm"
+              >
+                Le standard mondial de fiabilité.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <button
+                class="w-full bg-white text-primary py-2 font-label-md text-label-md hover:bg-secondary hover:text-white transition-all"
+              >
+                Devis rapide
+              </button>
+            </div>
+          </div>
+          <!-- Hybride 8kW -->
+          <div class="bento-card bg-white p-6 flex flex-col h-full">
+            <div class="mb-4">
+              <span
+                class="bg-surface-container text-primary px-2 py-1 font-label-md text-[10px] uppercase"
+                >Performance</span
+              >
+              <h3 class="font-headline-md text-headline-md mt-2">
+                Hybride 8kW
+              </h3>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm"
+              >
+                Équilibre parfait PME &amp; Luxe.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <button
+                class="w-full bg-surface-container-high text-primary py-2 font-label-md text-label-md hover:bg-primary hover:text-white transition-all"
+              >
+                Détails
+              </button>
+            </div>
+          </div>
+          <!-- Hybride 12kW -->
+          <div class="bento-card bg-white p-6 flex flex-col h-full">
+            <div class="mb-4">
+              <span
+                class="bg-surface-container text-primary px-2 py-1 font-label-md text-[10px] uppercase"
+                >Triphasé</span
+              >
+              <h3 class="font-headline-md text-headline-md mt-2">
+                Hybride 12kW
+              </h3>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm"
+              >
+                Solution industrielle complète.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <button
+                class="w-full bg-surface-container-high text-primary py-2 font-label-md text-label-md hover:bg-primary hover:text-white transition-all"
+              >
+                Détails
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Showcase Image for Inverters -->
+        <div class="mt-8 h-80 overflow-hidden border border-outline-variant">
+          <img
+            alt="Industrial Inverter Setup"
+            class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"
+          />
+        </div>
+      </section>
+      <!-- Section 3: Stockage d'Énergie -->
+      <section
+        class="mb-20 bg-surface-container-low p-8 md:p-12 border border-outline-variant"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <span
+            class="material-symbols-outlined text-secondary"
+            data-icon="battery_charging_full"
+            >battery_charging_full</span
+          >
+          <h2
+            class="font-headline-lg text-headline-lg uppercase tracking-tight"
+          >
+            Stockage d'Énergie
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div class="space-y-4">
+            <h3 class="font-headline-md text-headline-md text-primary">
+              Lithium &amp; Gel Technology
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+              Solutions de stockage haute densité pour une autonomie totale, de
+              la batterie domestique au rack industriel.
+            </p>
+            <div class="grid grid-cols-1 gap-2">
+              <div
+                class="flex justify-between items-center p-4 bg-white border border-outline-variant hover:border-primary transition-all group"
+              >
+                <span class="font-body-md text-body-md"
+                  >Batterie Gel 200Ah</span
+                >
+                <button
+                  class="text-secondary font-label-md text-label-md group-hover:underline"
+                >
+                  Devis
+                </button>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-white border border-outline-variant hover:border-primary transition-all group"
+              >
+                <span class="font-body-md text-body-md"
+                  >Lithium 100Ah (48V / 5.12kWh)</span
+                >
+                <button
+                  class="text-secondary font-label-md text-label-md group-hover:underline"
+                >
+                  Devis
+                </button>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-white border border-outline-variant hover:border-primary transition-all group"
+              >
+                <span class="font-body-md text-body-md"
+                  >Lithium 200Ah (10.24kWh)</span
+                >
+                <button
+                  class="text-secondary font-label-md text-label-md group-hover:underline"
+                >
+                  Devis
+                </button>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-white border border-outline-variant hover:border-primary transition-all group"
+              >
+                <span class="font-body-md text-body-md"
+                  >Lithium 300Ah (15.36kWh)</span
+                >
+                <button
+                  class="text-secondary font-label-md text-label-md group-hover:underline"
+                >
+                  Devis
+                </button>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-primary-container text-white border border-outline-variant"
+              >
+                <span class="font-body-md text-body-md font-bold"
+                  >Lithium 600Ah (30kWh Rack)</span
+                >
+                <button
+                  class="bg-white text-primary px-3 py-1 font-label-md text-label-md hover:bg-secondary hover:text-white transition-all"
+                >
+                  Spécifications
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="h-full">
+            <img
+              alt="Professional lithium battery rack"
+              class="w-full h-full object-cover shadow-xl border border-outline-variant"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uhJAwITZfJXTebCl0EcMbPtezYzsYJH-6nNYth-JNif7ZdoqU7rs3mGk35Kzpv-bseLDpS9_dGy7c0x-1801u89quYofo51IXRmM62LtXngsrlo9iYjkz6mQZkBOBFDMFFP4TEaEoq9s1nOueUoJ3dN4ikUk0LA1-ARg4S1xSeqeQcaVWQVYgSBjlhF7ptxpVMvxfoBOCDrcBlHxeBav-C0tRQoRQ9xEhiqHbjuxg6XZKsXtiI4NifzL78"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- New Section: Solutions Complètes & Devis Groupés -->
+      <section class="mb-20">
+        <div
+          class="bg-primary p-12 text-center text-white relative overflow-hidden"
+        >
+          <div class="absolute inset-0 opacity-20">
+            <img
+              alt="Background architecture"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uj_dm8gjhiEhS3Ob2uVsVINsMa1juoK7mICdHS0D6EK5jxjt3p9TkcPUZcpq2u7VMK_wkyWm2yRhKtWaxv6EJ_OU_koGryjHw0RhmdvwxSyuAeqtgKd4l_7agkT0r7r_kRR1lOtmL966G0ffEKELDt2LY43f19iM9DMNGkras2_A2fUL0CL7S7rc1v3nZsmbvEhItAe0f2bFtfffh_zX0w3peGu57jGfTeIx8F_D2nrWlOBF1D-CXfpuD4"
+            />
+          </div>
+          <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="font-headline-xl text-headline-xl mb-6">
+              Besoin d'un système complet ?
+            </h2>
+            <p class="font-body-lg text-body-lg text-surface-variant mb-10">
+              Nous assemblons pour vous des kits sur-mesure incluant panneaux,
+              onduleurs, stockage et protection. Profitez de tarifs
+              préférentiels pour vos projets clé en main.
+            </p>
+            <a
+              class="inline-block bg-secondary text-white px-10 py-5 rounded-lg font-headline-md text-headline-md hover:bg-white hover:text-primary transition-all shadow-2xl"
+              href="#"
+            >
+              Demande de Devis pour Ensemble de Produits
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Section 4 & 5: Cabling & Protection (Technical Grid) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <!-- Câblage -->
+        <section>
+          <div class="flex items-center gap-4 mb-8">
+            <span
+              class="material-symbols-outlined text-secondary"
+              data-icon="cable"
+              >cable</span
+            >
+            <h2
+              class="font-headline-lg text-headline-lg uppercase tracking-tight"
+            >
+              Câblages &amp; Connectique
+            </h2>
+          </div>
+          <div class="bg-white border border-outline-variant overflow-hidden">
+            <table class="w-full text-left">
+              <thead class="bg-primary text-white">
+                <tr>
+                  <th class="p-4 font-label-md text-label-md uppercase">
+                    Type
+                  </th>
+                  <th class="p-4 font-label-md text-label-md uppercase">
+                    Specs
+                  </th>
+                  <th class="p-4"></th>
+                </tr>
+              </thead>
+              <tbody
+                class="divide-y divide-outline-variant font-body-md text-body-md"
+              >
+                <tr>
+                  <td class="p-4 font-bold">Câble Solaire</td>
+                  <td class="p-4">6mm² (Rouge/Noir)</td>
+                  <td class="p-4 text-right">
+                    <button class="text-secondary font-label-md text-label-md">
+                      Devis
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-bold">VTMB Multiconducteurs</td>
+                  <td class="p-4">3x2.5, 4x4, 4x6</td>
+                  <td class="p-4 text-right">
+                    <button class="text-secondary font-label-md text-label-md">
+                      Devis
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-bold">VOB Rigide</td>
+                  <td class="p-4">1.5mm, 2.5mm</td>
+                  <td class="p-4 text-right">
+                    <button class="text-secondary font-label-md text-label-md">
+                      Devis
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-bold">Câble Flexible</td>
+                  <td class="p-4">25mm, 35mm, 50mm</td>
+                  <td class="p-4 text-right">
+                    <button class="text-secondary font-label-md text-label-md">
+                      Devis
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-4">
+            <img
+              alt="Solar cabling detail"
+              class="w-full h-48 object-cover border border-outline-variant"
+              src="https://lh3.googleusercontent.com/aida/ADBb0ugpKRCqu6AZQi0X2W5CpFu8smqw_A4aNHw1Qqy5eKwICVns-5teVsli3ZJJfC_E6a5j_iliPKPSDEC55Yh8ncZAB_L6pT4YsRLEgnnQ_SjGGpaPqg7NFM1PxOOLwBNZGVpym0siyohX3dliDrg29-u2opf7HDpHsFzAx6GaXd12c3nwOrzFDfUEEiI_a6XacwFfsZZOuDo-38d2GUKcapP_wHpy2HiDsbSle7uFmdxGuowQDV_kQpvTzHU"
+            />
+          </div>
+        </section>
+        <!-- Protection -->
+        <section>
+          <div class="flex items-center gap-4 mb-8">
+            <span
+              class="material-symbols-outlined text-secondary"
+              data-icon="shield_with_heart"
+              >shield_with_heart</span
+            >
+            <h2
+              class="font-headline-lg text-headline-lg uppercase tracking-tight"
+            >
+              Protection &amp; Tableaux
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 gap-3">
+            <div
+              class="p-5 border border-outline-variant bg-white flex justify-between items-center group hover:border-primary transition-all"
+            >
+              <div>
+                <p
+                  class="font-label-md text-label-md uppercase text-on-surface-variant"
+                >
+                  Disjoncteurs DC
+                </p>
+                <p class="font-headline-md text-headline-md">
+                  63A &amp; 125A High Voltage
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline group-hover:text-secondary"
+                data-icon="shopping_cart_checkout"
+                >shopping_cart_checkout</span
+              >
+            </div>
+            <div
+              class="p-5 border border-outline-variant bg-white flex justify-between items-center group hover:border-primary transition-all"
+            >
+              <div>
+                <p
+                  class="font-label-md text-label-md uppercase text-on-surface-variant"
+                >
+                  Contrôleur AVP
+                </p>
+                <p class="font-headline-md text-headline-md">
+                  Protection Tension Automatique
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline group-hover:text-secondary"
+                data-icon="shopping_cart_checkout"
+                >shopping_cart_checkout</span
+              >
+            </div>
+            <div
+              class="p-5 border border-outline-variant bg-white flex justify-between items-center group hover:border-primary transition-all"
+            >
+              <div>
+                <p
+                  class="font-label-md text-label-md uppercase text-on-surface-variant"
+                >
+                  Parafoudres DC
+                </p>
+                <p class="font-headline-md text-headline-md">
+                  500V &amp; 1000V
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline group-hover:text-secondary"
+                data-icon="shopping_cart_checkout"
+                >shopping_cart_checkout</span
+              >
+            </div>
+            <div
+              class="p-5 border border-outline-variant bg-white flex justify-between items-center group hover:border-primary transition-all"
+            >
+              <div>
+                <p
+                  class="font-label-md text-label-md uppercase text-on-surface-variant"
+                >
+                  Parafoudres AC
+                </p>
+                <p class="font-headline-md text-headline-md">
+                  2P &amp; 4P Solutions
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline group-hover:text-secondary"
+                data-icon="shopping_cart_checkout"
+                >shopping_cart_checkout</span
+              >
+            </div>
+            <div
+              class="p-5 border border-outline-variant bg-white flex justify-between items-center group hover:border-primary transition-all"
+            >
+              <div>
+                <p
+                  class="font-label-md text-label-md uppercase text-on-surface-variant"
+                >
+                  Tableaux Divisionnaires
+                </p>
+                <p class="font-headline-md text-headline-md">
+                  8, 12, 18 Modules IP65
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline group-hover:text-secondary"
+                data-icon="shopping_cart_checkout"
+                >shopping_cart_checkout</span
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-tertiary-container text-on-primary dark:text-on-tertiary-container w-full border-t border-outline-variant"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-gutter-md px-margin-desktop py-12 max-w-max-width mx-auto"
+      >
+        <div class="md:col-span-4">
+          <img
+            alt="REPOWER-RDC Logo"
+            class="h-10 mb-6 brightness-0 invert"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1vT-0rx9iCFDDC22d563aKtyXfwa4IGAMRBuXndhEXtqyNfI_DLXRw4rTFL9xCViebyIkRqDMcYdr9Ot2FG7hsy2LbsrLJVt7wHOxJLYz47lYsRR_99ePAX51VA5LFTMhS8O-XcL-InW-U-x9_biSYcJ5UcJZzodF0K4-AulmSz34Tsrv0reRGons5-h46EuiyaxoO_VzYkYwsnF2yaLKrl2HY3glZg8SthT59Xy3WthLcttzOz1j8Vm9-wyliXVUxwHKPOa64QOP"
+          />
+          <p class="font-body-md text-body-md opacity-80 mb-6">
+            Expertise en ingénierie solaire et solutions énergétiques de pointe
+            pour le développement de la République Démocratique du Congo.
+          </p>
+          <div class="flex gap-4">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed"
+              data-icon="public"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed"
+              data-icon="mail"
+              >mail</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed"
+              data-icon="call"
+              >call</span
+            >
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <h5
+            class="font-label-md text-label-md uppercase mb-4 text-secondary-fixed"
+          >
+            Navigation
+          </h5>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <h5
+            class="font-label-md text-label-md uppercase mb-4 text-secondary-fixed"
+          >
+            Catalogue
+          </h5>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Panneaux</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Batteries</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Onduleurs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <h5
+            class="font-label-md text-label-md uppercase mb-4 text-secondary-fixed"
+          >
+            Support
+          </h5>
+          <ul class="space-y-2 mb-6">
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Installation Guide</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:underline"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+          <p class="font-label-md text-label-md text-on-primary/60">
+            © 2024 REPOWER-RDC. All rights reserved. Lubumbashi, DRC.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1028 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>REPOWER-RDC | Solutions Énergétiques Durables en RDC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'inverse-primary': '#b4c6f6',
+              'surface-variant': '#d8e3fa',
+              'surface-container': '#e7eeff',
+              'tertiary-container': '#1d2022',
+              'on-tertiary-container': '#85878a',
+              'on-secondary-container': '#fffbff',
+              'surface-container-low': '#f0f3ff',
+              outline: '#75777f',
+              'surface-container-highest': '#d8e3fa',
+              'primary-fixed-dim': '#b4c6f6',
+              'secondary-fixed': '#ffdad5',
+              'on-tertiary': '#ffffff',
+              'outline-variant': '#c5c6cf',
+              'surface-container-high': '#dee8ff',
+              'surface-tint': '#4c5e88',
+              tertiary: '#05080a',
+              'primary-fixed': '#d9e2ff',
+              surface: '#f9f9ff',
+              secondary: '#b90c09',
+              'on-error-container': '#93000a',
+              'on-primary-container': '#7587b3',
+              'on-error': '#ffffff',
+              'on-secondary': '#ffffff',
+              primary: '#00061c',
+              background: '#f9f9ff',
+              'on-primary': '#ffffff',
+              'surface-dim': '#cfdaf1',
+              'secondary-fixed-dim': '#ffb4a9',
+              'on-tertiary-fixed-variant': '#44474a',
+              'on-primary-fixed-variant': '#34466f',
+              'inverse-surface': '#263142',
+              'tertiary-fixed-dim': '#c4c7ca',
+              'on-primary-fixed': '#031a41',
+              'on-secondary-fixed': '#410000',
+              'on-tertiary-fixed': '#191c1e',
+              'on-surface-variant': '#44464e',
+              'tertiary-fixed': '#e0e3e6',
+              'secondary-container': '#de2e21',
+              'on-secondary-fixed-variant': '#930002',
+              'surface-container-lowest': '#ffffff',
+              'on-background': '#111c2c',
+              'on-surface': '#111c2c',
+              'primary-container': '#081e45',
+              'inverse-on-surface': '#ebf1ff',
+              'error-container': '#ffdad6',
+              error: '#ba1a1a',
+              'surface-bright': '#f9f9ff',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            spacing: {
+              'margin-desktop': '64px',
+              unit: '8px',
+              'gutter-md': '24px',
+              'max-width': '1280px',
+              'margin-mobile': '16px',
+              'gutter-sm': '16px',
+            },
+            fontFamily: {
+              'body-lg': ['Hanken Grotesk'],
+              'headline-lg': ['Hanken Grotesk'],
+              'headline-lg-mobile': ['Hanken Grotesk'],
+              'headline-md': ['Hanken Grotesk'],
+              'body-md': ['Hanken Grotesk'],
+              'label-md': ['Hanken Grotesk'],
+              'headline-xl': ['Hanken Grotesk'],
+            },
+            fontSize: {
+              'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+              'headline-lg': [
+                '32px',
+                {
+                  lineHeight: '40px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '700',
+                },
+              ],
+              'headline-lg-mobile': [
+                '28px',
+                { lineHeight: '36px', fontWeight: '700' },
+              ],
+              'headline-md': [
+                '24px',
+                { lineHeight: '32px', fontWeight: '700' },
+              ],
+              'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+              'label-md': [
+                '14px',
+                {
+                  lineHeight: '20px',
+                  letterSpacing: '0.05em',
+                  fontWeight: '600',
+                },
+              ],
+              'headline-xl': [
+                '48px',
+                {
+                  lineHeight: '56px',
+                  letterSpacing: '-0.02em',
+                  fontWeight: '800',
+                },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      body {
+        background-color: #f9f9ff;
+        color: #111c2c;
+        scroll-behavior: smooth;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          to right,
+          rgba(0, 6, 28, 0.9) 0%,
+          rgba(0, 6, 28, 0.4) 100%
+        );
+      }
+    </style>
+  </head>
+  <body
+    class="font-body-md text-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed"
+  >
+    <!-- TopAppBar Section -->
+    <header
+      class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant shadow-sm transition-all"
+    >
+      <nav
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-max-width mx-auto"
+      >
+        <div class="font-headline-md text-headline-md font-bold text-primary">
+          REPOWER-RDC
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors duration-200"
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="text-on-surface hover:text-secondary hover:bg-surface-container-low transition-colors duration-200"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="text-on-surface hover:text-secondary hover:bg-surface-container-low transition-colors duration-200"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="text-on-surface hover:text-secondary hover:bg-surface-container-low transition-colors duration-200"
+            href="#products"
+            >Products</a
+          >
+          <a
+            class="text-on-surface hover:text-secondary hover:bg-surface-container-low transition-colors duration-200"
+            href="#team"
+            >Team</a
+          >
+          <a
+            class="text-on-surface hover:text-secondary hover:bg-surface-container-low transition-colors duration-200"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 active:scale-95 transition-all"
+        >
+          Request Quote
+        </button>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative pt-20 h-screen min-h-[700px] flex items-center overflow-hidden"
+        id="home"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Industrial Solar Farm Lubumbashi"
+            class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"
+          />
+          <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div
+          class="relative z-10 px-margin-desktop max-w-max-width mx-auto w-full"
+        >
+          <div class="max-w-2xl text-on-primary">
+            <span
+              class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-6 uppercase tracking-wider"
+              >Énergie Durable en RDC</span
+            >
+            <h1 class="font-headline-xl text-headline-xl mb-6">
+              Électrifier l'avenir de la RDC avec précision
+            </h1>
+            <p class="font-body-lg text-body-lg mb-10 text-on-primary/80">
+              Nous apportons des solutions solaires de pointe au cœur du
+              Katanga, garantissant une autonomie énergétique robuste pour les
+              industries et les résidences.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="bg-secondary px-8 py-4 rounded font-bold text-on-primary hover:bg-secondary-container transition-all"
+              >
+                Démarrer votre projet
+              </button>
+              <button
+                class="border border-white px-8 py-4 rounded font-bold text-white hover:bg-white/10 transition-all"
+              >
+                En savoir plus
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- À propos Section -->
+      <section class="py-24 bg-surface-container-lowest" id="about">
+        <div
+          class="px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          <div class="relative">
+            <img
+              alt="Solar installers team"
+              class="rounded-xl shadow-lg border border-outline-variant w-full h-[500px] object-cover"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uj_dm8gjhiEhS3Ob2uVsVINsMa1juoK7mICdHS0D6EK5jxjt3p9TkcPUZcpq2u7VMK_wkyWm2yRhKtWaxv6EJ_OU_koGryjHw0RhmdvwxSyuAeqtgKd4l_7agkT0r7r_kRR1lOtmL966G0ffEKELDt2LY43f19iM9DMNGkras2_A2fUL0CL7S7rc1v3nZsmbvEhItAe0f2bFtfffh_zX0w3peGu57jGfTeIx8F_D2nrWlOBF1D-CXfpuD4"
+            />
+            <div
+              class="absolute -bottom-6 -right-6 bg-primary-container p-8 text-on-primary hidden md:block"
+            >
+              <div class="text-4xl font-bold mb-1">10+</div>
+              <div class="text-sm opacity-80">Années d'expertise</div>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8">
+              Notre Engagement pour Lubumbashi
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed"
+            >
+              Basé à Lubumbashi, REPOWER-RDC est né de la volonté de transformer
+              le paysage énergétique de la République Démocratique du Congo.
+              Notre histoire est celle d'une passion pour l'innovation
+              technologique mise au service du développement local.
+            </p>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed"
+            >
+              Notre mission est d'offrir des systèmes solaires fiables qui
+              répondent aux défis climatiques et industriels uniques de notre
+              région. De l'étude de faisabilité à la maintenance, nous assurons
+              une précision technique absolue.
+            </p>
+            <div class="grid grid-cols-2 gap-8">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary text-3xl"
+                  >verified</span
+                >
+                <div>
+                  <h4 class="font-bold text-primary">Qualité</h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Matériel certifié internationalement.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary text-3xl"
+                  >support_agent</span
+                >
+                <div>
+                  <h4 class="font-bold text-primary">Support Local</h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Équipe basée à Lubumbashi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section (Bento Grid) -->
+      <section class="py-24 bg-surface" id="services">
+        <div class="px-margin-desktop max-w-max-width mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+              Solutions Énergétiques Complètes
+            </h2>
+            <p class="text-on-surface-variant max-w-2xl mx-auto">
+              Une expertise technique multidisciplinaire pour assurer votre
+              transition énergétique en toute sérénité.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-md">
+            <div
+              class="md:col-span-2 bg-primary-container p-8 rounded-xl border border-outline-variant flex flex-col justify-between hover:border-secondary transition-all group"
+            >
+              <span
+                class="material-symbols-outlined text-secondary text-4xl mb-8"
+                >solar_power</span
+              >
+              <div>
+                <h3
+                  class="font-headline-md text-headline-md text-on-primary mb-4"
+                >
+                  Installation Solaire Industrielle
+                </h3>
+                <p class="text-on-primary/70 mb-6">
+                  Conception et déploiement de parcs solaires haute performance
+                  pour les entreprises du secteur minier et industriel.
+                </p>
+                <a
+                  class="inline-flex items-center text-secondary font-bold group-hover:gap-2 transition-all"
+                  href="#"
+                  >Explorer
+                  <span class="material-symbols-outlined"
+                    >arrow_forward</span
+                  ></a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-high p-8 rounded-xl border border-outline-variant hover:shadow-md transition-all"
+            >
+              <span class="material-symbols-outlined text-primary text-4xl mb-6"
+                >battery_charging_full</span
+              >
+              <h3 class="font-bold text-primary mb-3">Stockage Intelligent</h3>
+              <p class="text-on-surface-variant text-sm">
+                Systèmes de batteries lithium pour une autonomie garantie 24/7.
+              </p>
+            </div>
+            <div
+              class="bg-surface-container-high p-8 rounded-xl border border-outline-variant hover:shadow-md transition-all"
+            >
+              <span class="material-symbols-outlined text-primary text-4xl mb-6"
+                >settings_input_component</span
+              >
+              <h3 class="font-bold text-primary mb-3">
+                Onduleurs &amp; Régulateurs
+              </h3>
+              <p class="text-on-surface-variant text-sm">
+                Gestion électronique avancée pour une stabilité parfaite du
+                courant.
+              </p>
+            </div>
+            <div
+              class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-secondary transition-all"
+            >
+              <div class="flex items-center gap-6">
+                <span class="material-symbols-outlined text-primary text-5xl"
+                  >engineering</span
+                >
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mb-2"
+                  >
+                    Maintenance &amp; Support
+                  </h3>
+                  <p class="text-on-surface-variant">
+                    Surveillance en temps réel et interventions rapides sur site
+                    à Lubumbashi pour maximiser le rendement de vos
+                    installations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:col-span-2 bg-secondary-container p-8 rounded-xl flex items-center justify-between"
+            >
+              <div class="text-on-secondary-container">
+                <h3 class="font-headline-md text-headline-md mb-2">
+                  Besoin d'un audit ?
+                </h3>
+                <p class="opacity-90">
+                  Nos ingénieurs évaluent vos besoins gratuitement.
+                </p>
+              </div>
+              <button
+                class="bg-primary text-on-primary px-8 py-3 rounded font-bold hover:scale-105 transition-transform"
+              >
+                Demander un Audit
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Produits Section -->
+      <section class="py-24 bg-surface-container-low" id="products">
+        <div class="px-margin-desktop max-w-max-width mx-auto">
+          <div class="flex justify-between items-end mb-16">
+            <div>
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-2">
+                Équipements de Classe Mondiale
+              </h2>
+              <p class="text-on-surface-variant">
+                Sélection rigoureuse pour les conditions climatiques de la RDC.
+              </p>
+            </div>
+            <button
+              class="text-secondary font-bold flex items-center gap-2 hover:underline"
+            >
+              Voir tout le catalogue
+              <span class="material-symbols-outlined">grid_view</span>
+            </button>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-md"
+          >
+            <!-- Panneau 450w -->
+            <div
+              class="bg-surface-container-lowest rounded overflow-hidden border border-outline-variant hover:shadow-lg transition-all"
+            >
+              <div class="h-64 bg-white relative overflow-hidden group">
+                <div
+                  class="absolute inset-0 bg-slate-100 flex items-center justify-center p-8"
+                >
+                  <div
+                    class="w-full h-full bg-slate-200 rounded animate-pulse"
+                  ></div>
+                  <span
+                    class="absolute inset-0 flex items-center justify-center font-bold text-primary/20"
+                    >IMAGE PRODUCT 1</span
+                  >
+                </div>
+                <!-- Hypothetical Image Placeholder -->
+                <div class="absolute inset-0 bg-white p-4">
+                  <div
+                    class="w-full h-full border border-outline-variant flex items-center justify-center bg-surface-container"
+                  >
+                    <span
+                      class="material-symbols-outlined text-5xl text-primary/30"
+                      >solar_power</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <span
+                  class="text-[10px] uppercase font-bold text-secondary-container tracking-widest"
+                  >Panneau Solaire</span
+                >
+                <h4 class="font-bold text-primary mt-1">
+                  Panneau Solaire 450w Mono
+                </h4>
+                <div class="mt-4 flex justify-between items-center">
+                  <span class="text-secondary font-bold">Premium Tier</span>
+                  <button
+                    class="p-2 bg-primary-container text-white rounded hover:bg-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Panneau 600w -->
+            <div
+              class="bg-surface-container-lowest rounded overflow-hidden border border-outline-variant hover:shadow-lg transition-all"
+            >
+              <div class="h-64 bg-white relative">
+                <div class="absolute inset-0 bg-white p-4">
+                  <div
+                    class="w-full h-full border border-outline-variant flex items-center justify-center bg-surface-container"
+                  >
+                    <span
+                      class="material-symbols-outlined text-5xl text-primary/30"
+                      >solar_power</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <span
+                  class="text-[10px] uppercase font-bold text-secondary-container tracking-widest"
+                  >Technologie Bifaciale</span
+                >
+                <h4 class="font-bold text-primary mt-1">
+                  Panneau Bifacial 600w
+                </h4>
+                <div class="mt-4 flex justify-between items-center">
+                  <span class="text-secondary font-bold">High Efficiency</span>
+                  <button
+                    class="p-2 bg-primary-container text-white rounded hover:bg-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Convertisseur -->
+            <div
+              class="bg-surface-container-lowest rounded overflow-hidden border border-outline-variant hover:shadow-lg transition-all"
+            >
+              <div class="h-64 bg-white relative">
+                <img
+                  alt="Convertisseur hybride 12kw"
+                  class="w-full h-full object-contain p-4"
+                  src="https://lh3.googleusercontent.com/aida/ADBb0ugpKRCqu6AZQi0X2W5CpFu8smqw_A4aNHw1Qqy5eKwICVns-5teVsli3ZJJfC_E6a5j_iliPKPSDEC55Yh8ncZAB_L6pT4YsRLEgnnQ_SjGGpaPqg7NFM1PxOOLwBNZGVpym0siyohX3dliDrg29-u2opf7HDpHsFzAx6GaXd12c3nwOrzFDfUEEiI_a6XacwFfsZZOuDo-38d2GUKcapP_wHpy2HiDsbSle7uFmdxGuowQDV_kQpvTzHU"
+                />
+              </div>
+              <div class="p-6">
+                <span
+                  class="text-[10px] uppercase font-bold text-secondary-container tracking-widest"
+                  >Onduleur Hybride</span
+                >
+                <h4 class="font-bold text-primary mt-1">
+                  Convertisseur Hybride 12kw
+                </h4>
+                <div class="mt-4 flex justify-between items-center">
+                  <span class="text-secondary font-bold">Smart Control</span>
+                  <button
+                    class="p-2 bg-primary-container text-white rounded hover:bg-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Batterie -->
+            <div
+              class="bg-surface-container-lowest rounded overflow-hidden border border-outline-variant hover:shadow-lg transition-all"
+            >
+              <div class="h-64 bg-white relative">
+                <img
+                  alt="Batterie lithium 600Ah"
+                  class="w-full h-full object-contain p-4"
+                  src="https://lh3.googleusercontent.com/aida/ADBb0uhJAwITZfJXTebCl0EcMbPtezYzsYJH-6nNYth-JNif7ZdoqU7rs3mGk35Kzpv-bseLDpS9_dGy7c0x-1801u89quYofo51IXRmM62LtXngsrlo9iYjkz6mQZkBOBFDMFFP4TEaEoq9s1nOueUoJ3dN4ikUk0LA1-ARg4S1xSeqeQcaVWQVYgSBjlhF7ptxpVMvxfoBOCDrcBlHxeBav-C0tRQoRQ9xEhiqHbjuxg6XZKsXtiI4NifzL78"
+                />
+              </div>
+              <div class="p-6">
+                <span
+                  class="text-[10px] uppercase font-bold text-secondary-container tracking-widest"
+                  >Stockage Énergie</span
+                >
+                <h4 class="font-bold text-primary mt-1">
+                  Batterie Lithium 600Ah
+                </h4>
+                <div class="mt-4 flex justify-between items-center">
+                  <span class="text-secondary font-bold">LiFePO4 Gen 3</span>
+                  <button
+                    class="p-2 bg-primary-container text-white rounded hover:bg-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Valeurs Section -->
+      <section class="py-20 bg-primary text-on-primary">
+        <div
+          class="px-margin-desktop max-w-max-width mx-auto flex flex-col md:flex-row items-center gap-16"
+        >
+          <div class="md:w-1/2">
+            <h2 class="font-headline-lg text-headline-lg mb-6">
+              Électrifier l'avenir de la RDC
+            </h2>
+            <p
+              class="font-body-lg text-body-lg text-on-primary/80 mb-8 leading-relaxed"
+            >
+              Basée au cœur de Lubumbashi, notre entreprise s'appuie sur quatre
+              piliers fondamentaux pour garantir le succès de vos projets
+              énergétiques.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                Équipements fiables de grade industriel
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                Installation professionnelle certifiée
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                Respect strict des normes de sécurité
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                Soutien au développement économique local
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2 grid grid-cols-2 gap-4">
+            <div
+              class="bg-white/5 p-8 rounded border border-white/10 hover:bg-white/10 transition-colors"
+            >
+              <div class="text-secondary text-4xl font-extrabold mb-2">98%</div>
+              <p class="text-sm opacity-70">Disponibilité système</p>
+            </div>
+            <div
+              class="bg-white/5 p-8 rounded border border-white/10 hover:bg-white/10 transition-colors"
+            >
+              <div class="text-secondary text-4xl font-extrabold mb-2">
+                500+
+              </div>
+              <p class="text-sm opacity-70">Installations réussies</p>
+            </div>
+            <div
+              class="bg-white/5 p-8 rounded border border-white/10 hover:bg-white/10 transition-colors"
+            >
+              <div class="text-secondary text-4xl font-extrabold mb-2">
+                24/7
+              </div>
+              <p class="text-sm opacity-70">Assistance technique</p>
+            </div>
+            <div
+              class="bg-white/5 p-8 rounded border border-white/10 hover:bg-white/10 transition-colors"
+            >
+              <div class="text-secondary text-4xl font-extrabold mb-2">25Y</div>
+              <p class="text-sm opacity-70">Garantie performance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Équipe Section -->
+      <section class="py-24 bg-surface-container-highest" id="team">
+        <div class="px-margin-desktop max-w-max-width mx-auto text-center">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+            L'Excellence Technique
+          </h2>
+          <p class="text-on-surface-variant max-w-2xl mx-auto mb-16">
+            Une équipe d'ingénieurs et de techniciens passionnés par
+            l'innovation et engagés pour un service client irréprochable.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md">
+            <div
+              class="bg-white p-10 border border-outline-variant text-center"
+            >
+              <div
+                class="w-24 h-24 bg-surface-container rounded-full mx-auto mb-6 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-4xl text-primary"
+                  >groups</span
+                >
+              </div>
+              <h4 class="font-bold text-primary text-xl mb-3">
+                Professionnalisme
+              </h4>
+              <p class="text-on-surface-variant text-sm">
+                Chaque membre de notre équipe est formé aux dernières
+                technologies photovoltaïques mondiales.
+              </p>
+            </div>
+            <div
+              class="bg-white p-10 border border-outline-variant text-center border-t-4 border-t-secondary"
+            >
+              <div
+                class="w-24 h-24 bg-surface-container rounded-full mx-auto mb-6 flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-secondary"
+                  style="font-variation-settings: 'FILL' 1"
+                  >lightbulb</span
+                >
+              </div>
+              <h4 class="font-bold text-primary text-xl mb-3">Innovation</h4>
+              <p class="text-on-surface-variant text-sm">
+                Nous recherchons continuellement les solutions les plus
+                efficaces pour le contexte spécifique du Katanga.
+              </p>
+            </div>
+            <div
+              class="bg-white p-10 border border-outline-variant text-center"
+            >
+              <div
+                class="w-24 h-24 bg-surface-container rounded-full mx-auto mb-6 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-4xl text-primary"
+                  >handshake</span
+                >
+              </div>
+              <h4 class="font-bold text-primary text-xl mb-3">Engagement</h4>
+              <p class="text-on-surface-variant text-sm">
+                Nous accompagnons nos clients bien au-delà de l'installation,
+                assurant la pérennité de leur investissement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Section -->
+      <section class="py-24 bg-surface-container-lowest">
+        <div class="px-margin-desktop max-w-max-width mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+              Questions Fréquentes
+            </h2>
+            <p class="text-on-surface-variant">
+              Tout ce que vous devez savoir sur le solaire en RDC.
+            </p>
+          </div>
+          <div class="max-w-3xl mx-auto space-y-4">
+            <div
+              class="border border-outline-variant rounded p-6 hover:bg-surface-container-low transition-colors"
+            >
+              <h4
+                class="font-bold text-primary flex justify-between items-center cursor-pointer"
+              >
+                Le solaire est-il fiable pendant la saison des pluies en RDC ?
+                <span class="material-symbols-outlined">expand_more</span>
+              </h4>
+              <p class="mt-4 text-on-surface-variant">
+                Absolument. Nos panneaux de haute technologie captent la lumière
+                diffuse même par temps nuageux, et nos systèmes de stockage
+                dimensionnés avec précision assurent une autonomie continue.
+              </p>
+            </div>
+            <div
+              class="border border-outline-variant rounded p-6 hover:bg-surface-container-low transition-colors"
+            >
+              <h4
+                class="font-bold text-primary flex justify-between items-center cursor-pointer"
+              >
+                Combien de temps dure une installation complète ?
+                <span class="material-symbols-outlined">expand_more</span>
+              </h4>
+              <p class="mt-4 text-on-surface-variant">
+                Pour un système résidentiel standard, l'installation prend
+                généralement 2 à 4 jours après l'étude technique. Les projets
+                industriels sont soumis à un calendrier spécifique établi lors
+                du devis.
+              </p>
+            </div>
+            <div
+              class="border border-outline-variant rounded p-6 hover:bg-surface-container-low transition-colors"
+            >
+              <h4
+                class="font-bold text-primary flex justify-between items-center cursor-pointer"
+              >
+                Quelle est la durée de vie des batteries lithium proposées ?
+                <span class="material-symbols-outlined">expand_more</span>
+              </h4>
+              <p class="mt-4 text-on-surface-variant">
+                Nos batteries LiFePO4 de dernière génération sont conçues pour
+                plus de 6000 cycles, soit environ 10 à 15 ans de fonctionnement
+                optimal selon l'usage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="py-24 bg-surface" id="contact">
+        <div
+          class="px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16"
+        >
+          <div>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+              Contactez Nos Experts
+            </h2>
+            <p class="text-on-surface-variant mb-10">
+              Prêt à passer à l'énergie solaire ? Notre équipe est à votre
+              disposition pour toute question ou demande de devis.
+            </p>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-bold text-primary mb-2"
+                    >Nom Complet</label
+                  >
+                  <input
+                    class="w-full border-outline-variant focus:ring-primary focus:border-primary rounded p-3 bg-surface-container-lowest"
+                    placeholder="Votre nom"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-bold text-primary mb-2"
+                    >Email</label
+                  >
+                  <input
+                    class="w-full border-outline-variant focus:ring-primary focus:border-primary rounded p-3 bg-surface-container-lowest"
+                    placeholder="votre@email.com"
+                    type="email"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-primary mb-2"
+                  >Type de Projet</label
+                >
+                <select
+                  class="w-full border-outline-variant focus:ring-primary focus:border-primary rounded p-3 bg-surface-container-lowest"
+                >
+                  <option>Résidentiel</option>
+                  <option>Industriel / Minier</option>
+                  <option>Commercial</option>
+                  <option>Maintenance</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-primary mb-2"
+                  >Message</label
+                >
+                <textarea
+                  class="w-full border-outline-variant focus:ring-primary focus:border-primary rounded p-3 bg-surface-container-lowest"
+                  placeholder="Décrivez votre besoin..."
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                class="w-full bg-primary text-on-primary py-4 rounded font-bold hover:bg-primary-container transition-all"
+                type="submit"
+              >
+                Envoyer la demande
+              </button>
+            </form>
+          </div>
+          <div class="flex flex-col gap-8">
+            <div
+              class="h-80 rounded-xl overflow-hidden border border-outline-variant relative"
+            >
+              <!-- Map Placeholder -->
+              <div
+                class="absolute inset-0 bg-surface-container flex items-center justify-center"
+                data-location="Lubumbashi, DRC"
+                style=""
+              >
+                <div class="text-center">
+                  <span
+                    class="material-symbols-outlined text-secondary text-5xl mb-2"
+                    >location_on</span
+                  >
+                  <p class="font-bold text-primary">Lubumbashi, Katanga, RDC</p>
+                  <p class="text-sm text-on-surface-variant">
+                    Avenue Industrielle, Quartier Golf
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="p-6 bg-surface-container-high rounded border border-outline-variant"
+              >
+                <h5 class="font-bold text-primary mb-2">Téléphone</h5>
+                <p class="text-secondary font-bold">+243 81 000 0000</p>
+              </div>
+              <div
+                class="p-6 bg-surface-container-high rounded border border-outline-variant"
+              >
+                <h5 class="font-bold text-primary mb-2">Email Direct</h5>
+                <p class="text-secondary font-bold">contact@repower-rdc.com</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <a
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all"
+                href="#"
+              >
+                <span class="material-symbols-outlined">share</span>
+              </a>
+              <a
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all"
+                href="#"
+              >
+                <span class="material-symbols-outlined">mail</span>
+              </a>
+              <a
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all"
+                href="#"
+              >
+                <span class="material-symbols-outlined">call</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer
+      class="bg-primary dark:bg-tertiary-container w-full border-t border-outline-variant py-12"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-gutter-md px-margin-desktop max-w-max-width mx-auto"
+      >
+        <div class="md:col-span-4">
+          <div
+            class="font-headline-md text-headline-md font-extrabold text-on-primary mb-6"
+          >
+            REPOWER-RDC
+          </div>
+          <p class="text-on-primary/70 mb-8 max-w-xs">
+            Solution d'énergie propre et durable pour une République
+            Démocratique du Congo en plein essor.
+          </p>
+          <div class="text-on-primary/50 text-sm">
+            © 2024 REPOWER-RDC. All rights reserved. Lubumbashi, DRC.
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <h5 class="text-on-primary font-bold mb-6">Navigation</h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#services"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <h5 class="text-on-primary font-bold mb-6">Solutions</h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#"
+                >Installation Guide</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#"
+                >Team</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <h5 class="text-on-primary font-bold mb-6">Légal</h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:underline transition-all"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <h5 class="text-on-primary font-bold mb-6">Contact</h5>
+          <p class="text-on-primary/70 text-sm">Lubumbashi, Katanga</p>
+          <p class="text-on-primary/70 text-sm mt-2">contact@repower.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
