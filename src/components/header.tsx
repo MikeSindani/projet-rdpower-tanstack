@@ -69,7 +69,7 @@ export default function Header() {
             <a
               className={`rounded-full px-4 py-2 font-label-md text-label-md transition-all ${
                 isActivePath(href)
-                  ? ' text-white bg-orange-600'
+                  ? ' text-black bg-orange-600'
                   : 'text-on-surface hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-800'
               }`}
               href={href}
@@ -101,7 +101,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen((current) => !current)}
             type="button"
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={20} color='red' /> : <Menu color='white' size={20} />}
           </button>
         </div>
       </div>
@@ -117,8 +117,8 @@ export default function Header() {
             <a
               className={`flex items-center justify-between rounded-xl px-6 py-4 transition-all ${
                 isActivePath(href)
-                  ? 'bg-secondary/10 text-secondary dark:bg-orange-600/10 dark:text-orange-400'
-                  : 'text-on-surface hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-900'
+                  ? 'bg-secondary/10 text-black dark:bg-orange-600/10 dark:text-orange-400'
+                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-900'
               }`}
               href={href}
               key={label}
@@ -179,7 +179,8 @@ function QuoteButton({ className = '' }: { className?: string }) {
       className={`inline-flex items-center gap-2 rounded-full px-8 py-2.5 font-label-md text-label-md font-bold uppercase tracking-widest text-white transition-all hover:bg-secondary-container hover:shadow-lg active:scale-95 bg-orange-600 dark:hover:bg-orange-700 ${className}`}
       href="/demander-un-devis"
     >
-      Demander un devis
+      <span>Demander un devis</span>  
+      <ArrowRight size={18} />
     </a>
   )
 }

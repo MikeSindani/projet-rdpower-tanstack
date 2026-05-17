@@ -33,7 +33,7 @@ const strengths = [
 function AboutPage() {
   return (
     <main className="bg-background font-body-md text-body-md text-on-surface dark:bg-gray-950 dark:text-gray-200">
-      <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-primary-container dark:bg-gray-900">
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-primary-container/70 dark:bg-gray-950/75">
         <div className="absolute inset-0 opacity-40">
           <img
             alt="Parc solaire industriel"

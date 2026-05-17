@@ -58,9 +58,9 @@ function QuoteRequest() {
         <img 
           src="https://www.totalenergies.fr/fileadmin/_processed_/5/4/csm_onduleur_solaire_f27b08b7ac.jpeg" 
           alt="" 
-          className="w-full h-full object-cover opacity-5 dark:opacity-[0.03]"
+          className="w-full h-full object-cover opacity-[0.4] dark:opacity-[0.4]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background dark:from-gray-950 dark:via-transparent dark:to-gray-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-transparent/50 to-background/90 dark:from-gray-950/95 dark:via-transparent/60 dark:to-gray-950/95" />
       </div>
 
       {/* Main Content Canvas */}
@@ -73,7 +73,7 @@ function QuoteRequest() {
               <h1 className="font-headline-xl text-headline-xl text-primary mb-4 md:font-headline-lg-mobile md:text-headline-lg-mobile lg:font-headline-xl lg:text-headline-xl dark:text-white">
                 Demander un Devis
               </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant dark:text-gray-300">
+              <p className="font-body-lg text-body-lg text-on-surface-variant dark:text-gray-400">
                 Obtenez une évaluation précise pour votre infrastructure énergétique. Nos ingénieurs analyseront vos besoins pour concevoir une solution solaire robuste et pérenne, adaptée aux exigences de la RDC.
               </p>
             </div>

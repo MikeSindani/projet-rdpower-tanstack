@@ -154,11 +154,11 @@ export default function Footer() {
               ))}
             </div>
             <a
-              className="mt-4 inline-flex items-center gap-2 font-label-md text-label-md font-bold uppercase tracking-widest text-secondary transition-colors hover:text-white"
+              className="mt-4 inline-flex items-center gap-2 font-label-md text-label-md font-bold uppercase tracking-widest text-white transition-colors hover:text-white rounded-lg px-3 py-4 bg-secondary"
               href="/demander-un-devis"
             >
               Parler de votre projet
-              <ArrowRight size={18} />
+              <ArrowRight size={30} />
             </a>
           </div>
         </div>

@@ -70,7 +70,7 @@ const teamValues = [
     icon: ShieldCheck,
     title: 'Engagement',
     text: 'Nous accompagnons nos clients bien au dela de l installation, pour assurer la perennite de leur investissement.',
-  },
+  }
 ]
 
 const faqs = [
@@ -170,7 +170,7 @@ function RouteComponent() {
               src="https://lh3.googleusercontent.com/aida/ADBb0uj_dm8gjhiEhS3Ob2uVsVINsMa1juoK7mICdHS0D6EK5jxjt3p9TkcPUZcpq2u7VMK_wkyWm2yRhKtWaxv6EJ_OU_koGryjHw0RhmdvwxSyuAeqtgKd4l_7agkT0r7r_kRR1lOtmL966G0ffEKELDt2LY43f19iM9DMNGkras2_A2fUL0CL7S7rc1v3nZsmbvEhItAe0f2bFtfffh_zX0w3peGu57jGfTeIx8F_D2nrWlOBF1D-CXfpuD4"
             />
             <div className="absolute -bottom-6 -right-6 hidden bg-primary-container p-8 text-on-primary shadow-xl md:block dark:bg-orange-600">
-              <div className="mb-1 text-4xl font-bold">10+</div>
+              <div className="mb-1 text-4xl font-bold">5+</div>
               <div className="text-sm opacity-80">Annees d expertise</div>
             </div>
           </div>
@@ -263,7 +263,7 @@ function RouteComponent() {
 
             <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-8 md:col-span-2 dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-6">
-                <Wrench className="text-primary dark:text-orange-400" size={42} />
+                <Wrench className="text-primary dark:text-orange-400" size={70} />
                 <div>
                   <h3 className="mb-2 font-headline-md text-headline-md text-primary dark:text-white">
                     Maintenance & Support
@@ -279,7 +279,7 @@ function RouteComponent() {
             <div className="flex items-center justify-between rounded-xl bg-secondary-container p-8 text-on-secondary-container md:col-span-2 dark:bg-orange-600/10 dark:text-orange-400">
               <div>
                 <h3 className="mb-2 font-headline-md text-headline-md">
-                  Besoin d un audit ?
+                  Besoin d{"'"}un devis ?
                 </h3>
                 <p className="opacity-90">
                   Nos ingenieurs evaluent vos besoins gratuitement.
@@ -371,7 +371,7 @@ function RouteComponent() {
         <div className="mx-auto flex max-w-max-width flex-col items-center gap-16 px-margin-mobile md:flex-row md:px-margin-desktop">
           <div className="md:w-1/2">
             <h2 className="mb-6 font-headline-lg text-headline-lg text-white">
-              Electrifier l avenir de la RDC
+              Electrifier l{"'"}avenir de la RDC.
             </h2>
             <p className="mb-8 font-body-lg text-body-lg leading-relaxed text-white/80">
               Basee au coeur de Lubumbashi, notre entreprise s appuie sur quatre
@@ -408,7 +408,7 @@ function RouteComponent() {
       <section className="bg-surface-container-highest py-24 dark:bg-gray-900" id="team">
         <div className="mx-auto max-w-max-width px-margin-mobile text-center md:px-margin-desktop">
           <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
-            L Excellence Technique
+            L{"'"}Excellence Technique
           </h2>
           <p className="mx-auto mb-16 max-w-2xl text-on-surface-variant dark:text-gray-400">
             Une equipe d ingenieurs et de techniciens passionnes par l innovation et
@@ -420,7 +420,7 @@ function RouteComponent() {
                 className="rounded-xl border border-outline-variant bg-white p-10 text-center dark:border-gray-800 dark:bg-gray-800"
                 key={title}
               >
-                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-surface-container dark:bg-gray-700">
+                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-surface-container-low dark:bg-gray-700">
                   <Icon className={title === 'Innovation' ? 'text-secondary dark:text-orange-400' : 'text-primary dark:text-orange-400'} size={40} />
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-primary dark:text-white">{title}</h4>

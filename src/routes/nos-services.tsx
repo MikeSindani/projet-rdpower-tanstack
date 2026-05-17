@@ -13,7 +13,7 @@ import {
   Wrench,
 } from 'lucide-react'
 
-export const Route = createFileRoute('/nos-services')({ component: Services })
+export const Route = createFileRoute('/nos-services')({ component: Services})
 
 const installationItems = [
   {
@@ -158,7 +158,7 @@ function Services() {
               <Cpu className="text-white" size={30} />
             </div>
             <div>
-              <h2 className="font-headline-md text-headline-md text-primary dark:text-on-surface">
+              <h2 className="font-headline-md text-headline-md text-primary dark:text-white">
                 Onduleurs et Regulateurs
               </h2>
               <p className="mb-6 mt-4 font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
@@ -179,12 +179,12 @@ function Services() {
             </div>
           </div>
 
-          <div className="flex items-start gap-6 border border-outline-variant bg-white p-8 md:col-span-6 md:p-10 dark:border-outline dark:bg-surface-container-lowest">
+          <div className="flex items-start gap-6 border border-outline-variant bg-white p-8 md:col-span-6 md:p-10 dark:border-outline dark:bg-surface-container">
             <div className="rounded-lg bg-secondary p-4">
               <Construction className="text-white" size={30} />
             </div>
             <div>
-              <h2 className="font-headline-md text-headline-md text-primary dark:text-on-surface">
+              <h2 className="font-headline-md text-headline-md text-primary dark:text-white">
                 Maintenance et Support
               </h2>
               <p className="mb-6 mt-4 font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
@@ -207,15 +207,15 @@ function Services() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-primary-container py-20 text-center">
-        <div className="pointer-events-none absolute inset-0 flex flex-wrap items-center justify-center gap-12 opacity-10">
+      <section className="relative overflow-hidden bg-primary-container py-20 text-center dark:bg-gray-900">
+        <div className="pointer-events-none absolute inset-0 flex h-full w-full flex-wrap items-center justify-center gap-12 opacity-10">
           <Cpu className="h-24 w-24 text-white" />
           <Bolt className="h-24 w-24 text-white" />
           <Leaf className="h-24 w-24 text-white" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-margin-mobile">
           <h2 className="font-headline-lg text-headline-lg text-white">
-            Pret a passer a l energie solaire ?
+            Pret a passer a l{"'"}avenir de la RDC avec precision ?
           </h2>
           <p className="mb-10 mt-6 font-body-lg text-body-lg text-primary-fixed">
             Nos experts sont a votre disposition pour une etude de faisabilite
