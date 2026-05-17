@@ -22,10 +22,12 @@
     "@tanstack/react-router-ssr-query": "latest",
     "@tanstack/react-start": "latest",
     "@tanstack/router-plugin": "^1.132.0",
+    "h3": "^2.0.1-rc.22",
     "lucide-react": "^0.545.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@netlify/vite-plugin-tanstack-start": "^1.2.15",

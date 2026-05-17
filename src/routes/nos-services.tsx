@@ -68,7 +68,7 @@ function Services() {
           <img
             alt="Centrale solaire industrielle"
             className="h-full w-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXnuGpzXUXmBY32iCdiDs3kdyJdwKDQzJh-lA-KV4M2BSs4U5Y7Ehbowcd69eRK8pb_yjDXUHQtVY1M5IgrkzvB7d6_8WFqC4imn0PnUY1p96Aj7BAwA3_MwMJEGcHN_0P9CIHOBIUSq6SmTT0guioSiFDUvn7u2rxw8FudQvfa4AzMBY3phzim1PFezDgpccP2axW4cUf5HkariTuKIRLGq0J3SJlXdGAcTqxNAazXCnx6LTItJyk2ZzU6_vyeBZqwCYWZ9Tl5OHd"
+            src="https://www.totalenergies.fr/fileadmin/_processed_/5/4/csm_onduleur_solaire_f27b08b7ac.jpeg"
           />
         </div>
 
@@ -238,7 +238,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="border-t border-outline-variant bg-surface-bright py-24 dark:border-outline dark:bg-surface-container-low">
+      <section className="border-t border-outline-variant bg-surface-bright py-24 dark:border-outline dark:bg-surface-container">
         <div className="mx-auto max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="flex flex-col items-center gap-16 md:flex-row">
             <div className="md:w-1/2">

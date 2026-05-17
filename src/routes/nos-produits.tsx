@@ -5,15 +5,21 @@ import {
   Cable,
   CheckCircle2,
   Cpu,
+  MessageCircle,
   Phone,
+  Plus,
   Shield,
   ShoppingCart,
   SunMedium,
+  Trash2
 } from 'lucide-react'
+import { useQuoteStore } from '../store/useQuoteStore'
 
 export const Route = createFileRoute('/nos-produits')({
   component: ProductsPage,
 })
+
+const WHATSAPP_NUMBER = '+243810000000'
 
 const panelProducts = [
   'Panneau solaire 450w',
@@ -130,8 +136,31 @@ const productSections = [
 ]
 
 function ProductsPage() {
+  const { addItem, removeItem, isInCart, items } = useQuoteStore()
+
+  const handleWhatsAppBuy = (productName: string) => {
+    const message = encodeURIComponent(`Bonjour REPOWER-RDC, je souhaite acheter le produit suivant : ${productName}`)
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank')
+  }
+
   return (
     <main className="bg-background px-margin-mobile pb-20 pt-40 text-on-background dark:bg-gray-950 dark:text-gray-200 md:px-margin-desktop">
+      {/* Panier flottant de devis */}
+      {items.length > 0 && (
+        <div className="fixed bottom-8 right-8 z-50 animate-bounce">
+          <a
+            href="/demander-un-devis"
+            className="flex items-center gap-3 rounded-full bg-secondary px-6 py-4 font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-orange-600"
+          >
+            <ShoppingCart size={24} />
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-sm text-secondary">
+              {items.length}
+            </span>
+            Demander mon devis
+          </a>
+        </div>
+      )}
+
       <div className="mx-auto max-w-max-width">
         <header className="mb-16">
           <h1 className="mb-4 font-headline-xl text-headline-xl text-primary dark:text-white">
@@ -194,12 +223,12 @@ function ProductsPage() {
                     <div
                       className={
                         section.theme === 'dark'
-                          ? 'flex items-center justify-between border border-white/10 bg-white/5 p-4 dark:bg-gray-800/50'
-                          : 'flex items-center justify-between border border-outline-variant bg-surface-container-lowest p-4 dark:border-outline dark:bg-gray-800/50'
+                          ? 'flex flex-col border border-white/10 bg-white/5 p-4 dark:bg-gray-800/50 sm:flex-row sm:items-center sm:justify-between'
+                          : 'flex flex-col border border-outline-variant bg-surface-container-lowest p-4 dark:border-outline dark:bg-gray-800/50 sm:flex-row sm:items-center sm:justify-between'
                       }
                       key={product}
                     >
-                      <div className="flex items-start gap-3">
+                      <div className="mb-4 flex items-start gap-3 sm:mb-0">
                         <CheckCircle2
                           className={
                             section.theme === 'dark'
@@ -210,16 +239,34 @@ function ProductsPage() {
                         />
                         <span className="font-body-md text-body-md">{product}</span>
                       </div>
-                      <a
-                        className={
-                          section.theme === 'dark'
-                            ? 'shrink-0 font-label-md text-label-md text-secondary-fixed hover:underline dark:text-orange-400'
-                            : 'shrink-0 font-label-md text-label-md text-secondary hover:underline dark:text-orange-400'
-                        }
-                        href="#contact-catalogue"
-                      >
-                        Devis
-                      </a>
+                      
+                      <div className="flex flex-wrap items-center gap-2">
+                        <button
+                          onClick={() => handleWhatsAppBuy(product)}
+                          className="inline-flex items-center gap-2 rounded-full bg-green-600 px-3 py-1.5 text-xs font-bold text-white transition-all hover:bg-green-700"
+                        >
+                          <MessageCircle size={14} />
+                          Acheter
+                        </button>
+                        
+                        {isInCart(product) ? (
+                          <button
+                            onClick={() => removeItem(product)}
+                            className="inline-flex items-center gap-2 rounded-full bg-red-500/10 px-3 py-1.5 text-xs font-bold text-red-500 transition-all hover:bg-red-500 hover:text-white"
+                          >
+                            <Trash2 size={14} />
+                            Retirer
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() => addItem({ name: product, category: section.title })}
+                            className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-3 py-1.5 text-xs font-bold text-secondary transition-all hover:bg-secondary hover:text-white dark:text-orange-400 dark:hover:text-white"
+                          >
+                            <Plus size={14} />
+                            Ajouter au devis
+                          </button>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>

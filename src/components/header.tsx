@@ -167,7 +167,7 @@ function ThemeToggle({
       {isDarkMode ? (
         <Sun size={20} className="transition-transform hover:rotate-45" />
       ) : (
-        <Moon size={20} className="transition-transform hover:-rotate-12" />
+        <Moon size={20} color='white' className="transition-transform hover:-rotate-12 " />
       )}
     </button>
   )

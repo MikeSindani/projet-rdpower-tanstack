@@ -6,16 +6,16 @@ import {
   Headphones,
   Lightbulb,
   Mail,
-  MapPin,
   Phone,
+  Plus,
   Settings2,
   Share2,
   ShieldCheck,
-  ShoppingCart,
   SunMedium,
   Users,
-  Wrench,
+  Wrench
 } from 'lucide-react'
+import { useQuoteStore } from '../store/useQuoteStore'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -77,27 +77,38 @@ const faqs = [
   {
     question: 'Le solaire est-il fiable pendant la saison des pluies en RDC ?',
     answer:
-      'Oui. Nos panneaux captent aussi la lumiere diffuse, et nos systemes de stockage sont dimensionnes pour maintenir une bonne autonomie.',
+      'Oui. Nos panneaux captent aussi la lumiere diffuse, et nos systemes de stockage sont dimensionnes pour maintenir une bonne autonomie meme lors de journees nuageuses.',
   },
   {
-    question: 'Combien de temps dure une installation complete ?',
+    question: 'Puis-je devenir totalement autonome vis-à-vis de la SNEL ?',
     answer:
-      'Pour un systeme residentiel standard, il faut generalement 2 a 4 jours apres validation technique. Les projets industriels suivent un planning dedie.',
+      'Absolument. Avec un dimensionnement correct et des batteries lithium de haute capacité, nous concevons des systèmes "Off-grid" qui vous permettent de vous passer totalement du réseau national.',
   },
   {
-    question: 'Quelle est la duree de vie des batteries lithium proposees ?',
+    question: 'Combien de temps dure une installation complète ?',
     answer:
-      'Nos batteries LiFePO4 sont concues pour plusieurs milliers de cycles, soit environ 10 a 15 ans selon l usage.',
+      'Pour un systeme residentiel standard, il faut generalement 2 a 4 jours apres validation technique. Les projets industriels suivent un planning dedie selon la puissance installée.',
   },
   {
-    question: 'Comment puis-je contacter REPOWER-RDC ?',
+    question: 'Offrez-vous des facilités de paiement ou du crédit bail ?',
     answer:
-      'Pour toute question ou demande de devis, n\'hésitez pas à nous contacter via notre formulaire de contact ou notre site web.',
+      'Nous étudions chaque projet au cas par cas. Pour les industries et commerces, des solutions de financement via nos partenaires bancaires locaux à Lubumbashi sont envisageables.',
   },
-
+  {
+    question: 'Quelle est la durée de vie des batteries lithium proposées ?',
+    answer:
+      'Nos batteries LiFePO4 (Lithium Fer Phosphate) sont concues pour plus de 6000 cycles, soit environ 10 a 15 ans de vie utile selon l usage quotidien.',
+  },
+  {
+    question: 'Comment fonctionne la maintenance après installation ?',
+    answer:
+      'Nous proposons des contrats de maintenance préventive et disposons d\'un service technique réactif basé à Lubumbashi pour toute intervention urgente.',
+  },
 ]
 
 function RouteComponent() {
+  const { addItem, isInCart } = useQuoteStore()
+
   return (
     <main className="bg-surface font-body-md text-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed dark:bg-gray-950 dark:text-gray-200">
       <section
@@ -105,11 +116,17 @@ function RouteComponent() {
         id="home"
       >
         <div className="absolute inset-0 z-0">
-          <img
-            alt="Industrial Solar Farm Lubumbashi"
-            className="h-full w-full object-cover"
-            src="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"
-          />
+          {/* Background Video Support (Replace src with actual video URL when available) */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute h-full w-full object-cover"
+            poster="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"
+          >
+            <source src="https://video-previews.elements.envatousercontent.com/4503eb00-7cff-4569-bf2b-b15641b5e175/watermarked_preview/watermarked_preview.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/70 to-primary/35 dark:from-gray-950 dark:via-gray-950/80 dark:to-gray-900/40" />
         </div>
 
@@ -321,8 +338,26 @@ function RouteComponent() {
                   <h4 className="mt-1 font-bold text-primary dark:text-white">{product.name}</h4>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="font-bold text-secondary dark:text-orange-400">{product.tier}</span>
-                    <button className="rounded-full bg-primary-container p-2 text-white transition-colors hover:bg-secondary dark:bg-gray-900">
-                      <ShoppingCart size={16} />
+                    <button 
+                      onClick={() => addItem({ name: product.name, category: product.category })}
+                      disabled={isInCart(product.name)}
+                      className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all ${
+                        isInCart(product.name)
+                          ? 'bg-green-500 text-white cursor-default'
+                          : 'bg-primary-container text-white hover:bg-secondary dark:bg-gray-900'
+                      }`}
+                    >
+                      {isInCart(product.name) ? (
+                        <>
+                          <CheckCircle2 size={14} />
+                          Ajouté
+                        </>
+                      ) : (
+                        <>
+                          <Plus size={14} />
+                          Devis
+                        </>
+                      )}
                     </button>
                   </div>
                 </div>
@@ -491,15 +526,17 @@ function RouteComponent() {
 
           <div className="flex flex-col gap-8">
             <div className="relative h-80 overflow-hidden rounded-xl border border-outline-variant dark:border-gray-800">
-              <div className="absolute inset-0 flex items-center justify-center bg-surface-container dark:bg-gray-800">
-                <div className="text-center">
-                  <MapPin className="mx-auto mb-2 text-secondary dark:text-orange-400" size={42} />
-                  <p className="font-bold text-primary dark:text-white">Lubumbashi, Katanga, RDC</p>
-                  <p className="text-sm text-on-surface-variant dark:text-gray-400">
-                    Avenue Industrielle, Quartier Golf
-                  </p>
-                </div>
-              </div>
+              <iframe
+                title="REPOWER-RDC Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125211.51684345152!2d27.404555891370213!3d-11.669818816789505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19723ec086577579%3A0xc39103c271891008!2sLubumbashi%2C%20Congo-Kinshasa!5e0!3m2!1sfr!2sfr!4v1715942400000!5m2!1sfr!2sfr"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale-[20%] contrast-110 invert-[0.05] dark:invert-0"
+              ></iframe>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
