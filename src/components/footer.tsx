@@ -2,157 +2,175 @@ import {
   ArrowRight,
   Facebook,
   Instagram,
-  Linkedin,
   Mail,
   MapPin,
   Phone,
 } from 'lucide-react'
 
+// Icône TikTok personnalisée
+const Tiktok = ({ size = 18 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+)
+
+const productLinks = [
+  { href: '/nos-produits#panneaux', label: 'Panneaux Solaires' },
+  { href: '/nos-produits#convertisseurs', label: 'Onduleurs & Convertisseurs' },
+  { href: '/nos-produits#batteries', label: 'Stockage d\'Énergie' },
+  { href: '/nos-produits#protection', label: 'Protections & Câblage' },
+]
+
 const serviceLinks = [
-  { href: '#products', label: 'Catalogue produits' },
-  { href: '#services', label: 'Installation solaire' },
-  { href: '#services', label: 'Maintenance & support' },
-  { href: '#services', label: 'Audit energetique' },
+  { href: '/nos-services', label: 'Installation Solaire' },
+  { href: '/nos-services', label: 'Maintenance & Support' },
+  { href: '/nos-services', label: 'Audit Énergétique' },
+  { href: '/demander-un-devis', label: 'Demander un Devis' },
 ]
 
 const companyLinks = [
-  { href: '#about', label: 'A propos de REPOWER-RDC' },
-  { href: '#team', label: 'Notre equipe' },
-  { href: '#contact', label: 'Parler a un conseiller' },
+  { href: '/about', label: 'À Propos de REPOWER-RDC' },
+  { href: '/nos-services', label: 'Nos Réalisations' },
+  { href: '/demander-un-devis', label: 'Contactez-nous' },
 ]
 
 const socialLinks = [
   { href: 'https://facebook.com', label: 'Facebook', icon: Facebook },
   { href: 'https://instagram.com', label: 'Instagram', icon: Instagram },
-  { href: 'https://linkedin.com', label: 'LinkedIn', icon: Linkedin },
+  { href: 'https://tiktok.com', label: 'TikTok', icon: Tiktok },
 ]
 
 export default function Footer() {
   return (
-    <footer className="border-t border-outline bg-tertiary text-tertiary-fixed dark:bg-tertiary-container dark:text-on-tertiary-container">
-      <div className="mx-auto max-w-max-width px-margin-mobile py-12 md:px-margin-desktop md:py-16">
-        <section className="py-24 bg-tertiary">
-        <div className="px-margin-desktop max-w-max-width mx-auto text-center">
-          <h2 className="font-headline-xl text-headline-xl text-white mb-8">
-            Prêt à transformer votre consommation énergétique ?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              className="bg-secondary text-white px-10 py-4 rounded font-label-md text-label-md hover:opacity-90 transition-opacity"
-              href="#"
-            >
-              Contactez notre équipe
-            </a>
-            <a
-              className="border border-white text-white px-10 py-4 rounded font-label-md text-label-md hover:bg-white hover:text-tertiary transition-all"
-              href="#"
-            >
-              Découvrir nos projets
-            </a>
-          </div>
-        </div>
-      </section>
-
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
-          <div className="md:col-span-1">
-            <div className="mb-4 font-headline-md text-headline-md font-extrabold text-white">
+    <footer className="border-t border-white/10 bg-black text-white">
+      <div className="mx-auto max-w-max-width px-margin-mobile py-16 md:px-margin-desktop md:py-24">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col gap-6">
+            <div className="font-headline-md text-headline-md font-extrabold tracking-tight">
               REPOWER-RDC
             </div>
-            <p className="mb-5 font-body-md text-body-md text-tertiary-fixed-dim">
-              Solutions solaires pour residences, commerces et industries en RDC, avec une expertise ancree a Lubumbashi.
+            <p className="font-body-md text-body-md leading-relaxed text-white/70">
+              Expert en solutions solaires durables en République Démocratique du Congo. Nous accompagnons les industries, commerces et particuliers vers l'autonomie énergétique depuis Lubumbashi.
             </p>
 
-            <div className="space-y-3 font-body-md text-body-md text-tertiary-fixed-dim">
+            <div className="space-y-4 font-body-md text-body-md text-white/70">
               <a
-                className="flex items-center gap-3 transition-colors hover:text-secondary-fixed"
-                href="tel:+243000000000"
+                className="flex items-center gap-3 transition-colors hover:text-secondary"
+                href="tel:+243810000000"
               >
-                <Phone size={18} />
-                +243 000 000 000
+                <Phone size={18} className="text-secondary" />
+                +243 81 000 0000
               </a>
               <a
-                className="flex items-center gap-3 transition-colors hover:text-secondary-fixed"
+                className="flex items-center gap-3 transition-colors hover:text-secondary"
                 href="mailto:contact@repower-rdc.com"
               >
-                <Mail size={18} />
+                <Mail size={18} className="text-secondary" />
                 contact@repower-rdc.com
               </a>
               <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 shrink-0" size={18} />
-                <span>Lubumbashi, Republique Democratique du Congo</span>
+                <MapPin className="mt-1 shrink-0 text-secondary" size={18} />
+                <span>Lubumbashi, République Démocratique du Congo</span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">
-              Produits & services
+          <div className="flex flex-col gap-6">
+            <h3 className="font-label-md text-label-md font-bold uppercase tracking-widest text-secondary">
+              Nos Produits
             </h3>
-            {serviceLinks.map((link) => (
-              <a
-                className="font-body-md text-body-md text-tertiary-fixed-dim transition-colors hover:text-white"
-                href={link.href}
-                key={link.label}
-              >
-                {link.label}
-              </a>
-            ))}
+            <div className="flex flex-col gap-3">
+              {productLinks.map((link) => (
+                <a
+                  className="font-body-md text-body-md text-white/70 transition-colors hover:text-white"
+                  href={link.href}
+                  key={link.label}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">
+          <div className="flex flex-col gap-6">
+            <h3 className="font-label-md text-label-md font-bold uppercase tracking-widest text-secondary">
+              Services & Support
+            </h3>
+            <div className="flex flex-col gap-3">
+              {serviceLinks.map((link) => (
+                <a
+                  className="font-body-md text-body-md text-white/70 transition-colors hover:text-white"
+                  href={link.href}
+                  key={link.label}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <h3 className="mt-4 font-label-md text-label-md font-bold uppercase tracking-widest text-secondary">
               Entreprise
             </h3>
-            {companyLinks.map((link) => (
-              <a
-                className="font-body-md text-body-md text-tertiary-fixed-dim transition-colors hover:text-white"
-                href={link.href}
-                key={link.label}
-              >
-                {link.label}
-              </a>
-            ))}
+            <div className="flex flex-col gap-3">
+              {companyLinks.map((link) => (
+                <a
+                  className="font-body-md text-body-md text-white/70 transition-colors hover:text-white"
+                  href={link.href}
+                  key={link.label}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">
-              Reseaux sociaux
+          <div className="flex flex-col gap-6">
+            <h3 className="font-label-md text-label-md font-bold uppercase tracking-widest text-secondary">
+              Suivez-nous
             </h3>
-            <p className="font-body-md text-body-md text-tertiary-fixed-dim">
-              Suivez nos projets, conseils energie et nouveautes produits.
+            <p className="font-body-md text-body-md text-white/70">
+              Rejoignez notre communauté pour découvrir nos projets et conseils en énergie solaire.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4">
               {socialLinks.map(({ href, icon: Icon, label }) => (
                 <a
                   aria-label={label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-tertiary-fixed transition-all hover:border-secondary-fixed hover:bg-secondary hover:text-white"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-all hover:border-secondary hover:bg-secondary hover:text-white"
                   href={href}
                   key={label}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Icon size={18} />
+                  <Icon size={20} />
                 </a>
               ))}
             </div>
             <a
-              className="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-widest text-secondary-fixed transition-colors hover:text-white"
-              href="#contact"
+              className="mt-4 inline-flex items-center gap-2 font-label-md text-label-md font-bold uppercase tracking-widest text-secondary transition-colors hover:text-white"
+              href="/demander-un-devis"
             >
               Parler de votre projet
-              <ArrowRight size={16} />
+              <ArrowRight size={18} />
             </a>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-tertiary-fixed-dim md:flex-row md:items-center md:justify-between">
-          <p>© 2026 REPOWER-RDC. Energie solaire durable pour la RDC.</p>
-          <div className="flex flex-wrap gap-4">
+        <div className="mt-16 flex flex-col gap-6 border-t border-white/10 pt-10 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 REPOWER-RDC. Tous droits réservés. Énergie solaire durable pour la RDC.</p>
+          <div className="flex flex-wrap gap-8">
             <a className="transition-colors hover:text-white" href="#">
-              Politique de confidentialite
+              Politique de confidentialité
             </a>
             <a className="transition-colors hover:text-white" href="#">
-              Conditions d&apos;utilisation
+              Conditions d'utilisation
             </a>
           </div>
         </div>
@@ -160,3 +178,4 @@ export default function Footer() {
     </footer>
   )
 }
+

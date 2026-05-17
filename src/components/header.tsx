@@ -1,5 +1,5 @@
 import { useLocation } from '@tanstack/react-router'
-import { Menu, Moon, Sun, X } from 'lucide-react'
+import { ArrowRight, Menu, Moon, Sun, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const navLinks = [
@@ -13,6 +13,7 @@ const navLinks = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -20,6 +21,12 @@ export default function Header() {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
     setIsDarkMode(savedTheme ? savedTheme === 'dark' : prefersDark)
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   useEffect(() => {
@@ -35,24 +42,36 @@ export default function Header() {
   }
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-outline-variant bg-surface shadow-sm dark:border-outline dark:bg-primary-container dark:shadow-md">
-      <div className="mx-auto flex h-20 max-w-max-width items-center justify-between px-margin-mobile md:px-margin-desktop">
-        <a href="/" aria-label="REPOWER-RDC accueil" onClick={closeMobileMenu}>
+    <nav
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/90 py-2 shadow-lg backdrop-blur-md dark:bg-gray-950/90'
+          : 'bg-transparent py-4'
+      }`}
+    >
+      <div className="mx-auto flex max-w-max-width items-center justify-between px-margin-mobile md:px-margin-desktop">
+        <a
+          href="/"
+          aria-label="REPOWER-RDC accueil"
+          onClick={closeMobileMenu}
+          className="transition-transform hover:scale-105"
+        >
           <img
             alt="REPOWER-RDC Logo"
-            className="h-12 object-contain"
+            className="h-10 object-contain md:h-12"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1vT-0rx9iCFDDC22d563aKtyXfwa4IGAMRBuXndhEXtqyNfI_DLXRw4rTFL9xCViebyIkRqDMcYdr9Ot2FG7hsy2LbsrLJVt7wHOxJLYz47lYsRR_99ePAX51VA5LFTMhS8O-XcL-InW-U-x9_biSYcJ5UcJZzodF0K4-AulmSz34Tsrv0reRGons5-h46EuiyaxoO_VzYkYwsnF2yaLKrl2HY3glZg8SthT59Xy3WthLcttzOz1j8Vm9-wyliXVUxwHKPOa64QOP"
           />
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-1 lg:flex">
           {navLinks.map(({ label, href }) => (
             <a
-              className={
+              className={`rounded-full px-4 py-2 font-label-md text-label-md transition-all ${
                 isActivePath(href)
-                  ? 'border-b-2 border-secondary pb-1 font-body-md text-body-md font-bold text-secondary dark:text-secondary-fixed'
-                  : 'font-body-md text-body-md text-on-surface transition-colors hover:text-secondary dark:text-on-surface-variant dark:hover:text-secondary-fixed'
-              }
+                  ? ' text-white bg-orange-600'
+                  : 'text-on-surface hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-800'
+              }`}
               href={href}
               key={label}
             >
@@ -61,7 +80,7 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           <ThemeToggle
             isDarkMode={isDarkMode}
             onClick={() => setIsDarkMode((current) => !current)}
@@ -69,7 +88,8 @@ export default function Header() {
           <QuoteButton />
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        {/* Mobile Actions */}
+        <div className="flex items-center gap-3 lg:hidden">
           <ThemeToggle
             isDarkMode={isDarkMode}
             onClick={() => setIsDarkMode((current) => !current)}
@@ -77,37 +97,52 @@ export default function Header() {
           <button
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-            className="rounded-lg border border-outline-variant p-2 text-on-surface transition-colors hover:border-secondary hover:text-secondary dark:border-outline dark:text-on-surface-variant dark:hover:border-secondary-fixed dark:hover:text-secondary-fixed"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-colors hover:bg-secondary hover:text-white dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-orange-600"
             onClick={() => setIsMenuOpen((current) => !current)}
             type="button"
           >
-            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu Overlay */}
       <div
-        className={`overflow-hidden border-t border-outline-variant bg-surface transition-[max-height,opacity] duration-300 dark:border-outline dark:bg-primary-container md:hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`fixed inset-0 top-[72px] z-40 h-[calc(100vh-72px)] w-full bg-white transition-all duration-300 dark:bg-gray-950 lg:hidden ${
+          isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
-        <div className="flex flex-col gap-1 px-margin-mobile py-4">
+        <div className="flex flex-col gap-2 p-6">
           {navLinks.map(({ label, href }) => (
             <a
-              className={
+              className={`flex items-center justify-between rounded-xl px-6 py-4 transition-all ${
                 isActivePath(href)
-                  ? 'rounded-lg bg-secondary-container px-4 py-3 font-body-md text-body-md font-bold text-on-secondary-container dark:bg-secondary-fixed dark:text-on-secondary'
-                  : 'rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface transition-colors hover:bg-surface-container dark:text-on-surface-variant dark:hover:bg-surface-tint/20'
-              }
+                  ? 'bg-secondary/10 text-secondary dark:bg-orange-600/10 dark:text-orange-400'
+                  : 'text-on-surface hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-900'
+              }`}
               href={href}
               key={label}
               onClick={closeMobileMenu}
             >
-              {label}
+              <span className="font-headline-md text-headline-md font-bold">
+                {label}
+              </span>
+              <ArrowRight size={20} />
             </a>
           ))}
-          <div className="pt-3">
-            <QuoteButton className="w-full justify-center" />
+          <div className="mt-8 flex flex-col gap-4">
+            <QuoteButton className="w-full justify-center py-5 text-lg" />
+            <div className="mt-4 text-center">
+              <p className="text-sm text-on-surface-variant dark:text-gray-400">
+                Besoin d'aide ?
+              </p>
+              <a
+                href="tel:+243810000000"
+                className="font-bold text-secondary dark:text-orange-400"
+              >
+                +243 81 000 0000
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -125,11 +160,15 @@ function ThemeToggle({
   return (
     <button
       aria-label={isDarkMode ? 'Activer le mode clair' : 'Activer le mode sombre'}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant text-on-surface transition-colors hover:border-secondary hover:text-secondary dark:border-outline dark:text-on-surface-variant"
+      className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-all hover:bg-secondary hover:text-white dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-orange-600"
       onClick={onClick}
       type="button"
     >
-      {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+      {isDarkMode ? (
+        <Sun size={20} className="transition-transform hover:rotate-45" />
+      ) : (
+        <Moon size={20} className="transition-transform hover:-rotate-12" />
+      )}
     </button>
   )
 }
@@ -137,11 +176,11 @@ function ThemeToggle({
 function QuoteButton({ className = '' }: { className?: string }) {
   return (
     <a
-      className={`inline-flex rounded-lg bg-secondary-container px-6 py-2 font-label-md text-label-md uppercase tracking-widest text-on-secondary-container transition-colors hover:bg-secondary ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full px-8 py-2.5 font-label-md text-label-md font-bold uppercase tracking-widest text-white transition-all hover:bg-secondary-container hover:shadow-lg active:scale-95 bg-orange-600 dark:hover:bg-orange-700 ${className}`}
       href="/demander-un-devis"
-      type="button"
     >
       Demander un devis
     </a>
   )
 }
+

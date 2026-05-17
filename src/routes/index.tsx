@@ -89,11 +89,17 @@ const faqs = [
     answer:
       'Nos batteries LiFePO4 sont concues pour plusieurs milliers de cycles, soit environ 10 a 15 ans selon l usage.',
   },
+  {
+    question: 'Comment puis-je contacter REPOWER-RDC ?',
+    answer:
+      'Pour toute question ou demande de devis, n\'hésitez pas à nous contacter via notre formulaire de contact ou notre site web.',
+  },
+
 ]
 
 function RouteComponent() {
   return (
-    <main className="bg-surface font-body-md text-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed dark:bg-primary dark:text-on-primary-fixed">
+    <main className="bg-surface font-body-md text-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed dark:bg-gray-950 dark:text-gray-200">
       <section
         className="relative flex h-screen min-h-[700px] items-center overflow-hidden pt-20"
         id="home"
@@ -104,31 +110,31 @@ function RouteComponent() {
             className="h-full w-full object-cover"
             src="https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/70 to-primary/35 dark:from-primary dark:via-primary/85 dark:to-primary-container/60" />
+          <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/70 to-primary/35 dark:from-gray-950 dark:via-gray-950/80 dark:to-gray-900/40" />
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="max-w-2xl text-on-primary">
-            <span className="mb-6 inline-block bg-secondary-container px-4 py-1 font-label-md text-label-md uppercase tracking-wider text-on-secondary-container">
+            <span className="mb-6 inline-block bg-secondary-container px-4 py-1 font-label-md text-label-md uppercase tracking-wider text-on-secondary-container dark:bg-orange-600">
               Energie Durable en RDC
             </span>
             <h1 className="mb-6 font-headline-xl text-headline-xl text-white">
               Electrifier l avenir de la RDC avec precision
             </h1>
-            <p className="mb-10 font-body-lg text-body-lg text-primary-fixed">
+            <p className="mb-10 font-body-lg text-body-lg text-primary-fixed dark:text-gray-300">
               Nous apportons des solutions solaires de pointe au coeur du Katanga,
               garantissant une autonomie energetique robuste pour les industries et
               les residences.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                className="rounded bg-secondary px-8 py-4 font-bold text-on-primary transition-all hover:bg-secondary-container"
-                href="#contact"
+                className="rounded-full bg-secondary px-8 py-4 font-bold text-on-primary transition-all hover:bg-secondary-container hover:shadow-lg dark:bg-orange-600 dark:hover:bg-orange-700"
+                href="/demander-un-devis"
               >
                 Demarrer votre projet
               </a>
               <a
-                className="rounded border border-white px-8 py-4 font-bold text-white transition-all hover:bg-white/10"
+                className="rounded-full border border-white px-8 py-4 font-bold text-white transition-all hover:bg-white/10"
                 href="#about"
               >
                 En savoir plus
@@ -138,15 +144,15 @@ function RouteComponent() {
         </div>
       </section>
 
-      <section className="bg-surface-container-lowest py-24 dark:bg-surface-container-low" id="about">
+      <section className="bg-surface-container-lowest py-24 dark:bg-gray-900" id="about">
         <div className="mx-auto grid max-w-max-width grid-cols-1 items-center gap-16 px-margin-mobile md:px-margin-desktop lg:grid-cols-2">
           <div className="relative">
             <img
               alt="Solar installers team"
-              className="h-[500px] w-full rounded-xl border border-outline-variant object-cover shadow-lg dark:border-outline"
+              className="h-[500px] w-full rounded-xl border border-outline-variant object-cover shadow-lg dark:border-gray-800"
               src="https://lh3.googleusercontent.com/aida/ADBb0uj_dm8gjhiEhS3Ob2uVsVINsMa1juoK7mICdHS0D6EK5jxjt3p9TkcPUZcpq2u7VMK_wkyWm2yRhKtWaxv6EJ_OU_koGryjHw0RhmdvwxSyuAeqtgKd4l_7agkT0r7r_kRR1lOtmL966G0ffEKELDt2LY43f19iM9DMNGkras2_A2fUL0CL7S7rc1v3nZsmbvEhItAe0f2bFtfffh_zX0w3peGu57jGfTeIx8F_D2nrWlOBF1D-CXfpuD4"
             />
-            <div className="absolute -bottom-6 -right-6 hidden bg-primary-container p-8 text-on-primary shadow-xl md:block dark:bg-secondary">
+            <div className="absolute -bottom-6 -right-6 hidden bg-primary-container p-8 text-on-primary shadow-xl md:block dark:bg-orange-600">
               <div className="mb-1 text-4xl font-bold">10+</div>
               <div className="text-sm opacity-80">Annees d expertise</div>
             </div>
@@ -156,31 +162,31 @@ function RouteComponent() {
             <h2 className="mb-8 font-headline-lg text-headline-lg text-primary dark:text-white">
               Notre Engagement pour Lubumbashi
             </h2>
-            <p className="mb-6 font-body-md text-body-md leading-relaxed text-on-surface-variant dark:text-on-surface-variant">
+            <p className="mb-6 font-body-md text-body-md leading-relaxed text-on-surface-variant dark:text-gray-400">
               Base a Lubumbashi, REPOWER-RDC est ne de la volonte de transformer
               le paysage energetique de la Republique Democratique du Congo. Notre
               histoire est celle d une passion pour l innovation technologique mise
               au service du developpement local.
             </p>
-            <p className="mb-10 font-body-md text-body-md leading-relaxed text-on-surface-variant dark:text-on-surface-variant">
+            <p className="mb-10 font-body-md text-body-md leading-relaxed text-on-surface-variant dark:text-gray-400">
               Notre mission est d offrir des systemes solaires fiables qui repondent
               aux defis climatiques et industriels uniques de notre region.
             </p>
             <div className="grid grid-cols-2 gap-8">
               <div className="flex items-start gap-4">
-                <ShieldCheck className="text-secondary" size={28} />
+                <ShieldCheck className="text-secondary dark:text-orange-400" size={28} />
                 <div>
                   <h4 className="font-bold text-primary dark:text-white">Qualite</h4>
-                  <p className="text-sm text-on-surface-variant dark:text-on-surface-variant">
+                  <p className="text-sm text-on-surface-variant dark:text-gray-400">
                     Materiel certifie internationalement.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Headphones className="text-secondary" size={28} />
+                <Headphones className="text-secondary dark:text-orange-400" size={28} />
                 <div>
                   <h4 className="font-bold text-primary dark:text-white">Support Local</h4>
-                  <p className="text-sm text-on-surface-variant dark:text-on-surface-variant">
+                  <p className="text-sm text-on-surface-variant dark:text-gray-400">
                     Equipe basee a Lubumbashi.
                   </p>
                 </div>
@@ -190,62 +196,62 @@ function RouteComponent() {
         </div>
       </section>
 
-      <section className="bg-surface py-24 dark:bg-primary-container/30" id="services">
+      <section className="bg-surface py-24 dark:bg-gray-950" id="services">
         <div className="mx-auto max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
               Solutions Energetiques Completes
             </h2>
-            <p className="mx-auto max-w-2xl text-on-surface-variant dark:text-on-surface-variant">
+            <p className="mx-auto max-w-2xl text-on-surface-variant dark:text-gray-400">
               Une expertise technique multidisciplinaire pour assurer votre transition
               energetique en toute serenite.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-gutter-md md:grid-cols-4">
-            <div className="group flex flex-col justify-between rounded-xl border border-outline-variant bg-primary-container p-8 text-on-primary md:col-span-2 dark:border-outline">
-              <SunMedium className="mb-8 text-secondary" size={40} />
+            <div className="group flex flex-col justify-between rounded-xl border border-outline-variant bg-primary-container p-8 text-on-primary md:col-span-2 dark:border-gray-800 dark:bg-gray-900">
+              <SunMedium className="mb-8 text-secondary dark:text-orange-400" size={40} />
               <div>
-                <h3 className="mb-4 font-headline-md text-headline-md">
+                <h3 className="mb-4 font-headline-md text-headline-md dark:text-white">
                   Installation Solaire Industrielle
                 </h3>
-                <p className="mb-6 text-on-primary/70">
+                <p className="mb-6 text-on-primary/70 dark:text-gray-400">
                   Conception et deploiement de parcs solaires haute performance
                   pour les entreprises du secteur minier et industriel.
                 </p>
-                <a className="inline-flex items-center gap-2 font-bold text-secondary" href="#contact">
+                <a className="inline-flex items-center gap-2 font-bold text-secondary dark:text-orange-400" href="#contact">
                   Explorer
                   <ArrowRight className="transition-transform group-hover:translate-x-1" size={16} />
                 </a>
               </div>
             </div>
 
-            <div className="rounded-xl border border-outline-variant bg-surface-container-high p-8 dark:border-outline dark:bg-surface-container">
-              <BatteryCharging className="mb-6 text-primary dark:text-secondary-fixed" size={40} />
+            <div className="rounded-xl border border-outline-variant bg-surface-container-high p-8 dark:border-gray-800 dark:bg-gray-900">
+              <BatteryCharging className="mb-6 text-primary dark:text-orange-400" size={40} />
               <h3 className="mb-3 font-bold text-primary dark:text-white">Stockage Intelligent</h3>
-              <p className="text-sm text-on-surface-variant dark:text-on-surface-variant">
+              <p className="text-sm text-on-surface-variant dark:text-gray-400">
                 Systemes de batteries lithium pour une autonomie garantie 24/7.
               </p>
             </div>
 
-            <div className="rounded-xl border border-outline-variant bg-surface-container-high p-8 dark:border-outline dark:bg-surface-container">
-              <Settings2 className="mb-6 text-primary dark:text-secondary-fixed" size={40} />
+            <div className="rounded-xl border border-outline-variant bg-surface-container-high p-8 dark:border-gray-800 dark:bg-gray-900">
+              <Settings2 className="mb-6 text-primary dark:text-orange-400" size={40} />
               <h3 className="mb-3 font-bold text-primary dark:text-white">
                 Onduleurs & Regulateurs
               </h3>
-              <p className="text-sm text-on-surface-variant dark:text-on-surface-variant">
+              <p className="text-sm text-on-surface-variant dark:text-gray-400">
                 Gestion electronique avancee pour une stabilite parfaite du courant.
               </p>
             </div>
 
-            <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-8 md:col-span-2 dark:border-outline dark:bg-surface-container-low">
+            <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-8 md:col-span-2 dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-6">
-                <Wrench className="text-primary dark:text-secondary-fixed" size={42} />
+                <Wrench className="text-primary dark:text-orange-400" size={42} />
                 <div>
                   <h3 className="mb-2 font-headline-md text-headline-md text-primary dark:text-white">
                     Maintenance & Support
                   </h3>
-                  <p className="text-on-surface-variant dark:text-on-surface-variant">
+                  <p className="text-on-surface-variant dark:text-gray-400">
                     Surveillance en temps reel et interventions rapides sur site a
                     Lubumbashi pour maximiser le rendement de vos installations.
                   </p>
@@ -253,7 +259,7 @@ function RouteComponent() {
               </div>
             </div>
 
-            <div className="flex items-center justify-between rounded-xl bg-secondary-container p-8 text-on-secondary-container md:col-span-2">
+            <div className="flex items-center justify-between rounded-xl bg-secondary-container p-8 text-on-secondary-container md:col-span-2 dark:bg-orange-600/10 dark:text-orange-400">
               <div>
                 <h3 className="mb-2 font-headline-md text-headline-md">
                   Besoin d un audit ?
@@ -263,7 +269,7 @@ function RouteComponent() {
                 </p>
               </div>
               <a
-                className="rounded bg-primary px-8 py-3 font-bold text-on-primary transition-transform hover:scale-105 dark:bg-primary-container"
+                className="rounded-full bg-primary px-8 py-3 font-bold text-on-primary transition-transform hover:scale-105 dark:bg-orange-600 dark:text-white"
                 href="#contact"
               >
                 Demander un Audit
@@ -273,18 +279,18 @@ function RouteComponent() {
         </div>
       </section>
 
-      <section className="bg-surface-container-low py-24 dark:bg-surface-container-high/30" id="products">
+      <section className="bg-surface-container-low py-24 dark:bg-gray-900" id="products">
         <div className="mx-auto max-w-max-width px-margin-mobile md:px-margin-desktop">
-          <div className="mb-16 flex items-end justify-between">
+          <div className="mb-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="mb-2 font-headline-lg text-headline-lg text-primary dark:text-white">
                 Equipements de Classe Mondiale
               </h2>
-              <p className="text-on-surface-variant dark:text-on-surface-variant">
+              <p className="text-on-surface-variant dark:text-gray-400">
                 Selection rigoureuse pour les conditions climatiques de la RDC.
               </p>
             </div>
-            <a className="flex items-center gap-2 font-bold text-secondary hover:underline" href="/nos-produits">
+            <a className="flex items-center gap-2 font-bold text-secondary hover:underline dark:text-orange-400" href="/nos-produits">
               Voir tout le catalogue
             </a>
           </div>
@@ -292,10 +298,10 @@ function RouteComponent() {
           <div className="grid grid-cols-1 gap-gutter-md md:grid-cols-2 lg:grid-cols-4">
             {products.map((product) => (
               <div
-                className="overflow-hidden rounded border border-outline-variant bg-surface-container-lowest transition-all hover:shadow-lg dark:border-outline dark:bg-surface-container"
+                className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest transition-all hover:shadow-lg dark:border-gray-800 dark:bg-gray-800"
                 key={product.name}
               >
-                <div className="relative h-64 bg-white dark:bg-surface-container-lowest">
+                <div className="relative h-64 bg-white dark:bg-gray-700">
                   {product.image ? (
                     <img
                       alt={product.name}
@@ -303,19 +309,19 @@ function RouteComponent() {
                       src={product.image}
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-surface-container p-4 dark:bg-surface-container-high">
+                    <div className="absolute inset-0 flex items-center justify-center bg-surface-container p-4 dark:bg-gray-700">
                       <SunMedium className="text-primary/30 dark:text-white/25" size={72} />
                     </div>
                   )}
                 </div>
                 <div className="p-6">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-secondary-container dark:text-secondary-fixed">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-secondary-container dark:text-orange-400">
                     {product.category}
                   </span>
                   <h4 className="mt-1 font-bold text-primary dark:text-white">{product.name}</h4>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="font-bold text-secondary">{product.tier}</span>
-                    <button className="rounded bg-primary-container p-2 text-white transition-colors hover:bg-secondary dark:bg-primary">
+                    <span className="font-bold text-secondary dark:text-orange-400">{product.tier}</span>
+                    <button className="rounded-full bg-primary-container p-2 text-white transition-colors hover:bg-secondary dark:bg-gray-900">
                       <ShoppingCart size={16} />
                     </button>
                   </div>
@@ -326,20 +332,20 @@ function RouteComponent() {
         </div>
       </section>
 
-      <section className="bg-primary py-20 text-on-primary dark:bg-primary-container" id="values">
+      <section className="bg-primary py-20 text-on-primary dark:bg-gray-950" id="values">
         <div className="mx-auto flex max-w-max-width flex-col items-center gap-16 px-margin-mobile md:flex-row md:px-margin-desktop">
           <div className="md:w-1/2">
-            <h2 className="mb-6 font-headline-lg text-headline-lg">
+            <h2 className="mb-6 font-headline-lg text-headline-lg text-white">
               Electrifier l avenir de la RDC
             </h2>
-            <p className="mb-8 font-body-lg text-body-lg leading-relaxed text-on-primary/80">
+            <p className="mb-8 font-body-lg text-body-lg leading-relaxed text-white/80">
               Basee au coeur de Lubumbashi, notre entreprise s appuie sur quatre
               piliers fondamentaux pour garantir le succes de vos projets energetiques.
             </p>
             <ul className="space-y-4">
               {values.map((value) => (
-                <li className="flex items-center gap-4" key={value}>
-                  <CheckCircle2 className="text-secondary" size={20} />
+                <li className="flex items-center gap-4 text-white/90" key={value}>
+                  <CheckCircle2 className="text-secondary dark:text-orange-400" size={20} />
                   {value}
                 </li>
               ))}
@@ -353,37 +359,37 @@ function RouteComponent() {
               ['25Y', 'Garantie performance'],
             ].map(([value, label]) => (
               <div
-                className="rounded border border-white/10 bg-white/5 p-8 transition-colors hover:bg-white/10"
+                className="rounded-xl border border-white/10 bg-white/5 p-8 transition-colors hover:bg-white/10"
                 key={label}
               >
-                <div className="mb-2 text-4xl font-extrabold text-secondary">{value}</div>
-                <p className="text-sm opacity-70">{label}</p>
+                <div className="mb-2 text-4xl font-extrabold text-secondary dark:text-orange-400">{value}</div>
+                <p className="text-sm text-white/70">{label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-surface-container-highest py-24 dark:bg-surface-container" id="team">
+      <section className="bg-surface-container-highest py-24 dark:bg-gray-900" id="team">
         <div className="mx-auto max-w-max-width px-margin-mobile text-center md:px-margin-desktop">
           <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
             L Excellence Technique
           </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-on-surface-variant dark:text-on-surface-variant">
+          <p className="mx-auto mb-16 max-w-2xl text-on-surface-variant dark:text-gray-400">
             Une equipe d ingenieurs et de techniciens passionnes par l innovation et
             engages pour un service client irreprochable.
           </p>
           <div className="grid grid-cols-1 gap-gutter-md md:grid-cols-3">
             {teamValues.map(({ icon: Icon, title, text }) => (
               <div
-                className="border border-outline-variant bg-white p-10 text-center dark:border-outline dark:bg-surface-container-lowest"
+                className="rounded-xl border border-outline-variant bg-white p-10 text-center dark:border-gray-800 dark:bg-gray-800"
                 key={title}
               >
-                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-surface-container dark:bg-surface-container-high">
-                  <Icon className={title === 'Innovation' ? 'text-secondary' : 'text-primary dark:text-secondary-fixed'} size={40} />
+                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-surface-container dark:bg-gray-700">
+                  <Icon className={title === 'Innovation' ? 'text-secondary dark:text-orange-400' : 'text-primary dark:text-orange-400'} size={40} />
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-primary dark:text-white">{title}</h4>
-                <p className="text-sm text-on-surface-variant dark:text-on-surface-variant">
+                <p className="text-sm text-on-surface-variant dark:text-gray-400">
                   {text}
                 </p>
               </div>
@@ -392,26 +398,26 @@ function RouteComponent() {
         </div>
       </section>
 
-      <section className="bg-surface-container-lowest py-24 dark:bg-surface-container-low" id="faq">
+      <section className="bg-surface-container-lowest py-24 dark:bg-gray-950" id="faq">
         <div className="mx-auto max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
               Questions Frequentes
             </h2>
-            <p className="text-on-surface-variant dark:text-on-surface-variant">
+            <p className="text-on-surface-variant dark:text-gray-400">
               Tout ce que vous devez savoir sur le solaire en RDC.
             </p>
           </div>
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq) => (
               <div
-                className="rounded border border-outline-variant p-6 transition-colors hover:bg-surface-container-low dark:border-outline dark:hover:bg-surface-container"
+                className="rounded-xl border border-outline-variant p-6 transition-colors hover:bg-surface-container-low dark:border-gray-800 dark:hover:bg-gray-900"
                 key={faq.question}
               >
                 <h4 className="flex items-center justify-between font-bold text-primary dark:text-white">
                   {faq.question}
                 </h4>
-                <p className="mt-4 text-on-surface-variant dark:text-on-surface-variant">
+                <p className="mt-4 text-on-surface-variant dark:text-gray-400">
                   {faq.answer}
                 </p>
               </div>
@@ -420,13 +426,13 @@ function RouteComponent() {
         </div>
       </section>
 
-      <section className="bg-surface py-24 dark:bg-primary-container/30" id="contact">
+      <section className="bg-surface py-24 dark:bg-gray-900" id="contact">
         <div className="mx-auto grid max-w-max-width grid-cols-1 gap-16 px-margin-mobile md:px-margin-desktop lg:grid-cols-2">
           <div>
             <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
               Contactez Nos Experts
             </h2>
-            <p className="mb-10 text-on-surface-variant dark:text-on-surface-variant">
+            <p className="mb-10 text-on-surface-variant dark:text-gray-400">
               Pret a passer a l energie solaire ? Notre equipe est a votre
               disposition pour toute question ou demande de devis.
             </p>
@@ -437,7 +443,7 @@ function RouteComponent() {
                     Nom Complet
                   </label>
                   <input
-                    className="w-full rounded border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-outline dark:bg-surface-container"
+                    className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:border-orange-500"
                     placeholder="Votre nom"
                     type="text"
                   />
@@ -447,7 +453,7 @@ function RouteComponent() {
                     Email
                   </label>
                   <input
-                    className="w-full rounded border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-outline dark:bg-surface-container"
+                    className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:border-orange-500"
                     placeholder="votre@email.com"
                     type="email"
                   />
@@ -457,7 +463,7 @@ function RouteComponent() {
                 <label className="mb-2 block text-sm font-bold text-primary dark:text-white">
                   Type de Projet
                 </label>
-                <select className="w-full rounded border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-outline dark:bg-surface-container">
+                <select className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:border-orange-500">
                   <option>Residentiel</option>
                   <option>Industriel / Minier</option>
                   <option>Commercial</option>
@@ -469,13 +475,13 @@ function RouteComponent() {
                   Message
                 </label>
                 <textarea
-                  className="w-full rounded border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-outline dark:bg-surface-container"
+                  className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest p-3 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:border-orange-500"
                   placeholder="Decrivez votre besoin..."
                   rows={4}
                 />
               </div>
               <button
-                className="w-full rounded bg-primary py-4 font-bold text-on-primary transition-all hover:bg-primary-container dark:bg-secondary dark:text-white"
+                className="w-full rounded-full bg-primary py-4 font-bold text-on-primary transition-all hover:bg-primary-container dark:bg-orange-600 dark:text-white dark:hover:bg-orange-700"
                 type="submit"
               >
                 Envoyer la demande
@@ -484,12 +490,12 @@ function RouteComponent() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="relative h-80 overflow-hidden rounded-xl border border-outline-variant dark:border-outline">
-              <div className="absolute inset-0 flex items-center justify-center bg-surface-container dark:bg-surface-container-low">
+            <div className="relative h-80 overflow-hidden rounded-xl border border-outline-variant dark:border-gray-800">
+              <div className="absolute inset-0 flex items-center justify-center bg-surface-container dark:bg-gray-800">
                 <div className="text-center">
-                  <MapPin className="mx-auto mb-2 text-secondary" size={42} />
+                  <MapPin className="mx-auto mb-2 text-secondary dark:text-orange-400" size={42} />
                   <p className="font-bold text-primary dark:text-white">Lubumbashi, Katanga, RDC</p>
-                  <p className="text-sm text-on-surface-variant dark:text-on-surface-variant">
+                  <p className="text-sm text-on-surface-variant dark:text-gray-400">
                     Avenue Industrielle, Quartier Golf
                   </p>
                 </div>
@@ -497,31 +503,31 @@ function RouteComponent() {
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="rounded border border-outline-variant bg-surface-container-high p-6 dark:border-outline dark:bg-surface-container">
+              <div className="rounded-xl border border-outline-variant bg-surface-container-high p-6 dark:border-gray-800 dark:bg-gray-800">
                 <h5 className="mb-2 font-bold text-primary dark:text-white">Telephone</h5>
-                <p className="font-bold text-secondary">+243 81 000 0000</p>
+                <p className="font-bold text-secondary dark:text-orange-400">+243 81 000 0000</p>
               </div>
-              <div className="rounded border border-outline-variant bg-surface-container-high p-6 dark:border-outline dark:bg-surface-container">
+              <div className="rounded-xl border border-outline-variant bg-surface-container-high p-6 dark:border-gray-800 dark:bg-gray-800">
                 <h5 className="mb-2 font-bold text-primary dark:text-white">Email Direct</h5>
-                <p className="font-bold text-secondary">contact@repower-rdc.com</p>
+                <p className="font-bold text-secondary dark:text-orange-400">contact@repower-rdc.com</p>
               </div>
             </div>
 
             <div className="flex gap-4">
               <a
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary dark:bg-secondary"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary dark:bg-orange-600"
                 href="#"
               >
                 <Share2 size={18} />
               </a>
               <a
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary dark:bg-secondary"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary dark:bg-orange-600"
                 href="mailto:contact@repower-rdc.com"
               >
                 <Mail size={18} />
               </a>
               <a
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary dark:bg-secondary"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary dark:bg-orange-600"
                 href="tel:+243810000000"
               >
                 <Phone size={18} />

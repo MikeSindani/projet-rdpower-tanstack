@@ -32,8 +32,8 @@ const strengths = [
 
 function AboutPage() {
   return (
-    <main className="bg-background pt-20 font-body-md text-body-md text-on-surface dark:bg-primary dark:text-on-primary-fixed">
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden bg-primary-container">
+    <main className="bg-background font-body-md text-body-md text-on-surface dark:bg-gray-950 dark:text-gray-200">
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-primary-container dark:bg-gray-900">
         <div className="absolute inset-0 opacity-40">
           <img
             alt="Parc solaire industriel"
@@ -43,13 +43,13 @@ function AboutPage() {
         </div>
         <div className="relative z-10 mx-auto w-full max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="max-w-3xl">
-            <span className="mb-6 inline-block rounded bg-secondary-container px-4 py-1 font-label-md text-label-md text-white">
+            <span className="mb-6 inline-block rounded bg-secondary-container px-4 py-1 font-label-md text-label-md text-white dark:bg-orange-600">
               A PROPOS DE NOUS
             </span>
             <h1 className="mb-6 font-headline-xl text-headline-xl text-white">
               Notre Mission : Electrifier l&apos;avenir de la RDC
             </h1>
-            <p className="max-w-2xl font-body-lg text-body-lg text-primary-fixed">
+            <p className="max-w-2xl font-body-lg text-body-lg text-primary-fixed dark:text-gray-300">
               REPOWER-RDC s&apos;engage a transformer le paysage energetique de la
               Republique Democratique du Congo grace a des solutions solaires
               durables, innovantes et accessibles.
@@ -64,7 +64,7 @@ function AboutPage() {
             <h2 className="mb-6 font-headline-lg text-headline-lg text-primary dark:text-white">
               Ancrage Local, Ambition Nationale
             </h2>
-            <p className="mb-6 text-on-surface-variant dark:text-on-surface-variant">
+            <p className="mb-6 text-on-surface-variant dark:text-gray-400">
               Bases au coeur industriel de la RDC a Lubumbashi, nous rayonnons sur
               toute la region du Katanga et au-dela. Notre histoire est celle d&apos;une
               proximite forte avec les acteurs economiques et residentiels locaux.
@@ -73,7 +73,7 @@ function AboutPage() {
               <div className="font-headline-md text-headline-md text-primary dark:text-white">
                 Lubumbashi
               </div>
-              <p className="italic text-on-surface-variant dark:text-on-surface-variant">
+              <p className="italic text-on-surface-variant dark:text-gray-400">
                 Notre centre operationnel strategique pour le developpement
                 energetique du pays.
               </p>
@@ -92,7 +92,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-surface-container-low py-24 dark:bg-surface-container-low/30">
+      <section className="bg-surface-container-low py-24 dark:bg-surface-container/30">
         <div className="mx-auto max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">

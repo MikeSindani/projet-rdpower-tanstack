@@ -61,10 +61,10 @@ const reasons = [
 
 function Services() {
   return (
-    <main className="bg-surface pt-20 text-on-surface dark:bg-primary dark:text-on-primary-fixed">
-      <section className="relative flex h-[60vh] items-center overflow-hidden bg-primary-container">
+    <main className="bg-surface text-on-surface dark:bg-gray-950 dark:text-gray-200">
+      <section className="relative flex h-[80vh] items-center overflow-hidden bg-primary-container dark:bg-gray-900">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 z-10 bg-primary-container/70 dark:bg-primary/75" />
+          <div className="absolute inset-0 z-10 bg-primary-container/70 dark:bg-gray-950/75" />
           <img
             alt="Centrale solaire industrielle"
             className="h-full w-full object-cover"
@@ -77,9 +77,9 @@ function Services() {
             <h1 className="font-headline-xl text-headline-xl text-white">
               Nos Services Energetiques
             </h1>
-            <p className="mt-4 font-body-lg text-body-lg text-primary-fixed">
+            <p className="mt-4 font-body-lg text-body-lg text-primary-fixed dark:text-gray-300">
               Solutions photovoltaiques de pointe pour l industrie, le commerce et
-              l habitat en Republique Democratique du Congo.
+              l{"'"}habitat en Republique Democratique du Congo.
             </p>
           </div>
         </div>
@@ -87,18 +87,18 @@ function Services() {
 
       <section className="mx-auto max-w-max-width px-margin-mobile py-24 md:px-margin-desktop">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-          <div className="group relative overflow-hidden border border-outline-variant bg-white p-8 md:col-span-8 md:min-h-[500px] md:p-12 dark:border-outline dark:bg-surface-container-lowest">
+          <div className="group relative overflow-hidden border border-outline-variant bg-white p-8 md:col-span-8 md:min-h-[500px] md:p-12 dark:border-outline dark:bg-gray-900">
             <div className="relative z-10">
-              <div className="mb-6 flex items-center gap-3 text-secondary">
+              <div className="mb-6 flex items-center gap-3 text-secondary dark:text-orange-400">
                 <SunIcon />
                 <span className="font-label-md text-label-md uppercase tracking-widest">
                   Innovation durable
                 </span>
               </div>
-              <h2 className="font-headline-lg text-headline-lg text-primary dark:text-on-surface">
+              <h2 className="font-headline-lg text-headline-lg text-primary dark:text-white">
                 Installation Solaire
               </h2>
-              <p className="mt-6 max-w-md font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
+              <p className="mt-6 max-w-md font-body-md text-body-md text-on-surface-variant dark:text-gray-400">
                 Deploiement complet de systemes photovoltaiques adaptes a vos besoins
                 specifiques. Nous couvrons tous les secteurs d activite avec une
                 expertise technique certifiee.
@@ -106,11 +106,11 @@ function Services() {
               <ul className="mb-10 mt-8 space-y-4">
                 {installationItems.map((item) => (
                   <li className="flex items-start gap-3" key={item.title}>
-                    <CheckCircle2 className="mt-0.5 text-secondary" size={20} />
-                    <span className="font-body-md text-body-md font-bold text-primary dark:text-on-surface">
+                    <CheckCircle2 className="mt-0.5 text-secondary dark:text-orange-400" size={20} />
+                    <span className="font-body-md text-body-md font-bold text-primary dark:text-white">
                       {item.title}:
                     </span>
-                    <span className="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
+                    <span className="font-body-md text-body-md text-on-surface-variant dark:text-gray-400">
                       {item.text}
                     </span>
                   </li>

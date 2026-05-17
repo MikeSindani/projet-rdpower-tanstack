@@ -131,13 +131,13 @@ const productSections = [
 
 function ProductsPage() {
   return (
-    <main className="bg-background px-margin-mobile pb-20 pt-40 text-on-background dark:bg-primary dark:text-on-primary-fixed md:px-margin-desktop">
+    <main className="bg-background px-margin-mobile pb-20 pt-40 text-on-background dark:bg-gray-950 dark:text-gray-200 md:px-margin-desktop">
       <div className="mx-auto max-w-max-width">
         <header className="mb-16">
           <h1 className="mb-4 font-headline-xl text-headline-xl text-primary dark:text-white">
             Catalogue de Solutions Energetiques
           </h1>
-          <p className="max-w-3xl font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant">
+          <p className="max-w-3xl font-body-lg text-body-lg text-on-surface-variant dark:text-gray-400">
             L excellence technique au service de votre autonomie. Decouvrez notre
             selection d equipements solaires, batteries, convertisseurs, cables et
             protections pour vos projets residentiels et industriels.
@@ -147,7 +147,7 @@ function ProductsPage() {
         {productSections.map((section) => (
           <section className="mb-20" id={section.id} key={section.id}>
             <div className="mb-8 flex items-center gap-4">
-              <section.icon className="text-secondary" size={28} />
+              <section.icon className="text-secondary dark:text-orange-400" size={28} />
               <h2 className="font-headline-lg text-headline-lg uppercase tracking-tight">
                 {section.title}
               </h2>
@@ -156,16 +156,16 @@ function ProductsPage() {
             <div
               className={
                 section.theme === 'dark'
-                  ? 'grid grid-cols-1 gap-gutter-md border border-outline bg-primary-container p-8 text-white md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline'
-                  : 'grid grid-cols-1 gap-gutter-md border border-outline-variant bg-white p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-surface-container-low'
+                  ? 'grid grid-cols-1 gap-gutter-md border border-outline bg-primary-container p-8 text-white md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-gray-900'
+                  : 'grid grid-cols-1 gap-gutter-md border border-outline-variant bg-white p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-gray-900'
               }
             >
               <div className="flex flex-col">
                 <span
                   className={
                     section.theme === 'dark'
-                      ? 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary-fixed'
-                      : 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary'
+                      ? 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary-fixed dark:text-orange-400'
+                      : 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-orange-400'
                   }
                 >
                   {section.subtitle}
@@ -182,8 +182,8 @@ function ProductsPage() {
                 <p
                   className={
                     section.theme === 'dark'
-                      ? 'mb-8 mt-4 font-body-md text-body-md text-primary-fixed'
-                      : 'mb-8 mt-4 font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant'
+                      ? 'mb-8 mt-4 font-body-md text-body-md text-primary-fixed dark:text-gray-300'
+                      : 'mb-8 mt-4 font-body-md text-body-md text-on-surface-variant dark:text-gray-400'
                   }
                 >
                   {section.description}
@@ -194,8 +194,8 @@ function ProductsPage() {
                     <div
                       className={
                         section.theme === 'dark'
-                          ? 'flex items-center justify-between border border-white/10 bg-white/5 p-4'
-                          : 'flex items-center justify-between border border-outline-variant bg-surface-container-lowest p-4 dark:border-outline dark:bg-surface-container'
+                          ? 'flex items-center justify-between border border-white/10 bg-white/5 p-4 dark:bg-gray-800/50'
+                          : 'flex items-center justify-between border border-outline-variant bg-surface-container-lowest p-4 dark:border-outline dark:bg-gray-800/50'
                       }
                       key={product}
                     >
@@ -203,8 +203,8 @@ function ProductsPage() {
                         <CheckCircle2
                           className={
                             section.theme === 'dark'
-                              ? 'mt-0.5 shrink-0 text-secondary-fixed'
-                              : 'mt-0.5 shrink-0 text-primary'
+                              ? 'mt-0.5 shrink-0 text-secondary-fixed dark:text-orange-400'
+                              : 'mt-0.5 shrink-0 text-primary dark:text-orange-400'
                           }
                           size={18}
                         />
@@ -213,8 +213,8 @@ function ProductsPage() {
                       <a
                         className={
                           section.theme === 'dark'
-                            ? 'shrink-0 font-label-md text-label-md text-secondary-fixed hover:underline'
-                            : 'shrink-0 font-label-md text-label-md text-secondary hover:underline'
+                            ? 'shrink-0 font-label-md text-label-md text-secondary-fixed hover:underline dark:text-orange-400'
+                            : 'shrink-0 font-label-md text-label-md text-secondary hover:underline dark:text-orange-400'
                         }
                         href="#contact-catalogue"
                       >
@@ -271,7 +271,7 @@ function ProductsPage() {
         <section className="mb-20 bg-primary p-10 text-center text-white md:p-12">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 font-headline-xl text-headline-xl">
-              Besoin d un systeme complet ?
+              Besoin d{"'"}un systeme complet ?
             </h2>
             <p className="mb-10 font-body-lg text-body-lg text-surface-variant">
               Nous pouvons assembler pour vous un kit complet incluant panneaux,
@@ -317,7 +317,7 @@ function ProductsPage() {
             </ul>
           </div>
 
-          <div className="rounded-lg border border-outline-variant bg-white p-6 shadow-sm dark:border-outline dark:bg-surface-container-lowest">
+          <div className="rounded-lg border border-outline-variant bg-white p-6 shadow-sm dark:border-outline dark:bg-gray-950/90">
             <h3 className="mb-3 font-headline-md text-headline-md text-primary dark:text-white">
               Devis rapide
             </h3>

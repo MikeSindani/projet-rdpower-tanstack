@@ -6,7 +6,7 @@
 @theme {
   --color-inverse-primary: #b4c6f6;
   --color-surface-variant: #d8e3fa;
-  --color-surface-container: #e7eeff;
+  --color-surface-container: #101828;
   --color-tertiary-container: #1d2022;
   --color-on-tertiary-container: #85878a;
   --color-on-secondary-container: #fffbff;
@@ -39,7 +39,7 @@
   --color-on-primary-fixed: #031a41;
   --color-on-secondary-fixed: #410000;
   --color-on-tertiary-fixed: #191c1e;
-  --color-on-surface-variant: #44464e;
+  --color-on-surface-variant: #b3b2b3;
   --color-tertiary-fixed: #e0e3e6;
   --color-secondary-container: #de2e21;
   --color-on-secondary-fixed-variant: #930002;

@@ -18,6 +18,10 @@ const config = defineConfig({
         // Switch to true to enable prerendering
         enabled: true,
       },
+      sitemap: {
+        enabled: true,
+        host: "https://repower-rdc.com",
+      },
     }),
     viteReact(),
   ],

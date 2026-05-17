@@ -17,8 +17,17 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Repower Landing Page',
       },
+      {
+        name: 'description',
+        content: 'Repower Landing Page',
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff',
+      },
+      
     ],
     links: [
       {
