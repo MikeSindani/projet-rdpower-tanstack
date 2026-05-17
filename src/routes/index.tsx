@@ -136,7 +136,7 @@ function RouteComponent() {
               Energie Durable en RDC
             </span>
             <h1 className="mb-6 font-headline-xl text-headline-xl text-white">
-              Electrifier l avenir de la RDC avec precision
+              Electrifier l{"'"}avenir de la RDC avec precision
             </h1>
             <p className="mb-10 font-body-lg text-body-lg text-primary-fixed dark:text-gray-300">
               Nous apportons des solutions solaires de pointe au coeur du Katanga,
@@ -287,9 +287,9 @@ function RouteComponent() {
               </div>
               <a
                 className="rounded-full bg-primary px-8 py-3 font-bold text-on-primary transition-transform hover:scale-105 dark:bg-orange-600 dark:text-white"
-                href="#contact"
+                href="/demander-un-devis"
               >
-                Demander un Audit
+                Demander un Devis
               </a>
             </div>
           </div>
