@@ -1,6 +1,7 @@
 import { useLocation } from '@tanstack/react-router'
 import { ArrowRight, Menu, Moon, Sun, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import image from '../../public/logo192.png'
 
 const navLinks = [
   { label: 'Accueil', href: '/' },
@@ -59,7 +60,7 @@ export default function Header() {
           <img
             alt="REPOWER-RDC Logo"
             className="h-10 object-contain md:h-12"
-            src="/public/logo192.png"
+            src={image}
           />
         </a>
 
