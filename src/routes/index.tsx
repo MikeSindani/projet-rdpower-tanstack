@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import image from '../../public/unnamed.jpg'
 import {
   ArrowRight,
   BatteryCharging,
@@ -328,7 +329,7 @@ function RouteComponent() {
             <img
               alt="Solar installers team"
               className="h-[500px] w-full rounded-xl border border-outline-variant object-cover shadow-lg dark:border-[#2d3438]"
-              src="../../public/unnamed.jpg"
+              src={image}
             />
             <div className="absolute -bottom-6 -right-6 hidden bg-primary-container p-8 text-on-primary shadow-xl md:block" style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}>
               <div className="mb-1 text-4xl font-bold">5+</div>
