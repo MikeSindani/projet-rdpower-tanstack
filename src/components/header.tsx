@@ -70,8 +70,8 @@ export default function Header() {
             <a
               className={`rounded-full px-4 py-2 font-label-md text-label-md transition-all ${
                 isActivePath(href)
-                  ? ' text-black bg-secondary'
-                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-[#252b2e]'
+                  ? ' text-black bg-secondary hover:text-white'
+                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-[#252b2e] dark:hover:text-white hover:text-white'
               }`}
               href={href}
               key={label}
@@ -110,7 +110,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 top-[72px] z-40 h-[calc(100vh-72px)] w-full bg-white transition-all duration-300 dark:bg-[#191c1e] lg:hidden ${
+        className={`fixed inset-0 top-[72px] z-40 h-[calc(100vh-72px)] w-full bg-white transition-all duration-300 dark:bg-[#191c1e] hover:text-white lg:hidden ${
           isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >

@@ -89,7 +89,7 @@ const productSections = [
     icon: Cpu,
     theme: 'dark',
     image:
-      'https://lh3.googleusercontent.com/aida/ADBb0uhNFjhNYmgtLl5uursTH0SAIdKVFLWbnZXjnEoZ3B1e_lbyKt8YPHvdQVF1VmHjZ4nzRDBGuMXqOHzcLbBP8YDUnv0xEKvBVyPeCI5nEY1QKQ9a-3_SvW0jQ4e2DGwF-cDHizn7EEGTrP8OHZbORaCNyiUgHcMh55_gfTqnlJ5eUAyhuPy1g_j3ZCChM-mKoEs0Ma5AZfADsH2j5_vcB6K3bqEdHPa7RNfDHyzWrE5eYUEiYSIa-4fqwLch',
+      'https://tse1.mm.bing.net/th/id/OIP.ya5yv994aLiQZzOl6-ZHJgHaFS?rs=1&pid=ImgDetMain&o=7&rm=3',
     sourceUrl: 'https://deye.com/product/sun-3-3-6-5-6k-sg04lp1-eu/',
     products: inverterProducts,
   },
@@ -102,7 +102,7 @@ const productSections = [
     icon: BatteryCharging,
     theme: 'light',
     image:
-      'https://lh3.googleusercontent.com/aida/ADBb0uhJAwITZfJXTebCl0EcMbPtezYzsYJH-6nNYth-JNif7ZdoqU7rs3mGk35Kzpv-bseLDpS9_dGy7c0x-1801u89quYofo51IXRmM62LtXngsrlo9iYjkz6mQZkBOBFDMFFP4TEaEoq9s1nOueUoJ3dN4ikUk0LA1-ARg4S1xSeqeQcaVWQVYgSBjlhF7ptxpVMvxfoBOCDrcBlHxeBav-C0tRQoRQ9xEhiqHbjuxg6XZKsXtiI4NifzL78',
+      'https://image.made-in-china.com/2f0j00bnJkciHtZrqR/Greensun-Touch-Screen-Battery-Backup-20kw-540kw-LiFePO4-Home-Energy-Storage-Battery.jpg',
     sourceUrl:
       'https://www.felicitysolar.com/products/fla48100-felicity-solar-48v-100ah-5kwh-lifepo4-power-battery-rechargeable-lithium-ion-batteries-for-solar-storage-system',
     products: batteryProducts,
@@ -116,7 +116,7 @@ const productSections = [
     icon: Cable,
     theme: 'light',
     image:
-      'https://lh3.googleusercontent.com/aida/ADBb0ugpKRCqu6AZQi0X2W5CpFu8smqw_A4aNHw1Qqy5eKwICVns-5teVsli3ZJJfC_E6a5j_iliPKPSDEC55Yh8ncZAB_L6pT4YsRLEgnnQ_SjGGpaPqg7NFM1PxOOLwBNZGVpym0siyohX3dliDrg29-u2opf7HDpHsFzAx6GaXd12c3nwOrzFDfUEEiI_a6XacwFfsZZOuDo-38d2GUKcapP_wHpy2HiDsbSle7uFmdxGuowQDV_kQpvTzHU',
+      'https://tse2.mm.bing.net/th/id/OIP.6B_VTz8sybh4oswRSlyECAHaD-?w=800&h=430&rs=1&pid=ImgDetMain&o=7&rm=3',
     sourceUrl: 'https://www.mustpower.com/product/pv9000-hm-3-6-12kw/',
     products: cableProducts,
   },
@@ -129,7 +129,7 @@ const productSections = [
     icon: Shield,
     theme: 'dark',
     image:
-      'https://lh3.googleusercontent.com/aida/ADBb0uj_dm8gjhiEhS3Ob2uVsVINsMa1juoK7mICdHS0D6EK5jxjt3p9TkcPUZcpq2u7VMK_wkyWm2yRhKtWaxv6EJ_OU_koGryjHw0RhmdvwxSyuAeqtgKd4l_7agkT0r7r_kRR1lOtmL966G0ffEKELDt2LY43f19iM9DMNGkras2_A2fUL0CL7S7rc1v3nZsmbvEhItAe0f2bFtfffh_zX0w3peGu57jGfTeIx8F_D2nrWlOBF1D-CXfpuD4',
+      'https://tse2.mm.bing.net/th/id/OIP.S3YgqEXZQysgRkRVneTLlgHaDa?rs=1&pid=ImgDetMain&o=7&rm=3',
     sourceUrl: 'https://www.mustpower.com/product/pc1800a-30a-40a/',
     products: protectionProducts,
   },
@@ -167,8 +167,8 @@ function ProductsPage() {
             Catalogue de Solutions Energetiques
           </h1>
           <p className="max-w-3xl font-body-lg text-body-lg text-on-surface-variant dark:text-gray-400">
-            L excellence technique au service de votre autonomie. Decouvrez notre
-            selection d equipements solaires, batteries, convertisseurs, cables et
+            L&apos;excellence technique au service de votre autonomie. Decouvrez notre
+            selection d&apos;equipements solaires, batteries, convertisseurs, cables et
             protections pour vos projets residentiels et industriels.
           </p>
         </header>

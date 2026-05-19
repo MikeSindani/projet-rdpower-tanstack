@@ -136,7 +136,7 @@ function Services() {
             <h2 className="font-headline-md text-headline-md">Systemes de Stockage</h2>
             <p className="mb-8 mt-6 font-body-md text-body-md text-on-tertiary-container">
               Assurez une continuite de service 24/7 avec nos solutions de stockage
-              d energie haute performance.
+              d&apos;energie haute performance.
             </p>
             <div className="mt-auto space-y-6">
               {storageItems.map((item) => (

@@ -149,7 +149,7 @@ function QuoteRequest() {
               {/* Section 1: Coordonnées */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-2 border-b border-outline-variant pb-2 mb-2 dark:border-[#2d3438]">
-                  <span className="material-symbols-outlined text-primary-container dark:text-secondary">person</span>
+                  
                   <h2 className="font-headline-md text-headline-md text-primary dark:text-white">Coordonnées</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -55,8 +55,8 @@ export default function Footer() {
       <div className="mx-auto max-w-max-width px-margin-mobile py-16 md:px-margin-desktop md:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-6">
-            <div className="font-headline-md text-headline-md font-extrabold tracking-tight">
-              REPOWER-RDC
+            <div className="font-headline-md text-headline-lg-mobile font-extrabold tracking-tight">
+              REPOWER
             </div>
             <p className="font-body-md text-body-md leading-relaxed text-white/70">
               Expert en solutions solaires durables en République Démocratique du Congo. Nous accompagnons les industries, commerces et particuliers vers l'autonomie énergétique depuis Lubumbashi.

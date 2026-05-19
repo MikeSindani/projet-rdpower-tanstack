@@ -177,7 +177,7 @@ function HeroCarousel() {
   useEffect(() => {
     const vid = videoRef.current
     if (!vid) return
-    if (active === 0) { vid.currentTime = 0; vid.play().catch(() => {}) }
+    if (active === 0) { vid.currentTime = 0; vid.play().catch(() => { }) }
     else vid.pause()
   }, [active])
 
@@ -302,7 +302,7 @@ function RouteComponent() {
             <img
               alt="Solar installers team"
               className="h-[500px] w-full rounded-xl border border-outline-variant object-cover shadow-lg dark:border-[#2d3438]"
-              src="/public/unnamed.jpg"
+              src="../../public/unnamed.jpg"
             />
             <div className="absolute -bottom-6 -right-6 hidden bg-primary-container p-8 text-on-primary shadow-xl md:block" style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}>
               <div className="mb-1 text-4xl font-bold">5+</div>
@@ -312,16 +312,16 @@ function RouteComponent() {
 
           <div>
             <h2 className="mb-8 font-headline-lg text-headline-lg text-primary dark:text-white">
-              Notre Engagement pour Lubumbashi
+              Nous sommes la pour votre confort energetique.
             </h2>
             <p className="mb-6 font-body-md text-body-md leading-relaxed text-on-surface-variant dark:text-gray-400">
-              Base a Lubumbashi, REPOWER-RDC est ne de la volonte de transformer
-              le paysage energetique de la Republique Democratique du Congo. Notre
-              histoire est celle d une passion pour l innovation technologique mise
-              au service du developpement local.
+              Leader en solutions d&apos;énergie solaire en République Démocratique du Congo,
+              REDPOWER‑DRC transforme l&apos;avenir énergétique de Lubumbashi et ses environs depuis plusieurs années.
+              Notre expertise locale combinée à des équipements de dernière génération
+              nous permet d&apos;offrir des installations fiables, durables et adaptées au climat congolais
             </p>
             <p className="mb-10 font-body-md text-body-md leading-relaxed text-on-surface-variant dark:text-gray-400">
-              Notre mission est d offrir des systemes solaires fiables qui repondent
+              Notre mission est d&apos;offrir des systemes solaires fiables qui repondent
               aux defis climatiques et industriels uniques de notre region.
             </p>
             <div className="grid grid-cols-2 gap-8">
@@ -474,14 +474,13 @@ function RouteComponent() {
                   <h4 className="mt-1 font-bold text-primary dark:text-white">{product.name}</h4>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="font-bold" style={{ color: 'var(--color-secondary, #ff8a65)' }}>{product.tier}</span>
-                    <button 
+                    <button
                       onClick={() => addItem({ name: product.name, category: product.category })}
                       disabled={isInCart(product.name)}
-                      className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all ${
-                        isInCart(product.name)
+                      className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all ${isInCart(product.name)
                           ? 'bg-green-500 text-white cursor-default'
                           : 'bg-primary-container text-white hover:bg-secondary dark:bg-[#1e2224]'
-                      }`}
+                        }`}
                     >
                       {isInCart(product.name) ? (
                         <>
