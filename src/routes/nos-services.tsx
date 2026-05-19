@@ -61,10 +61,10 @@ const reasons = [
 
 function Services() {
   return (
-    <main className="bg-surface text-on-surface dark:bg-gray-950 dark:text-gray-200">
-      <section className="relative flex h-[80vh] items-center overflow-hidden bg-primary-container dark:bg-gray-900">
+    <main className="bg-surface text-on-surface dark:bg-[#191c1e] dark:text-gray-200">
+      <section className="relative flex h-[80vh] items-center overflow-hidden bg-primary-container dark:bg-[#1e2224]">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 z-10 bg-primary-container/70 dark:bg-gray-950/75" />
+          <div className="absolute inset-0 z-10 bg-primary-container/70 dark:bg-[#191c1e]/75" />
           <img
             alt="Centrale solaire industrielle"
             className="h-full w-full object-cover"
@@ -87,9 +87,9 @@ function Services() {
 
       <section className="mx-auto max-w-max-width px-margin-mobile py-24 md:px-margin-desktop">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-          <div className="group relative overflow-hidden border border-outline-variant bg-white p-8 md:col-span-8 md:min-h-[500px] md:p-12 dark:border-outline dark:bg-gray-900">
+          <div className="group relative overflow-hidden border border-outline-variant bg-white p-8 md:col-span-8 md:min-h-[500px] md:p-12 dark:border-outline dark:bg-[#1e2224]">
             <div className="relative z-10">
-              <div className="mb-6 flex items-center gap-3 text-secondary dark:text-orange-400">
+              <div className="mb-6 flex items-center gap-3 text-secondary dark:text-secondary">
                 <SunIcon />
                 <span className="font-label-md text-label-md uppercase tracking-widest">
                   Innovation durable
@@ -106,7 +106,7 @@ function Services() {
               <ul className="mb-10 mt-8 space-y-4">
                 {installationItems.map((item) => (
                   <li className="flex items-start gap-3" key={item.title}>
-                    <CheckCircle2 className="mt-0.5 text-secondary dark:text-orange-400" size={20} />
+                    <CheckCircle2 className="mt-0.5 text-secondary dark:text-secondary" size={20} />
                     <span className="font-body-md text-body-md font-bold text-primary dark:text-white">
                       {item.title}:
                     </span>
@@ -207,7 +207,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-primary-container py-20 text-center dark:bg-gray-900">
+      <section className="relative overflow-hidden bg-primary-container py-20 text-center dark:bg-[#1e2224]">
         <div className="pointer-events-none absolute inset-0 flex h-full w-full flex-wrap items-center justify-center gap-12 opacity-10">
           <Cpu className="h-24 w-24 text-white" />
           <Bolt className="h-24 w-24 text-white" />

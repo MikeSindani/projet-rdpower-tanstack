@@ -32,8 +32,8 @@ const strengths = [
 
 function AboutPage() {
   return (
-    <main className="bg-background font-body-md text-body-md text-on-surface dark:bg-gray-950 dark:text-gray-200">
-      <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-primary-container/70 dark:bg-gray-950/75">
+    <main className="bg-background font-body-md text-body-md text-on-surface dark:bg-[#191c1e] dark:text-gray-200">
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-primary-container/70 dark:bg-[#191c1e]/75">
         <div className="absolute inset-0 opacity-40">
           <img
             alt="Parc solaire industriel"
@@ -43,7 +43,7 @@ function AboutPage() {
         </div>
         <div className="relative z-10 mx-auto w-full max-w-max-width px-margin-mobile md:px-margin-desktop">
           <div className="max-w-3xl">
-            <span className="mb-6 inline-block rounded bg-secondary-container px-4 py-1 font-label-md text-label-md text-white dark:bg-orange-600">
+            <span className="mb-6 inline-block rounded bg-secondary-container px-4 py-1 font-label-md text-label-md text-white dark:bg-secondary">
               A PROPOS DE NOUS
             </span>
             <h1 className="mb-6 font-headline-xl text-headline-xl text-white">

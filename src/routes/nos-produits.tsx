@@ -144,13 +144,13 @@ function ProductsPage() {
   }
 
   return (
-    <main className="bg-background px-margin-mobile pb-20 pt-40 text-on-background dark:bg-gray-950 dark:text-gray-200 md:px-margin-desktop">
+    <main className="bg-background px-margin-mobile pb-20 pt-40 text-on-background dark:bg-[#191c1e] dark:text-gray-200 md:px-margin-desktop">
       {/* Panier flottant de devis */}
       {items.length > 0 && (
         <div className="fixed bottom-8 right-8 z-50 animate-bounce">
           <a
             href="/demander-un-devis"
-            className="flex items-center gap-3 rounded-full bg-secondary px-6 py-4 font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-orange-600"
+            className="flex items-center gap-3 rounded-full bg-secondary px-6 py-4 font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-secondary"
           >
             <ShoppingCart size={24} />
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-sm text-secondary">
@@ -176,7 +176,7 @@ function ProductsPage() {
         {productSections.map((section) => (
           <section className="mb-20" id={section.id} key={section.id}>
             <div className="mb-8 flex items-center gap-4">
-              <section.icon className="text-secondary dark:text-orange-400" size={28} />
+              <section.icon className="text-secondary dark:text-secondary" size={28} />
               <h2 className="font-headline-lg text-headline-lg uppercase tracking-tight">
                 {section.title}
               </h2>
@@ -185,16 +185,16 @@ function ProductsPage() {
             <div
               className={
                 section.theme === 'dark'
-                  ? 'grid grid-cols-1 gap-gutter-md border border-outline bg-primary-container p-8 text-white md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-gray-900'
-                  : 'grid grid-cols-1 gap-gutter-md border border-outline-variant bg-white p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-gray-900'
+                  ? 'grid grid-cols-1 gap-gutter-md border border-outline bg-primary-container p-8 text-white md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-[#1e2224]'
+                  : 'grid grid-cols-1 gap-gutter-md border border-outline-variant bg-white p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10 dark:border-outline dark:bg-[#1e2224]'
               }
             >
               <div className="flex flex-col">
                 <span
                   className={
                     section.theme === 'dark'
-                      ? 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary-fixed dark:text-orange-400'
-                      : 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-orange-400'
+                      ? 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary-fixed dark:text-secondary'
+                      : 'mb-3 font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary'
                   }
                 >
                   {section.subtitle}
@@ -223,8 +223,8 @@ function ProductsPage() {
                     <div
                       className={
                         section.theme === 'dark'
-                          ? 'flex flex-col border border-white/10 bg-white/5 p-4 dark:bg-gray-800/50 sm:flex-row sm:items-center sm:justify-between'
-                          : 'flex flex-col border border-outline-variant bg-surface-container-lowest p-4 dark:border-outline dark:bg-gray-800/50 sm:flex-row sm:items-center sm:justify-between'
+                          ? 'flex flex-col border border-white/10 bg-white/5 p-4 dark:bg-[#252b2e]/50 sm:flex-row sm:items-center sm:justify-between'
+                          : 'flex flex-col border border-outline-variant bg-surface-container-lowest p-4 dark:border-outline dark:bg-[#252b2e]/50 sm:flex-row sm:items-center sm:justify-between'
                       }
                       key={product}
                     >
@@ -232,8 +232,8 @@ function ProductsPage() {
                         <CheckCircle2
                           className={
                             section.theme === 'dark'
-                              ? 'mt-0.5 shrink-0 text-secondary-fixed dark:text-orange-400'
-                              : 'mt-0.5 shrink-0 text-primary dark:text-orange-400'
+                              ? 'mt-0.5 shrink-0 text-secondary-fixed dark:text-secondary'
+                              : 'mt-0.5 shrink-0 text-primary dark:text-secondary'
                           }
                           size={18}
                         />
@@ -260,7 +260,7 @@ function ProductsPage() {
                         ) : (
                           <button
                             onClick={() => addItem({ name: product, category: section.title })}
-                            className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-3 py-1.5 text-xs font-bold text-secondary transition-all hover:bg-secondary hover:text-white dark:text-orange-400 dark:hover:text-white"
+                            className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-3 py-1.5 text-xs font-bold text-secondary transition-all hover:bg-secondary hover:text-white dark:text-secondary dark:hover:text-white"
                           >
                             <Plus size={14} />
                             Ajouter au devis
@@ -364,7 +364,7 @@ function ProductsPage() {
             </ul>
           </div>
 
-          <div className="rounded-lg border border-outline-variant bg-white p-6 shadow-sm dark:border-outline dark:bg-gray-950/90">
+          <div className="rounded-lg border border-outline-variant bg-white p-6 shadow-sm dark:border-outline dark:bg-[#191c1e]/90">
             <h3 className="mb-3 font-headline-md text-headline-md text-primary dark:text-white">
               Devis rapide
             </h3>

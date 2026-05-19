@@ -52,7 +52,7 @@ function QuoteRequest() {
   };
 
   return (
-    <div className="relative bg-background pt-20 text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container dark:selection:bg-orange-600 dark:selection:text-white min-h-screen flex flex-col dark:bg-gray-950 dark:text-gray-200">
+    <div className="relative bg-background pt-20 text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container dark:selection:bg-secondary dark:selection:text-white min-h-screen flex flex-col dark:bg-surface-container dark:text-gray-200">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img 
@@ -78,7 +78,7 @@ function QuoteRequest() {
               </p>
             </div>
             {/* Industrial Visual */}
-            <div className="w-full aspect-[4/3] rounded border border-outline-variant bg-surface-container overflow-hidden mt-4 dark:border-gray-800 dark:bg-gray-900">
+            <div className="w-full aspect-[4/3] rounded border border-outline-variant bg-surface-container overflow-hidden mt-4 dark:border-[#2d3438] dark:bg-gray-900">
               <img 
                 alt="Installation solaire industrielle" 
                 className="w-full h-full object-cover grayscale-[20%] contrast-125 opacity-90" 
@@ -87,10 +87,10 @@ function QuoteRequest() {
             </div>
 
             {/* Quote Cart Summary */}
-            <div className="mt-8 rounded-xl border border-secondary/30 bg-secondary/5 p-6 dark:bg-orange-600/10 dark:border-orange-500/20">
+            <div className="mt-8 rounded-xl border border-secondary/30 bg-secondary/5 p-6 dark:bg-secondary/10 dark:border-secondary/20">
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <ShoppingCart className="text-secondary dark:text-orange-400" size={24} />
+                  <ShoppingCart className="text-secondary dark:text-secondary" size={24} />
                   <h2 className="font-headline-md text-headline-md text-primary dark:text-white">Votre Panier de Devis</h2>
                 </div>
                 {items.length > 0 && (
@@ -108,7 +108,7 @@ function QuoteRequest() {
                   {items.map((item) => (
                     <div 
                       key={item.name}
-                      className="flex items-center justify-between rounded-lg border border-outline-variant bg-white p-3 dark:border-gray-700 dark:bg-gray-800"
+                      className="flex items-center justify-between rounded-lg border border-outline-variant bg-white p-3 dark:border-[#2d3438] dark:bg-[#252b2e]"
                     >
                       <div>
                         <p className="font-bold text-primary dark:text-gray-100">{item.name}</p>
@@ -133,7 +133,7 @@ function QuoteRequest() {
                   </p>
                   <a 
                     href="/nos-produits"
-                    className="rounded-full border border-secondary px-6 py-2 text-sm font-bold text-secondary transition-all hover:bg-secondary hover:text-white dark:border-orange-500 dark:text-orange-400 dark:hover:bg-orange-600 dark:hover:text-white"
+                    className="rounded-full border border-secondary px-6 py-2 text-sm font-bold text-secondary transition-all hover:bg-secondary hover:text-white dark:border-secondary dark:text-secondary dark:hover:bg-secondary dark:hover:text-white"
                   >
                     Voir le catalogue
                   </a>
@@ -143,20 +143,20 @@ function QuoteRequest() {
           </div>
 
           {/* Form Area (Bento-style rigid card) */}
-          <div className="lg:col-span-7 bg-surface-container-lowest border border-outline-variant p-6 md:p-8 rounded shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <div className="lg:col-span-7 bg-surface-container-lowest border border-outline-variant p-6 md:p-8 rounded shadow-sm dark:bg-surface-container dark:border-[#2d3438]">
             <form onSubmit={handleSubmit} className="flex flex-col gap-8">
               
               {/* Section 1: Coordonnées */}
               <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-2 border-b border-outline-variant pb-2 mb-2 dark:border-gray-800">
-                  <span className="material-symbols-outlined text-primary-container dark:text-orange-400">person</span>
+                <div className="flex items-center gap-2 border-b border-outline-variant pb-2 mb-2 dark:border-[#2d3438]">
+                  <span className="material-symbols-outlined text-primary-container dark:text-secondary">person</span>
                   <h2 className="font-headline-md text-headline-md text-primary dark:text-white">Coordonnées</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1">
                     <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="nom">Nom complet *</label>
                     <input 
-                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
+                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
                       id="nom" 
                       name="nom" 
                       required 
@@ -168,7 +168,7 @@ function QuoteRequest() {
                   <div className="flex flex-col gap-1">
                     <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="entreprise">Entreprise (Optionnel)</label>
                     <input 
-                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
+                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
                       id="entreprise" 
                       name="entreprise" 
                       type="text"
@@ -179,7 +179,7 @@ function QuoteRequest() {
                   <div className="flex flex-col gap-1">
                     <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="email">Adresse Email *</label>
                     <input 
-                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
+                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
                       id="email" 
                       name="email" 
                       required 
@@ -191,7 +191,7 @@ function QuoteRequest() {
                   <div className="flex flex-col gap-1">
                     <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="telephone">Téléphone *</label>
                     <input 
-                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
+                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
                       id="telephone" 
                       name="telephone" 
                       required 
@@ -205,15 +205,14 @@ function QuoteRequest() {
 
               {/* Section 2: Détails du Projet */}
               <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-2 border-b border-outline-variant pb-2 mb-2 dark:border-gray-800">
-                  <span className="material-symbols-outlined text-primary-container dark:text-orange-400">solar_power</span>
+                <div className="flex items-center gap-2 border-b border-outline-variant pb-2 mb-2 dark:border-[#2d3438]">
                   <h2 className="font-headline-md text-headline-md text-primary dark:text-white">Détails du Projet</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1 md:col-span-2">
                     <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="emplacement">Emplacement *</label>
                     <select 
-                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors appearance-none dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
+                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors appearance-none dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
                       id="emplacement" 
                       name="emplacement" 
                       required
@@ -232,7 +231,7 @@ function QuoteRequest() {
                     <div className="flex flex-col gap-2">
                       <label className="flex items-center gap-3 cursor-pointer group">
                         <input 
-                          className="w-4 h-4 text-primary-container border-outline-variant focus:ring-primary-container dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-orange-600 dark:focus:ring-orange-600" 
+                          className="w-4 h-4 text-primary-container border-outline-variant focus:ring-primary-container dark:bg-[#252b2e] dark:border-[#2d3438] dark:checked:bg-secondary dark:focus:ring-secondary" 
                           name="type_projet" 
                           required 
                           type="radio" 
@@ -244,7 +243,7 @@ function QuoteRequest() {
                       </label>
                       <label className="flex items-center gap-3 cursor-pointer group">
                         <input 
-                          className="w-4 h-4 text-primary-container border-outline-variant focus:ring-primary-container dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-orange-600 dark:focus:ring-orange-600" 
+                          className="w-4 h-4 text-primary-container border-outline-variant focus:ring-primary-container dark:bg-[#252b2e] dark:border-[#2d3438] dark:checked:bg-secondary dark:focus:ring-secondary" 
                           name="type_projet" 
                           type="radio" 
                           value="commercial"
@@ -255,7 +254,7 @@ function QuoteRequest() {
                       </label>
                       <label className="flex items-center gap-3 cursor-pointer group">
                         <input 
-                          className="w-4 h-4 text-primary-container border-outline-variant focus:ring-primary-container dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-orange-600 dark:focus:ring-orange-600" 
+                          className="w-4 h-4 text-primary-container border-outline-variant focus:ring-primary-container dark:bg-[#252b2e] dark:border-[#2d3438] dark:checked:bg-secondary dark:focus:ring-secondary" 
                           name="type_projet" 
                           type="radio" 
                           value="industriel"
@@ -269,7 +268,7 @@ function QuoteRequest() {
                   <div className="flex flex-col gap-1">
                     <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="puissance">Besoins énergétiques estimés</label>
                     <select 
-                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors appearance-none dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
+                      className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors appearance-none dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500" 
                       id="puissance" 
                       name="puissance"
                       value={formData.puissance}
@@ -287,7 +286,7 @@ function QuoteRequest() {
                 <div className="flex flex-col gap-1 mt-2">
                   <label className="font-label-md text-label-md text-on-surface dark:text-gray-200" htmlFor="message">Notes additionnelles</label>
                   <textarea 
-                    className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors resize-none dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500 dark:placeholder:text-gray-500" 
+                    className="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors resize-none dark:bg-[#252b2e] dark:border-[#2d3438] dark:text-white dark:focus:border-orange-500 dark:focus:ring-orange-500 dark:placeholder:text-gray-500" 
                     id="message" 
                     name="message" 
                     placeholder="Spécifiez des contraintes de site ou des équipements spécifiques..." 
@@ -299,9 +298,9 @@ function QuoteRequest() {
               </div>
 
               {/* Action Area */}
-              <div className="pt-4 border-t border-outline-variant flex justify-end dark:border-gray-800">
+              <div className="pt-4 border-t border-outline-variant flex justify-end dark:border-[#2d3438]">
                 <button 
-                  className="bg-secondary text-on-secondary font-label-md text-label-md px-8 py-3 rounded active:scale-95 transition-transform duration-150 hover:bg-secondary-container hover:text-on-secondary-container border border-transparent hover:border-secondary flex items-center gap-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:text-white" 
+                  className="bg-secondary text-on-secondary font-label-md text-label-md px-8 py-3 rounded active:scale-95 transition-transform duration-150 hover:bg-secondary-container hover:text-on-secondary-container border border-transparent hover:border-secondary flex items-center gap-2 dark:bg-secondary dark:hover:bg-secondary-container dark:text-white" 
                   type="submit"
                 >
                   <MessageCircle size={20} />

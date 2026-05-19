@@ -45,7 +45,7 @@ export default function Header() {
     <nav
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 py-2 shadow-lg backdrop-blur-md dark:bg-gray-950/90'
+          ? 'bg-white/90 py-2 shadow-lg backdrop-blur-md dark:bg-[#191c1e]/90'
           : 'bg-transparent py-4'
       }`}
     >
@@ -59,7 +59,7 @@ export default function Header() {
           <img
             alt="REPOWER-RDC Logo"
             className="h-10 object-contain md:h-12"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1vT-0rx9iCFDDC22d563aKtyXfwa4IGAMRBuXndhEXtqyNfI_DLXRw4rTFL9xCViebyIkRqDMcYdr9Ot2FG7hsy2LbsrLJVt7wHOxJLYz47lYsRR_99ePAX51VA5LFTMhS8O-XcL-InW-U-x9_biSYcJ5UcJZzodF0K4-AulmSz34Tsrv0reRGons5-h46EuiyaxoO_VzYkYwsnF2yaLKrl2HY3glZg8SthT59Xy3WthLcttzOz1j8Vm9-wyliXVUxwHKPOa64QOP"
+            src="/public/logo192.png"
           />
         </a>
 
@@ -69,8 +69,8 @@ export default function Header() {
             <a
               className={`rounded-full px-4 py-2 font-label-md text-label-md transition-all ${
                 isActivePath(href)
-                  ? ' text-black bg-orange-600'
-                  : 'text-on-surface hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-800'
+                  ? ' text-black bg-secondary'
+                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-[#252b2e]'
               }`}
               href={href}
               key={label}
@@ -97,7 +97,8 @@ export default function Header() {
           <button
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-colors hover:bg-secondary hover:text-white dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-orange-600"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-colors hover:bg-secondary hover:text-white dark:bg-[#252b2e] dark:text-gray-200 dark:hover:text-white"
+                        style={{ '--hover-bg': 'var(--color-secondary-accent, #ff8a65)' } as React.CSSProperties}
             onClick={() => setIsMenuOpen((current) => !current)}
             type="button"
           >
@@ -108,7 +109,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 top-[72px] z-40 h-[calc(100vh-72px)] w-full bg-white transition-all duration-300 dark:bg-gray-950 lg:hidden ${
+        className={`fixed inset-0 top-[72px] z-40 h-[calc(100vh-72px)] w-full bg-white transition-all duration-300 dark:bg-[#191c1e] lg:hidden ${
           isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
@@ -117,8 +118,8 @@ export default function Header() {
             <a
               className={`flex items-center justify-between rounded-xl px-6 py-4 transition-all ${
                 isActivePath(href)
-                  ? 'bg-secondary/10 text-black dark:bg-orange-600/10 dark:text-orange-400'
-                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-gray-900'
+                  ? 'bg-secondary/10 text-black dark:bg-secondary/10 dark:text-secondary'
+                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-[#1e2224]'
               }`}
               href={href}
               key={label}
@@ -138,7 +139,7 @@ export default function Header() {
               </p>
               <a
                 href="tel:+243810000000"
-                className="font-bold text-secondary dark:text-orange-400"
+                className="font-bold text-secondary" style={{ color: 'var(--color-secondary-accent, #ff8a65)' }}
               >
                 +243 81 000 0000
               </a>
@@ -160,7 +161,7 @@ function ThemeToggle({
   return (
     <button
       aria-label={isDarkMode ? 'Activer le mode clair' : 'Activer le mode sombre'}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-all hover:bg-secondary hover:text-white dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-orange-600"
+      className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-all hover:bg-secondary hover:text-white dark:bg-[#252b2e] dark:text-gray-200 dark:hover:text-white"
       onClick={onClick}
       type="button"
     >
@@ -176,7 +177,8 @@ function ThemeToggle({
 function QuoteButton({ className = '' }: { className?: string }) {
   return (
     <a
-      className={`inline-flex items-center gap-2 rounded-full px-8 py-2.5 font-label-md text-label-md font-bold uppercase tracking-widest text-white transition-all hover:bg-secondary-container hover:shadow-lg active:scale-95 bg-orange-600 dark:hover:bg-orange-700 ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full px-8 py-2.5 font-label-md text-label-md font-bold uppercase tracking-widest text-white transition-all hover:bg-secondary-container hover:shadow-lg active:scale-95 ${className}`}
+      style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}
       href="/demander-un-devis"
     >
       <span>Demander un devis</span>  

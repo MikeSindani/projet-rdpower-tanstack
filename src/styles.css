@@ -6,7 +6,7 @@
 @theme {
   --color-inverse-primary: #b4c6f6;
   --color-surface-variant: #d8e3fa;
-  --color-surface-container: #101828;
+  --color-surface-container: #1e2224;
   --color-tertiary-container: #1d2022;
   --color-on-tertiary-container: #85878a;
   --color-on-secondary-container: #fffbff;
@@ -22,7 +22,8 @@
   --color-tertiary: #05080a;
   --color-primary-fixed: #d9e2ff;
   --color-surface: #f9f9ff;
-  --color-secondary: #f54900;
+  --color-secondary: #ff5228;
+  --color-secondary-accent: #ff8a65;
   --color-on-error-container: #93000a;
   --color-on-primary-container: #7587b3;
   --color-on-error: #ffffff;
@@ -96,6 +97,11 @@
   --text-headline-xl--line-height: 56px;
   --text-headline-xl--letter-spacing: -0.02em;
   --text-headline-xl--font-weight: 800;
+  /* === Dark mode background palette (change here to retheme dark mode) === */
+  --color-dark-bg:          #191c1e;   /* page background */
+  --color-dark-bg-elevated: #1e2224;   /* sections slightly lighter */
+  --color-dark-bg-card:     #252b2e;   /* cards / inputs */
+  --color-dark-bg-border:   #2d3438;   /* borders / image wells */
 }
 
 * {
@@ -111,4 +117,94 @@ body,
 body {
   font-family: "Hanken Grotesk", sans-serif;
   margin: 0;
+}
+
+/* Dark theme background — controlled by --color-dark-bg in @theme */
+.dark {
+  background-color: var(--color-dark-bg) !important;
+}
+
+/* Secondary accent color using CSS variable */
+.bg-secondary-accent {
+  background-color: var(--color-secondary-accent, #ff8a65);
+}
+
+.text-secondary-accent {
+  color: var(--color-secondary-accent, #ff8a65);
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  animation: slide 12s infinite;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  animation: fadeInOut 12s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+.carousel-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.carousel-item:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.carousel-item:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.carousel-item:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.carousel-image {
+  flex: 0 0 40%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
 }
