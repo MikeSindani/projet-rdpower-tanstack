@@ -136,7 +136,7 @@ const productSections = [
 ]
 
 function ProductsPage() {
-  const { addItem, removeItem, isInCart, items } = useQuoteStore()
+  const { addItem, removeItem, isInCart, items, clearCart } = useQuoteStore()
 
   const handleWhatsAppBuy = (productName: string) => {
     const message = encodeURIComponent(`Bonjour REPOWER-RDC, je souhaite acheter le produit suivant : ${productName}`)
@@ -147,7 +147,7 @@ function ProductsPage() {
     <main className="bg-background px-margin-mobile pb-20 pt-40 text-on-background dark:bg-[#191c1e] dark:text-gray-200 md:px-margin-desktop">
       {/* Panier flottant de devis */}
       {items.length > 0 && (
-        <div className="fixed bottom-8 right-8 z-50 animate-bounce">
+        <div className="fixed bottom-8 right-8 z-50 flex items-center gap-2 animate-bounce">
           <a
             href="/demander-un-devis"
             className="flex items-center gap-3 rounded-full bg-secondary px-6 py-4 font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-secondary"
@@ -158,6 +158,13 @@ function ProductsPage() {
             </span>
             Demander mon devis
           </a>
+          <button
+            onClick={clearCart}
+            className="flex h-14 w-14 items-center justify-center rounded-full bg-red-500 text-white shadow-2xl transition-all hover:scale-105 hover:bg-red-600"
+            title="Tout vider"
+          >
+            <Trash2 size={24} />
+          </button>
         </div>
       )}
 

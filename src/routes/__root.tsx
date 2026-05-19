@@ -4,6 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import ScrollToTop from '../components/scroll-to-top'
 import appCss from '../styles.css?url'
 
 export const Route = createRootRoute({
@@ -63,6 +64,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Header />
         {children}
         <Footer />
+        <ScrollToTop />
         <TanStackDevtools
           config={{
             position: 'bottom-right',

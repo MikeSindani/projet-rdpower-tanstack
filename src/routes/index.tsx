@@ -16,7 +16,9 @@ import {
   ShieldCheck,
   SunMedium,
   Users,
-  Wrench
+  Wrench,
+  ShoppingCart,
+  Trash2
 } from 'lucide-react'
 import { useQuoteStore } from '../store/useQuoteStore'
 
@@ -49,7 +51,7 @@ const products = [
     name: 'Batterie Lithium 100Ah',
     tier: 'LiFePO4 Gen 3',
     image:
-      'https://tse1.mm.bing.net/th/id/OIP.Bvpp5jqyOJ4PJ2unpvFy9gAAAA?rs=1&pid=ImgDetMain&o=7&rm=3',
+      'https://tse3.mm.bing.net/th/id/OIP.IpIZn62j5JpG8dLvKBN09gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
 ]
 
@@ -86,7 +88,7 @@ const heroSlides = [
   },
   {
     type: 'image' as const,
-    image: 'https://tse4.mm.bing.net/th/id/OIP.Xnbk8jdLZMAflpe7dAalkgHaEH?w=768&h=427&rs=1&pid=ImgDetMain&o=7&rm=3',
+    image: 'https://tse3.mm.bing.net/th/id/OIP.pHN5g6U6kYwLJbaC0xI0TAHaDI?w=2560&h=1083&rs=1&pid=ImgDetMain&o=7&rm=3',
     badge: 'Batteries LiFePO4 Gen 3',
     heading: 'Stockage energie : 6000+ cycles, 10-15 ans de duree de vie',
     description:
@@ -284,10 +286,34 @@ function HeroCarousel() {
 }
 
 function RouteComponent() {
-  const { addItem, isInCart } = useQuoteStore()
+  const { addItem, removeItem, isInCart, items, clearCart } = useQuoteStore()
 
   return (
     <main className="bg-surface font-body-md text-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed dark:bg-[#191c1e] dark:text-gray-200">
+      {/* Panier flottant de devis */}
+      {items.length > 0 && (
+        <div className="fixed bottom-8 right-8 z-50 flex items-center gap-2 animate-bounce">
+          <a
+            href="/demander-un-devis"
+            className="flex items-center gap-3 rounded-full bg-secondary px-6 py-4 font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-secondary"
+            style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}
+          >
+            <ShoppingCart size={24} />
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-sm text-secondary" style={{ color: 'var(--color-secondary, #ff8a65)' }}>
+              {items.length}
+            </span>
+            Demander mon devis
+          </a>
+          <button
+            onClick={clearCart}
+            className="flex h-14 w-14 items-center justify-center rounded-full bg-red-500 text-white shadow-2xl transition-all hover:scale-105 hover:bg-red-600"
+            title="Tout vider"
+          >
+            <Trash2 size={24} />
+          </button>
+        </div>
+      )}
+
       <section
         className="relative h-screen min-h-[700px] overflow-hidden pt-20"
         id="home"
@@ -474,26 +500,23 @@ function RouteComponent() {
                   <h4 className="mt-1 font-bold text-primary dark:text-white">{product.name}</h4>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="font-bold" style={{ color: 'var(--color-secondary, #ff8a65)' }}>{product.tier}</span>
-                    <button
-                      onClick={() => addItem({ name: product.name, category: product.category })}
-                      disabled={isInCart(product.name)}
-                      className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all ${isInCart(product.name)
-                          ? 'bg-green-500 text-white cursor-default'
-                          : 'bg-primary-container text-white hover:bg-secondary dark:bg-[#1e2224]'
-                        }`}
-                    >
-                      {isInCart(product.name) ? (
-                        <>
-                          <CheckCircle2 size={14} />
-                          Ajouté
-                        </>
-                      ) : (
-                        <>
-                          <Plus size={14} />
-                          Devis
-                        </>
-                      )}
-                    </button>
+                    {isInCart(product.name) ? (
+                      <button
+                        onClick={() => removeItem(product.name)}
+                        className="flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white"
+                      >
+                        <Trash2 size={14} />
+                        Retirer
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => addItem({ name: product.name, category: product.category })}
+                        className="flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all bg-primary-container text-white hover:bg-secondary dark:bg-[#1e2224]"
+                      >
+                        <Plus size={14} />
+                        Devis
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -600,10 +623,10 @@ function RouteComponent() {
         <div className="mx-auto grid max-w-max-width grid-cols-1 gap-16 px-margin-mobile md:px-margin-desktop lg:grid-cols-2">
           <div>
             <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
-              Contactez Nos Experts
+              Discuter avec nos experts pour plus d&apos;informations.
             </h2>
             <p className="mb-10 text-on-surface-variant dark:text-gray-400">
-              Pret a passer a l energie solaire ? Notre equipe est a votre
+              Pret a passer a l&apos;energie solaire ? Notre equipe est a votre
               disposition pour toute question ou demande de devis.
             </p>
             <form className="space-y-6">

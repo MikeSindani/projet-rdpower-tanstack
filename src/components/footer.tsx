@@ -5,6 +5,7 @@ import {
   Mail,
   MapPin,
   Phone,
+  Wheat,
 } from 'lucide-react'
 
 // Icône TikTok personnalisée
@@ -40,7 +41,7 @@ const serviceLinks = [
 const companyLinks = [
   { href: '/about', label: 'À Propos de REPOWER-RDC' },
   { href: '/nos-services', label: 'Nos Réalisations' },
-  { href: '/demander-un-devis', label: 'Contactez-nous' },
+  { href: '/#contact', label: 'Contactez-nous' },
 ]
 
 const socialLinks = [

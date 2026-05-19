@@ -1,7 +1,8 @@
 import { useLocation } from '@tanstack/react-router'
-import { ArrowRight, Menu, Moon, Sun, X } from 'lucide-react'
+import { ArrowRight, Menu, Moon, Sun, X, ShoppingCart } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import image from '../../public/logo192.png'
+import { useQuoteStore } from '../store/useQuoteStore'
 
 const navLinks = [
   { label: 'Accueil', href: '/' },
@@ -176,13 +177,20 @@ function ThemeToggle({
 }
 
 function QuoteButton({ className = '' }: { className?: string }) {
+  const { items } = useQuoteStore()
+
   return (
     <a
       className={`inline-flex items-center gap-2 rounded-full px-8 py-2.5 font-label-md text-label-md font-bold uppercase tracking-widest text-white transition-all hover:bg-secondary-container hover:shadow-lg active:scale-95 ${className}`}
       style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}
       href="/demander-un-devis"
     >
-      <span>Demander un devis</span>  
+      <span>Demander un devis</span>
+      {items.length > 0 && (
+        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs font-bold text-secondary" style={{ color: 'var(--color-secondary, #ff8a65)' }}>
+          {items.length}
+        </span>
+      )}
       <ArrowRight size={18} />
     </a>
   )
