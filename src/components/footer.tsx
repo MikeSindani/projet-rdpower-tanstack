@@ -8,6 +8,8 @@ import {
   Wheat,
 } from 'lucide-react'
 
+import { CONTACT_INFO } from '../constants'
+
 // Icône TikTok personnalisée
 const Tiktok = ({ size = 18 }: { size?: number }) => (
   <svg
@@ -66,17 +68,17 @@ export default function Footer() {
             <div className="space-y-4 font-body-md text-body-md text-white/70">
               <a
                 className="flex items-center gap-3 transition-colors hover:text-secondary"
-                href="tel:+243810000000"
+                href={`tel:${CONTACT_INFO.phone.value}`}
               >
                 <Phone size={18} className="text-secondary" />
-                +243 81 000 0000
+                {CONTACT_INFO.phone.display}
               </a>
               <a
                 className="flex items-center gap-3 transition-colors hover:text-secondary"
-                href="mailto:contact@repower-rdc.com"
+                href={`mailto:${CONTACT_INFO.email}`}
               >
                 <Mail size={18} className="text-secondary" />
-                contact@repower-rdc.com
+                {CONTACT_INFO.email}
               </a>
               <div className="flex items-start gap-3">
                 <MapPin className="mt-1 shrink-0 text-secondary" size={18} />

@@ -22,6 +22,7 @@ import {
   Trash2
 } from 'lucide-react'
 import { useQuoteStore } from '../store/useQuoteStore'
+import { CONTACT_INFO } from '../constants'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -66,7 +67,7 @@ const values = [
 const heroSlides = [
   {
     type: 'video' as const,
-    badge: 'Bienvenue chew REPOWER-RDC',
+    badge: 'Bienvenu(e) chez REPOWER-RDC',
     heading: "L'énergie de demain, disponible aujourd'hui à Lubumbashi",
     description:
       'Solution completer d\'installation des panneaux solaires , onduleurs , batteries pour residence, commerce et industries. Expertise locale, equipement de qualite services apres ventes',
@@ -92,8 +93,7 @@ const heroSlides = [
     image: 'https://tse3.mm.bing.net/th/id/OIP.pHN5g6U6kYwLJbaC0xI0TAHaDI?w=2560&h=1083&rs=1&pid=ImgDetMain&o=7&rm=3',
     badge: 'Batteries LiFePO4 Gen 3',
     heading: 'Stockage energie : 6000+ cycles, 10-15 ans de duree de vie',
-    description:
-      'Nos batteries lithium fer phosphate garantissent une autonomie maximale, meme lors des journees sans soleil.',
+    description:'Nos batteries lithium fer phosphate garantissent une autonomie maximale, meme lors des journees sans soleil.',
   },
 ]
 
@@ -441,7 +441,7 @@ function RouteComponent() {
             <div className="flex items-center justify-between rounded-xl bg-secondary-container p-8 text-on-secondary-container md:col-span-2" style={{ backgroundColor: 'rgba(255, 138, 101, 0.1)', color: 'var(--color-secondary, #ff8a65)' }}>
               <div>
                 <h3 className="mb-2 font-headline-md text-headline-md">
-                  Besoin d{"'"}un devis ?
+                  Besoin d&apos;un devis ?
                 </h3>
                 <p className="opacity-90">
                   Nos ingenieurs evaluent vos besoins gratuitement.
@@ -530,10 +530,10 @@ function RouteComponent() {
         <div className="mx-auto flex max-w-max-width flex-col items-center gap-16 px-margin-mobile md:flex-row md:px-margin-desktop">
           <div className="md:w-1/2">
             <h2 className="mb-6 font-headline-lg text-headline-lg text-white">
-              Electrifier l{"'"}avenir de la RDC.
+              Electrifier l&apos;avenir de la RDC.
             </h2>
             <p className="mb-8 font-body-lg text-body-lg leading-relaxed text-white/80">
-              Basee au coeur de Lubumbashi, notre entreprise s appuie sur quatre
+              Basee au coeur de Lubumbashi, notre entreprise s&apos;appuie sur quatre
               piliers fondamentaux pour garantir le succes de vos projets energetiques.
             </p>
             <ul className="space-y-4">
@@ -567,10 +567,10 @@ function RouteComponent() {
       <section className="bg-surface-container-highest py-24 dark:bg-[#1e2224]" id="team">
         <div className="mx-auto max-w-max-width px-margin-mobile text-center md:px-margin-desktop">
           <h2 className="mb-4 font-headline-lg text-headline-lg text-primary dark:text-white">
-            L{"'"}Excellence Technique
+            L&apos;Excellence Technique
           </h2>
           <p className="mx-auto mb-16 max-w-2xl text-on-surface-variant dark:text-gray-400">
-            Une equipe d ingenieurs et de techniciens passionnes par l innovation et
+            Une equipe d&apos;ingenieurs et de techniciens passionnes par l&apos;innovation et
             engages pour un service client irreprochable.
           </p>
           <div className="grid grid-cols-1 gap-gutter-md md:grid-cols-3">
@@ -627,8 +627,8 @@ function RouteComponent() {
               Discuter avec nos experts pour plus d&apos;informations.
             </h2>
             <p className="mb-10 text-on-surface-variant dark:text-gray-400">
-              Pret a passer a l&apos;energie solaire ? Notre equipe est a votre
-              disposition pour toute question ou demande de devis.
+              Pret a passer a l&apos;energie solaire ? 
+              Notre equipe est a votre disposition pour toute question ou demande de devis.
             </p>
             <form className="space-y-6">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -702,11 +702,11 @@ function RouteComponent() {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-outline-variant bg-surface-container-high p-6 dark:border-[#2d3438] dark:bg-[#252b2e]">
                 <h5 className="mb-2 font-bold text-primary dark:text-white">Telephone</h5>
-                <p className="font-bold text-secondary" style={{ color: 'var(--color-secondary, #ff8a65)' }}>+243 81 000 0000</p>
+                <p className="font-bold text-secondary" style={{ color: 'var(--color-secondary, #ff8a65)' }}>{CONTACT_INFO.phone.display}</p>
               </div>
               <div className="rounded-xl border border-outline-variant bg-surface-container-high p-6 dark:border-[#2d3438] dark:bg-[#252b2e]">
                 <h5 className="mb-2 font-bold text-primary dark:text-white">Email Direct</h5>
-                <p className="font-bold text-secondary" style={{ color: 'var(--color-secondary, #ff8a65)' }}>contact@repower-rdc.com</p>
+                <p className="font-bold text-secondary" style={{ color: 'var(--color-secondary, #ff8a65)' }}>{CONTACT_INFO.email}</p>
               </div>
             </div>
 
@@ -721,14 +721,14 @@ function RouteComponent() {
               <a
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary"
                 style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}
-                href="mailto:contact@repower-rdc.com"
+                href={`mailto:${CONTACT_INFO.email}`}
               >
                 <Mail size={18} />
               </a>
               <a
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-all hover:bg-secondary"
                 style={{ backgroundColor: 'var(--color-secondary, #ff8a65)' }}
-                href="tel:+243810000000"
+                href={`tel:${CONTACT_INFO.phone.value}`}
               >
                 <Phone size={18} />
               </a>

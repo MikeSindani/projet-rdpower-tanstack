@@ -3,6 +3,7 @@ import { ArrowRight, Menu, Moon, Sun, X, ShoppingCart } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import image from '../../public/logo192.png'
 import { useQuoteStore } from '../store/useQuoteStore'
+import { CONTACT_INFO } from '../constants'
 
 const navLinks = [
   { label: 'Accueil', href: '/' },
@@ -17,6 +18,9 @@ export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+
+  const cleanPath = location.pathname === '/' ? '/' : location.pathname.replace(/\/$/, '')
+  const isHeroPage = ['/', '/about', '/nos-services'].includes(cleanPath)
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem('theme')
@@ -51,37 +55,68 @@ export default function Header() {
           : 'bg-transparent py-4'
       }`}
     >
-      <div className="mx-auto flex max-w-max-width items-center justify-between px-margin-mobile md:px-margin-desktop">
-        <a
-          href="/"
-          aria-label="REPOWER-RDC accueil"
-          onClick={closeMobileMenu}
-          className="transition-transform hover:scale-105"
-        >
-          <img
-            alt="REPOWER-RDC Logo"
-            className="h-10 object-contain md:h-12"
-            src={image}
+      <div className="mx-auto grid w-full grid-cols-3 items-center px-margin-mobile md:px-margin-desktop lg:flex lg:max-w-max-width lg:justify-between lg:items-center">
+        {/* Mobile Left action: Dark Mode Toggle */}
+        <div className="flex justify-start lg:hidden">
+          <ThemeToggle
+            isDarkMode={isDarkMode}
+            onClick={() => setIsDarkMode((current) => !current)}
           />
-        </a>
+        </div>
+
+        {/* Logo: Centered on mobile, left-aligned on desktop */}
+        <div className="flex justify-center lg:justify-start">
+          <a
+            href="/"
+            aria-label="REPOWER-RDC accueil"
+            onClick={closeMobileMenu}
+            className="transition-transform hover:scale-105"
+          >
+            <img
+              alt="REPOWER-RDC Logo"
+              className="h-10 object-contain md:h-12"
+              src={image}
+            />
+          </a>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-1 lg:flex">
-          {navLinks.map(({ label, href }) => (
-            <a
-              className={`rounded-full px-4 py-2 font-label-md text-label-md transition-all ${
-                isActivePath(href)
-                  ? ' text-black bg-secondary hover:text-white'
-                  : 'text-black hover:bg-surface-container dark:text-gray-200 dark:hover:bg-[#252b2e] dark:hover:text-white hover:text-white'
-              }`}
-              href={href}
-              key={label}
-            >
-              {label}
-            </a>
-          ))}
+          {navLinks.map(({ label, href }) => {
+            const isActive = isActivePath(href)
+            let linkColorClass = ''
+
+            if (isActive) {
+              linkColorClass = 'bg-secondary text-white'
+            } else if (isDarkMode) {
+              linkColorClass = 'text-white hover:bg-white/10 hover:text-white'
+            } else {
+              // Light Mode
+              if (scrolled) {
+                linkColorClass = 'text-black hover:bg-surface-container/70 hover:text-black'
+              } else {
+                // Not scrolled
+                if (isHeroPage) {
+                  linkColorClass = 'text-white hover:bg-white/10 hover:text-white'
+                } else {
+                  linkColorClass = 'text-black hover:bg-black/5 hover:text-black'
+                }
+              }
+            }
+
+            return (
+              <a
+                className={`rounded-full px-4 py-2 font-label-md text-label-md transition-all ${linkColorClass}`}
+                href={href}
+                key={label}
+              >
+                {label}
+              </a>
+            )
+          })}
         </div>
 
+        {/* Desktop Actions */}
         <div className="hidden items-center gap-4 lg:flex">
           <ThemeToggle
             isDarkMode={isDarkMode}
@@ -90,17 +125,13 @@ export default function Header() {
           <QuoteButton />
         </div>
 
-        {/* Mobile Actions */}
-        <div className="flex items-center gap-3 lg:hidden">
-          <ThemeToggle
-            isDarkMode={isDarkMode}
-            onClick={() => setIsDarkMode((current) => !current)}
-          />
+        {/* Mobile Right action: Hamburger Menu Button */}
+        <div className="flex justify-end lg:hidden">
           <button
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-colors hover:bg-secondary hover:text-white dark:bg-[#252b2e] dark:text-gray-200 dark:hover:text-white"
-                        style={{ '--hover-bg': 'var(--color-secondary-accent, #ff8a65)' } as React.CSSProperties}
+            style={{ '--hover-bg': 'var(--color-secondary-accent, #ff8a65)' } as React.CSSProperties}
             onClick={() => setIsMenuOpen((current) => !current)}
             type="button"
           >
@@ -140,10 +171,10 @@ export default function Header() {
                 Besoin d'aide ?
               </p>
               <a
-                href="tel:+243810000000"
+                href={`tel:${CONTACT_INFO.phone.value}`}
                 className="font-bold text-secondary" style={{ color: 'var(--color-secondary-accent, #ff8a65)' }}
               >
-                +243 81 000 0000
+                {CONTACT_INFO.phone.display}
               </a>
             </div>
           </div>
@@ -163,7 +194,9 @@ function ThemeToggle({
   return (
     <button
       aria-label={isDarkMode ? 'Activer le mode clair' : 'Activer le mode sombre'}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-all hover:bg-secondary hover:text-white dark:bg-[#252b2e] dark:text-gray-200 dark:hover:text-white"
+      className={isDarkMode ? 
+        `flex h-10 w-10 items-center justify-center rounded-full bg-white text-on-surface transition-all hover:bg-secondary hover:text-white` : 
+        `flex h-10 w-10 items-center justify-center rounded-full bg-surface-container text-on-surface transition-all hover:bg-secondary hover:text-white dark:bg-white dark:text-gray-200 dark:hover:text-white`}
       onClick={onClick}
       type="button"
     >

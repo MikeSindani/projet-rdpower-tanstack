@@ -14,12 +14,13 @@ import {
   Trash2
 } from 'lucide-react'
 import { useQuoteStore } from '../store/useQuoteStore'
+import { CONTACT_INFO } from '../constants'
 
 export const Route = createFileRoute('/nos-produits')({
   component: ProductsPage,
 })
 
-const WHATSAPP_NUMBER = '+243810000000'
+const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.value
 
 const panelProducts = [
   'Panneau solaire 450w',
@@ -379,13 +380,13 @@ function ProductsPage() {
               Contactez-nous pour recevoir une proposition detaillee.
             </p>
             <div className="space-y-3">
-              <a className="flex items-center gap-3 text-secondary hover:underline" href="tel:+243810000000">
+              <a className="flex items-center gap-3 text-secondary hover:underline" href={`tel:${CONTACT_INFO.phone.value}`}>
                 <Phone size={18} />
-                +243 81 000 0000
+                {CONTACT_INFO.phone.display}
               </a>
-              <a className="flex items-center gap-3 text-secondary hover:underline" href="mailto:contact@repower-rdc.com">
+              <a className="flex items-center gap-3 text-secondary hover:underline" href={`mailto:${CONTACT_INFO.email}`}>
                 <ShoppingCart size={18} />
-                contact@repower-rdc.com
+                {CONTACT_INFO.email}
               </a>
             </div>
           </div>

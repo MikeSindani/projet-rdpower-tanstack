@@ -2,12 +2,13 @@ import { createFileRoute } from '@tanstack/react-router';
 import { MessageCircle, ShoppingCart, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 import { useQuoteStore } from '../store/useQuoteStore';
+import { CONTACT_INFO } from '../constants';
 
 export const Route = createFileRoute('/demander-un-devis')({
   component: QuoteRequest,
 })
 
-const WHATSAPP_NUMBER = '+243810000000'
+const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.value
 
 function QuoteRequest() {
   const { items, removeItem, clearCart } = useQuoteStore();

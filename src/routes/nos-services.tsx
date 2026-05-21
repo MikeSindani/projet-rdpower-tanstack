@@ -64,7 +64,7 @@ function Services() {
     <main className="bg-surface text-on-surface dark:bg-[#191c1e] dark:text-gray-200">
       <section className="relative flex h-[80vh] items-center overflow-hidden bg-primary-container dark:bg-[#1e2224]">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 z-10 bg-primary-container/70 dark:bg-[#191c1e]/75" />
+          <div className="absolute inset-0 z-10 bg-primary-container/70" />
           <img
             alt="Centrale solaire industrielle"
             className="h-full w-full object-cover"
