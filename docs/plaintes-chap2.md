@@ -1,220 +1,222 @@
-# CHAPITRE DEUXIÈME : PRÉSENTATION DE L'ENTREPRISE
+# CHAPITRE DEUXIÈME : PRÉSENTATION DE L'ENTREPRISE — VODACOM CONGO À LUBUMBASHI
 
 ## INTRODUCTION DU CHAPITRE
 
-L'étude de la gestion des plaintes et de son impact sur la satisfaction des clients ne peut être conduite de manière abstraite : elle doit s'ancrer dans les réalités concrètes d'une organisation donnée, avec son histoire, sa structure, ses missions, ses ressources et ses contraintes. Ce deuxième chapitre est entièrement consacré à la présentation de l'entreprise objet de notre étude : la **Société Congolaise des Postes et Télécommunications (SCPT)**, plus couramment désignée sous l'appellation **Poste et Télécommunication** en République Démocratique du Congo.
+L'étude de la gestion des plaintes et de son impact sur la satisfaction des clients ne peut être conduite de manière abstraite : elle doit s'ancrer dans les réalités concrètes d'une organisation donnée, avec son histoire, sa structure, ses missions, ses ressources et ses contraintes. Ce deuxième chapitre est entièrement consacré à la présentation de l'entreprise objet de notre étude : **Vodacom Congo S.A.**, l'un des principaux opérateurs de télécommunications mobiles en République Démocratique du Congo, dont nous focalisons l'analyse sur ses activités et sa présence dans la ville de **Lubumbashi**, chef-lieu de la Province du Haut-Katanga.
 
-Il s'organise autour de quatre sections : l'historique et le cadre juridique de l'entreprise, son organisation administrative et fonctionnelle, ses missions et les services offerts aux clients, et enfin son environnement opérationnel actuel, incluant les défis auxquels elle fait face en matière de qualité de service et de gestion des réclamations clients.
+Il s'organise autour de quatre sections : l'historique et le cadre juridique de Vodacom Congo, son organisation administrative et fonctionnelle à Lubumbashi, ses missions et les services offerts aux clients, et enfin son environnement opérationnel actuel, incluant les défis auxquels elle fait face en matière de qualité de service et de gestion des réclamations clients dans la ville de Lubumbashi.
 
 ---
 
 ## SECTION 1 : HISTORIQUE ET CADRE JURIDIQUE
 
-### 1.1. Origine et évolution historique
+### 1.1. Origine et évolution historique du Groupe Vodacom
 
-L'histoire de la poste et des télécommunications au Congo est intimement liée à l'histoire coloniale du pays. Elle remonte à la fin du XIXᵉ siècle, lorsque les autorités de l'**État Indépendant du Congo (EIC)**, fondé par le roi Léopold II de Belgique en 1885, établissent les premières infrastructures de communication pour les besoins administratifs et commerciaux de la colonisation.
+**Le Groupe Vodacom**
 
-**Période coloniale (1885–1960)**
+Vodacom Congo est une filiale du **Groupe Vodacom**, lui-même contrôlé majoritairement par le groupe britannique **Vodafone**. Le Groupe Vodacom a été fondé en **1994** en Afrique du Sud par un consortium constitué de Telkom South Africa et de Vodafone, en vue de déployer les premiers réseaux GSM sur le continent africain. Dès ses débuts, Vodacom s'est positionné comme un opérateur panafricain ambitieux, implantant progressivement ses activités dans plusieurs pays du continent.
 
-Les premières lignes télégraphiques sont installées dès 1886 pour relier les postes administratifs le long du fleuve Congo. Le service postal colonial est organisé par l'administration belge sous la dénomination **Régie des Postes du Congo Belge**, qui fonctionnait en étroite coordination avec la **Régie des Télégraphes et Téléphones** (RTT). Ces services étaient intégrés à l'administration coloniale et destinés principalement aux besoins des colons européens, des entreprises minières et commerciales, et de l'administration territoriale.
+Aujourd'hui, le Groupe Vodacom opère dans cinq pays africains : l'Afrique du Sud (où il est le leader du marché), la République Démocratique du Congo, la Tanzanie, le Mozambique et le Lesotho. Il compte plus de **120 millions de clients** à travers le continent et est coté à la Bourse de Johannesburg (JSE).
 
-Durant cette période, le réseau postal et télégraphique s'étend progressivement à travers tout le territoire congolais, suivant les axes de pénétration économique : les voies ferrées (Matadi-Léopoldville, Katanga-Zambie), le fleuve Congo et ses affluents, les routes coloniales. En 1960, la colonie dispose d'un réseau postal relativement développé par rapport à d'autres territoires africains, avec des bureaux de poste dans toutes les villes importantes.
+**Implantation en République Démocratique du Congo**
 
-**Période post-indépendance (1960–1997)**
+La présence de Vodacom en RDC est étroitement liée à la libéralisation du secteur des télécommunications congolais, amorcée dans les années 2000 sous la présidence de Joseph Kabila, à la suite de la promulgation de la **Loi n° 013/2002 du 16 octobre 2002** portant réglementation des télécommunications.
 
-À l'indépendance du Congo (30 juin 1960), les services postaux et de télécommunications sont nationalisés et confiés à l'administration de la nouvelle République. Sous le régime Mobutu, le secteur est réorganisé plusieurs fois :
+**Vodacom Congo S.A.** a obtenu sa licence d'opérateur de réseau mobile en **2001** et a lancé officiellement ses services commerciaux en **2002**. La société a été créée sous la forme d'une société par actions à responsabilité limitée de droit congolais, conformément au droit OHADA applicable en RDC, avec un actionnariat composé du Groupe Vodacom (majoritaire) et de partenaires congolais.
 
-- En **1971**, l'**Office Congolais des Postes et Télécommunications (OCPT)** est créé comme entité paraétatique chargée de gérer l'ensemble des services postaux et de télécommunications sur le territoire national. L'OCPT fonctionnait sous la tutelle du Ministère des Postes et Télécommunications.
+L'arrivée de Vodacom en RDC a constitué un tournant majeur dans le développement des télécommunications congolaises. En quelques années, l'opérateur a déployé un réseau couvrant les principales villes du pays, rompant avec la quasi-absence de services de téléphonie fiables que connaissait la population congolaise depuis le délabrement progressif des infrastructures de l'OCPT (Office Congolais des Postes et Télécommunications) dans les années 1980–1990.
 
-- La **zaïrianisation** de 1973–1974 affecte peu directement ce secteur, car il était déjà sous contrôle public. Cependant, la détérioration générale de l'économie zaïroise, l'inflation galopante et le délabrement des infrastructures publiques ont progressivement dégradé la qualité des services postaux et télécoms.
+**Évolution à Lubumbashi**
 
-- Dans les années 1980 et 1990, le réseau de l'OCPT connaît un déclin accéléré : les équipements vieillissent faute d'investissements, les salaires des agents sont payés avec des retards croissants, et la qualité du service se détériore au point que de nombreuses fonctions (télécommunications longue distance, transferts d'argent) sont progressivement abandonnées ou captées par des opérateurs privés informels.
+À Lubumbashi, deuxième ville économique de la RDC et capitale minière du Katanga, Vodacom Congo s'est implanté dès le début de ses opérations commerciales en 2002. La ville présentait un potentiel économique considérable, lié à l'activité minière intense (cuivre, cobalt) et à une population urbaine dotée d'un pouvoir d'achat relatif supérieur à la moyenne congolaise.
 
-**Période de transition et de réforme (1997–2010)**
-
-La chute du régime Mobutu en 1997 et l'arrivée au pouvoir de Laurent-Désiré Kabila s'accompagnent d'une réforme partielle du secteur. L'OCPT est rebaptisé et restructuré. La libéralisation progressive du secteur des télécommunications, amorcée dans les années 2000 sous la présidence de Joseph Kabila, conduit à l'attribution de licences à des opérateurs mobiles privés (Vodacom, Airtel, Orange, Africell) qui concurrencent directement les services de télécommunication de l'État.
-
-**Période contemporaine (2010–à nos jours)**
-
-La **Société Congolaise des Postes et Télécommunications (SCPT)** est l'entité issue de la réorganisation de l'OCPT. Elle est organisée comme une **entreprise publique** conformément à la Loi n° 08/007 du 7 juillet 2008 portant dispositions générales relatives à la transformation des entreprises publiques en RDC. Cette loi a transformé les entreprises publiques congolaises en sociétés commerciales soumises au droit des sociétés (OHADA), tout en maintenant une participation majoritaire de l'État dans leur capital.
-
-La SCPT opère sous la double tutelle du **Ministère des Postes, Télécommunications et Nouvelles Technologies de l'Information et de la Communication (PTNTIC)** et du **Ministère du Portefeuille** (qui gère les participations de l'État dans les entreprises publiques).
+Au fil des années, Vodacom a progressivement étendu sa couverture réseau à l'ensemble des dix communes de Lubumbashi (Lubumbashi, Kampemba, Kamalondo, Kenya, Katuba, Annexe, Ruashi, Kasha, Rwashi, Ibanda), ainsi qu'aux agglomérations périphériques (Kasenga, Kipushi, Kasumbalesa). L'opérateur a également déployé la technologie **4G LTE** à Lubumbashi, faisant de la ville l'une des premières en RDC à bénéficier d'une connexion mobile haut débit de quatrième génération.
 
 ### 1.2. Cadre juridique et réglementaire
 
-La SCPT opère dans un environnement juridique défini par plusieurs textes fondamentaux :
+Vodacom Congo opère dans un environnement juridique défini par plusieurs textes fondamentaux :
 
-- **Loi n° 013/2002 du 16 octobre 2002** portant réglementation des télécommunications en RDC, qui libéralise le secteur et crée l'**Autorité de Régulation de la Poste et des Télécommunications du Congo (ARPTC)**, organe indépendant chargé de la régulation du secteur ;
-- **Loi n° 08/007 du 7 juillet 2008** sur la transformation des entreprises publiques ;
-- **Décret n° 09/12 du 24 avril 2009** portant statuts d'une entreprise publique transformée en société commerciale, applicable à la SCPT ;
-- **Convention de concession** entre l'État congolais et la SCPT pour la gestion du service universel postal.
+- **Loi n° 013/2002 du 16 octobre 2002** portant réglementation des télécommunications en RDC, qui libéralise le secteur et crée l'**Autorité de Régulation de la Poste et des Télécommunications du Congo (ARPTC)**, organe indépendant chargé de la régulation du secteur et de la protection des droits des consommateurs ;
+- **Licence d'exploitation** accordée par l'ARPTC, définissant les obligations de couverture, de qualité de service, d'interconnexion et de traitement des plaintes ;
+- **Loi-cadre n° 20/017 du 25 novembre 2020** sur les télécommunications et les technologies de l'information et de la communication (TIC), qui actualise le cadre réglementaire congolais ;
+- **Règlements de l'ARPTC** relatifs à la qualité de service, au traitement des réclamations clients et aux obligations d'information des usagers ;
+- **Droit OHADA** applicable aux sociétés commerciales opérant en RDC, notamment pour les aspects contractuels et de gouvernance.
 
-L'ARPTC joue un rôle important dans la régulation des litiges entre les opérateurs et leurs clients, notamment en matière de qualité de service et de traitement des plaintes. Elle peut recevoir des plaintes de clients insatisfaits des services postaux et de télécommunications et imposer des sanctions aux opérateurs en cas de non-respect des obligations de qualité.
+L'ARPTC joue un rôle central dans la régulation des litiges entre les opérateurs et leurs clients. Elle peut recevoir des plaintes de clients insatisfaits, diligenter des enquêtes sur la qualité de service et imposer des sanctions financières aux opérateurs en cas de non-respect de leurs obligations. Vodacom Congo est tenu de publier des indicateurs de qualité de service et de soumettre des rapports périodiques à l'ARPTC.
 
 ---
 
 ## SECTION 2 : ORGANISATION ADMINISTRATIVE ET FONCTIONNELLE
 
-### 2.1. Structure organisationnelle
+### 2.1. Structure organisationnelle nationale
 
-La SCPT est administrée conformément aux dispositions du droit OHADA applicable aux sociétés anonymes en RDC. Sa structure de gouvernance comprend :
+Vodacom Congo S.A. est administrée conformément aux dispositions du droit OHADA applicable aux sociétés anonymes, avec une structure de gouvernance adaptée aux exigences d'un opérateur télécom de grande envergure :
 
 **Les organes de gouvernance :**
 
-- **L'Assemblée Générale des Actionnaires** : organe souverain composé de représentants de l'État congolais, principal actionnaire, et d'éventuels actionnaires minoritaires ;
-- **Le Conseil d'Administration** : dirigé par un Président du Conseil d'Administration (PCA), il définit les orientations stratégiques de l'entreprise et supervise la Direction Générale ;
-- **La Direction Générale** : composée d'un **Directeur Général** (DG) et d'un ou plusieurs **Directeurs Généraux Adjoints** (DGA), elle assure la gestion quotidienne de l'entreprise et met en œuvre les décisions du Conseil d'Administration ;
-- **Le Collège des Commissaires aux Comptes** : assure le contrôle financier et la certification des comptes.
+- **Le Conseil d'Administration** : composé de représentants du Groupe Vodacom et des actionnaires minoritaires, il définit les orientations stratégiques et supervise la Direction Générale. Il comprend des administrateurs indépendants conformément aux bonnes pratiques de gouvernance du Groupe Vodacom ;
+- **La Direction Générale** : assurée par un **Directeur Général (CEO)** secondé par plusieurs **Directeurs Généraux Adjoints**, responsables des principales fonctions de l'entreprise. La Direction Générale est basée à **Kinshasa**, siège social de la société ;
+- **Le Comité d'Audit et de Conformité** : veille au respect des obligations légales, réglementaires et éthiques, ainsi qu'à la fiabilité des états financiers.
 
 **Les directions fonctionnelles :**
 
-La Direction Générale s'appuie sur plusieurs directions spécialisées, dont les principales sont :
+- **La Direction Technique et Réseaux** : chargée du déploiement, de l'exploitation et de la maintenance des infrastructures réseau (antennes, équipements cœur de réseau, transmission) ;
+- **La Direction Commerciale et Marketing** : chargée du développement des ventes, de la gestion des canaux de distribution, des offres et promotions, et de la stratégie de marque ;
+- **La Direction de l'Expérience Client (Customer Experience)** : chargée de la gestion de la relation client, du service après-vente, du traitement des plaintes et de la mesure de la satisfaction ;
+- **La Direction des Ressources Humaines** : chargée de la gestion du capital humain, du recrutement, de la formation et du développement des compétences ;
+- **La Direction Financière** : chargée de la gestion financière, de la comptabilité, du contrôle de gestion et de la conformité fiscale ;
+- **La Direction des Services Financiers Mobiles (M-Pesa)** : chargée du développement et de l'exploitation du service de mobile money M-Pesa, devenu un pilier stratégique de l'activité ;
+- **La Direction Juridique et Réglementaire** : chargée des relations avec l'ARPTC, du traitement des contentieux et de la conformité réglementaire.
 
-- **La Direction des Services Postaux** : chargée de la gestion du réseau de distribution du courrier et des colis, des services d'épargne postale et des mandats postaux ;
-- **La Direction des Télécommunications** : chargée des services de téléphonie fixe, des liaisons louées et des services de données ;
-- **La Direction Commerciale et Marketing** : chargée du développement de la clientèle, de la promotion des services et de la gestion de la relation client ;
-- **La Direction des Ressources Humaines** : chargée de la gestion du personnel, de la formation et du développement des compétences ;
-- **La Direction Financière et Comptable** : chargée de la gestion financière, de la comptabilité et du contrôle de gestion ;
-- **La Direction des Infrastructures et des Réseaux** : chargée de la maintenance et du développement des infrastructures postales et télécom ;
-- **La Direction du Contentieux et des Affaires Juridiques** : chargée du traitement des litiges et réclamations clients, ainsi que des questions juridiques et réglementaires.
+### 2.2. Organisation régionale à Lubumbashi
 
-### 2.2. Implantation géographique
+Au niveau de la Province du **Haut-Katanga**, Vodacom Congo dispose d'une **Direction Régionale** basée à Lubumbashi, qui coordonne l'ensemble des activités de l'opérateur dans la région. Cette structure régionale comprend :
 
-La SCPT dispose d'un réseau d'implantations sur l'ensemble du territoire national, organisé en niveaux hiérarchiques :
+- **Un Directeur Régional** : responsable de l'ensemble des opérations commerciales, techniques et administratives dans la région Haut-Katanga ;
+- **Des Agences commerciales et points de vente** : répartis dans les principales communes de Lubumbashi et dans les villes secondaires de la province (Likasi, Kolwezi, Kipushi, Kasumbalesa) ;
+- **Des équipes techniques locales** : chargées de la maintenance et de l'optimisation du réseau dans la région ;
+- **Un Service Client régional** : chargé du traitement des plaintes, des demandes d'information et du suivi de la satisfaction des clients lushois.
 
-- **Le Siège Social et la Direction Générale** : basés à Kinshasa, capitale de la RDC ;
-- **Les Directions Provinciales** : une par province (26 provinces depuis le redécoupage de 2015), chargées de la coordination des activités dans leur ressort territorial ;
-- **Les Bureaux de Poste de chef-lieu** : dans chaque chef-lieu de province et dans les grandes villes ;
-- **Les Guichets et Agences locales** : dans les villes secondaires et les centres semi-urbains.
+Les principaux centres de service client (*Vodacom Shops*) de Lubumbashi sont localisés dans des zones à forte fréquentation commerciale, notamment dans les quartiers de **Lubumbashi Centre**, **Rwashi**, **Katuba** et **Kenya**, afin de réduire les distances d'accès pour les clients des différentes communes.
 
-Au niveau de la Province du **Haut-Katanga**, dont Lubumbashi est le chef-lieu, la SCPT dispose d'une Direction Provinciale basée à Lubumbashi, avec plusieurs bureaux de poste et guichets dans les communes de la ville et dans les agglomérations secondaires de la province (Likasi, Kolwezi, Kipushi, Kasumbalesa, etc.).
+### 2.3. Ressources humaines à Lubumbashi
 
-### 2.3. Ressources humaines
+Vodacom Congo emploie plusieurs centaines d'agents à Lubumbashi, répartis entre le personnel permanent et les agents contractuels ou prestataires. On distingue :
 
-La SCPT emploie plusieurs milliers d'agents à travers le territoire national, répartis entre le personnel de direction, les techniciens, les agents de guichet (facteurs, opérateurs téléphoniques, agents commerciaux) et le personnel d'appui (sécurité, nettoyage, conduite).
+- **Le personnel de direction et d'encadrement** : directeurs régionaux, chefs de département, superviseurs ;
+- **Les commerciaux et agents de terrain** : chargés du développement des ventes, de l'activation des nouvelles lignes et du suivi des revendeurs (*dealers*) ;
+- **Les agents de service client** : en contact direct avec les clients dans les agences, chargés du traitement des plaintes, des demandes de renseignements et des opérations de service après-vente ;
+- **Les techniciens réseau** : chargés de la maintenance des équipements, de l'optimisation de la couverture et de la résolution des incidents techniques ;
+- **Le personnel de support** : comptabilité, ressources humaines, sécurité, logistique.
 
-Le personnel de première ligne — les agents de guichet en contact direct avec les clients — joue un rôle crucial dans la qualité de service perçue et dans le traitement des plaintes. Leur formation, leur motivation et leur sens du service client sont des déterminants essentiels de la satisfaction des usagers.
+Le personnel de première ligne — les agents de service client en contact direct avec les abonnés — joue un rôle crucial dans la qualité de service perçue et dans le traitement efficace des plaintes. Leur formation, leur motivation et leur sens du service client sont des déterminants essentiels de la satisfaction des abonnés lushois.
 
 ---
 
-## SECTION 3 : MISSIONS ET SERVICES OFFERTS
+## SECTION 3 : MISSIONS ET SERVICES OFFERTS À LUBUMBASHI
 
-### 3.1. Missions institutionnelles
+### 3.1. Missions et positionnement stratégique
 
-La SCPT remplit deux types de missions :
+Vodacom Congo poursuit à Lubumbashi plusieurs missions complémentaires, qui reflètent à la fois ses obligations réglementaires et sa stratégie commerciale :
 
-**Missions de service public universel :**
+**Mission de connectivité** : assurer l'accès de la population lubumbashienne aux services de communications électroniques (voix, SMS, données), en élargissant progressivement la couverture réseau et en améliorant la qualité de service ;
 
-- **La distribution du courrier postal** : collecte, acheminement et distribution de correspondances, lettres ordinaires et recommandées, sur l'ensemble du territoire national et vers l'international ;
-- **Le service des colis postaux** : réception et livraison de paquets et colis de particuliers et d'entreprises ;
-- **L'épargne postale** : gestion de comptes d'épargne accessibles dans les bureaux de poste, historiquement conçus pour toucher les populations exclues du système bancaire formel ;
-- **Les mandats postaux** : service de transfert d'argent national et international, notamment via les conventions avec l'**Union Postale Universelle (UPU)** ;
-- **La philatélie** : émission et vente de timbres-poste congolais.
+**Mission d'inclusion financière** : à travers le service **M-Pesa**, Vodacom Congo contribue à l'inclusion financière des populations non bancarisées de Lubumbashi, en leur offrant un accès simple aux services de paiement, d'épargne et de transfert d'argent via leur téléphone mobile ;
 
-**Missions commerciales :**
+**Mission économique** : en tant que premier employeur privé dans le secteur des TIC à Lubumbashi, Vodacom Congo contribue à la création d'emplois directs et indirects (revendeurs, agents M-Pesa, sous-traitants techniques) dans la ville.
 
-- **La téléphonie fixe** : services de ligne téléphonique fixe pour les particuliers et les entreprises, en concurrence avec les opérateurs mobiles ;
-- **Les liaisons louées** (*leased lines*) : mise à disposition de circuits de télécommunications dédiés pour les entreprises et administrations ;
-- **Les services internet** : connexion internet via des technologies filaires ou sans fil dans les zones couvertes ;
-- **La messagerie rapide** : service de courrier express à délai garanti, en concurrence avec des opérateurs privés (DHL, FedEx, Chronopost).
+### 3.2. Gamme de services offerts
 
-### 3.2. Gamme de services détaillée
-
-**Services postaux :**
-
-| Service | Description | Délai indicatif |
-|---------|-------------|-----------------|
-| Lettre ordinaire (national) | Envoi de correspondances à tarif standard | 5 à 15 jours |
-| Lettre recommandée | Envoi avec accusé de réception | 5 à 15 jours |
-| Colis postaux | Envoi de paquets jusqu'à 20 kg | 7 à 21 jours |
-| EMS (Express Mail Service) | Courrier et colis express international | 3 à 7 jours |
-| Mandat postal national | Transfert d'argent entre villes congolaises | 1 à 5 jours |
-| Mandat postal international | Transfert d'argent vers l'étranger (via UPU) | 3 à 10 jours |
-
-**Services de télécommunication :**
+**Services de téléphonie mobile :**
 
 | Service | Description |
 |---------|-------------|
-| Téléphonie fixe | Lignes téléphoniques résidentielles et professionnelles |
-| Liaisons spécialisées | Circuits dédiés pour entreprises (transmission de données) |
-| Internet ADSL/Fibre | Connexion internet haut débit (zones couvertes) |
-| Téléphonie publique | Cabines téléphoniques dans les espaces publics |
+| Téléphonie voix (2G/3G/4G) | Appels nationaux et internationaux, toutes catégories d'abonnés |
+| SMS | Messages courts nationaux et internationaux |
+| Roaming international | Services voix et données lors des déplacements à l'étranger |
+| Numéros spéciaux | Numéros d'urgence, service client (111) |
 
-### 3.3. Partenariats et conventions
+**Services de données mobiles :**
 
-La SCPT est membre de plusieurs organisations postales internationales qui structurent ses activités et ses standards de qualité :
+| Service | Description |
+|---------|-------------|
+| Internet mobile 3G | Navigation web, réseaux sociaux, messagerie |
+| Internet mobile 4G LTE | Haut débit mobile dans les zones couvertes de Lubumbashi |
+| Offres de données (*data bundles*) | Forfaits journaliers, hebdomadaires et mensuels à tarifs variés |
+| Hotspots Wi-Fi | Points d'accès Wi-Fi dans certains espaces publics et commerciaux |
 
-- **L'Union Postale Universelle (UPU)** : organisation intergouvernementale basée à Berne (Suisse), qui définit les règles du système postal mondial et facilite l'échange international de courrier et de colis. L'adhésion à l'UPU impose à la SCPT des obligations de qualité de service et des procédures de traitement des réclamations internationales ;
-- **L'Union Postale Africaine (UPA)** : organisation régionale africaine membre de l'UPU, facilitant les échanges postaux entre pays africains ;
-- **Western Union** : partenariat pour les services de transfert d'argent international, accessible dans certains bureaux de la SCPT.
+**Services financiers mobiles (M-Pesa) :**
+
+M-Pesa est le service de mobile money de Vodacom Congo, déployé en RDC depuis **2012**. À Lubumbashi, il constitue l'un des principaux vecteurs d'inclusion financière pour les populations non bancarisées :
+
+| Service M-Pesa | Description |
+|----------------|-------------|
+| Dépôt d'argent (*cash-in*) | Alimentation du portefeuille M-Pesa via un agent agréé |
+| Retrait d'argent (*cash-out*) | Retrait d'espèces depuis le portefeuille M-Pesa |
+| Transfert d'argent | Envoi d'argent entre abonnés M-Pesa (national) |
+| Paiement de factures | Règlement des factures SNEL, REGIDESO, DSTV, etc. |
+| Paiement marchand | Paiement chez les commerçants partenaires |
+| Achat de crédit téléphonique | Rechargement du compte téléphonique via M-Pesa |
+| Épargne M-Pesa | Constitution d'une épargne mobile sécurisée |
+
+**Offres commerciales :**
+
+Vodacom Congo propose à Lubumbashi plusieurs gammes d'offres adaptées aux différents segments de clientèle :
+
+- **Offres prépayées** (*prepaid*) : destinées à la majorité des abonnés, permettant l'achat de crédit à la demande sans engagement ;
+- **Offres postpayées** (*postpaid*) : destinées aux clients entreprises et aux particuliers à fort usage, avec facturation mensuelle ;
+- **Offres entreprises** (*Vodacom Business*) : solutions de connectivité dédiées aux entreprises (liaisons internet dédiées, VPN, solutions cloud) ;
+- **Offres jeunes et étudiants** : tarifs préférentiels sur les données et les appels, adaptés au profil des étudiants des universités de Lubumbashi (UNILU, ISC, etc.).
+
+### 3.3. Infrastructure réseau à Lubumbashi
+
+Vodacom Congo dispose à Lubumbashi d'une infrastructure réseau conséquente :
+
+- **Sites radio (antennes BTS/eNB)** : plusieurs dizaines de sites déployés dans toutes les communes de Lubumbashi, assurant une couverture 2G quasi-totale et une couverture 4G dans les zones urbaines denses ;
+- **Infrastructure de fibre optique** : réseau de transport en fibre optique reliant les sites radio au cœur du réseau, garantissant la capacité et la qualité de la connexion de données ;
+- **Centre de données régional** : hébergeant les équipements de supervision et de gestion du réseau pour la région Haut-Katanga.
 
 ---
 
-## SECTION 4 : ENVIRONNEMENT OPÉRATIONNEL ET DÉFIS ACTUELS
+## SECTION 4 : ENVIRONNEMENT OPÉRATIONNEL ET DÉFIS À LUBUMBASHI
 
 ### 4.1. Environnement concurrentiel
 
-La SCPT évolue dans un environnement concurrentiel de plus en plus intense, particulièrement dans le secteur des télécommunications et des transferts d'argent.
+Vodacom Congo opère à Lubumbashi dans un marché fortement concurrentiel, avec la présence de trois autres opérateurs mobiles nationaux :
 
-**Concurrents dans le secteur des télécommunications :**
+| Opérateur | Groupe d'appartenance | Positionnement à Lubumbashi |
+|-----------|-----------------------|------------------------------|
+| **Vodacom Congo** | Groupe Vodacom (Afrique du Sud) / Vodafone | Leader historique, forte couverture 4G |
+| **Airtel Congo** | Bharti Airtel (Inde) | Concurrent direct, agressif sur les prix |
+| **Orange Congo** | Groupe Orange (France) | Fort sur les données et le mobile money |
+| **Africell** | Africell Holding (Sierra Leone/USA) | Challenger sur les offres de données |
 
-Depuis la libéralisation du secteur en 2002, plusieurs opérateurs privés se sont implantés en RDC et ont conquis la majorité du marché :
+Cette concurrence intense oblige Vodacom Congo à innover régulièrement dans ses offres, à investir dans la qualité du réseau et à améliorer continuellement son service client pour fidéliser sa base d'abonnés.
 
-- **Vodacom Congo** : filiale du groupe sud-africain Vodacom, leader historique du marché mobile congolais ;
-- **Airtel Congo** : filiale du groupe indien Bharti Airtel ;
-- **Orange Congo** : filiale du groupe français Orange ;
-- **Africell** : opérateur d'origine africaine-américaine.
+### 4.2. Défis de la qualité de service à Lubumbashi
 
-Ces opérateurs offrent des services de voix, de données et de mobile money largement supérieurs en qualité, en couverture et en innovation à ce que la SCPT peut proposer dans le domaine des télécommunications fixes. La téléphonie fixe de la SCPT est en déclin structurel, supplantée par la téléphonie mobile.
-
-**Concurrents dans le secteur postal et des transferts d'argent :**
-
-- **DHL, FedEx, TNT** : opérateurs privés de messagerie express internationale, offrant des garanties de délai et de traçabilité que la SCPT ne peut pas toujours assurer ;
-- **Les services de transfert d'argent mobile** (M-Pesa/Airtel Money, Orange Money) : ont largement capté le marché des mandats d'argent, autrefois principal du service postal ;
-- **Les transporteurs informels** (*lièvres*) : opérateurs informels de transport de colis et de courrier entre villes congolaises, souvent perçus comme plus rapides et plus fiables que la poste officielle.
-
-### 4.2. Défis de la qualité de service
-
-La SCPT fait face à de nombreux défis qui affectent directement la qualité de ses services et génèrent des plaintes de clients :
+Malgré sa position de leader, Vodacom Congo fait face à des défis spécifiques à Lubumbashi qui affectent la qualité de ses services et génèrent des plaintes de clients :
 
 **Défis infrastructurels :**
-- Vétusté et dégradation du parc d'équipements techniques (véhicules de livraison, terminaux téléphoniques, lignes fixes) ;
-- Insuffisance des investissements de maintenance et de modernisation ;
-- Inadaptation du réseau physique à la croissance urbaine (nouveaux quartiers non couverts).
+- Saturation du réseau dans certaines zones de forte densité (marchés, campus universitaires, quartiers populaires) en heures de pointe ;
+- Instabilité de l'alimentation électrique affectant le fonctionnement des équipements réseau (délestages fréquents de la SNEL) ;
+- Croissance rapide de la ville (nouveaux quartiers périphériques) nécessitant des extensions constantes de la couverture réseau.
 
-**Défis financiers :**
-- Difficultés chroniques de trésorerie affectant le paiement régulier des salaires ;
-- Dépendance aux subventions de l'État, souvent versées avec retard ;
-- Faiblesse des ressources propres due à l'érosion des parts de marché.
+**Défis liés à la clientèle :**
+- Faible littératie numérique d'une partie de la clientèle, générant des difficultés d'utilisation des services et des malentendus sur les offres ;
+- Sensibilité aux prix élevée dans un contexte de pouvoir d'achat limité, conduisant à des frictions lors de facturation ;
+- Multiplicité des SIM (*multi-SIM behavior*) : de nombreux abonnés lushois détiennent des cartes de plusieurs opérateurs, augmentant la pression concurrentielle sur la fidélisation.
 
-**Défis de ressources humaines :**
-- Sureffectif hérité de la période d'expansion, combiné à une faible productivité ;
-- Faible motivation du personnel liée aux conditions salariales précaires ;
-- Insuffisance des formations continue et de la culture du service client ;
-- Résistance au changement dans une organisation à forte culture administrative.
+**Défis liés aux agents M-Pesa :**
+- Manque de liquidités (*float*) chez certains agents M-Pesa, limitant la capacité des clients à effectuer des retraits ;
+- Qualité variable du service offert par les agents, notamment dans les zones périphériques ;
+- Risques de fraude et d'arnaques exploitant la notoriété de la marque M-Pesa.
 
-**Défis de gouvernance :**
-- Interférences politiques dans les nominations aux postes de direction ;
-- Faible autonomie de gestion vis-à-vis des tutelles étatiques ;
-- Absence ou faiblesse des systèmes d'information intégrés permettant le suivi des opérations et des plaintes clients.
+**Défis de gouvernance locale :**
+- Coordination entre la Direction Régionale de Lubumbashi et le siège de Kinshasa pour la résolution rapide des problèmes ;
+- Adaptation des procédures nationales de traitement des plaintes aux réalités locales.
 
-### 4.3. Le système de gestion des plaintes existant
+### 4.3. Le système de gestion des plaintes à Lubumbashi
 
-Au moment de la réalisation de cette étude, le dispositif de gestion des plaintes de la SCPT présente les caractéristiques suivantes :
+Au moment de la réalisation de cette étude, le dispositif de gestion des plaintes de Vodacom Congo à Lubumbashi présente les caractéristiques suivantes :
 
 **Canaux de réception des plaintes :**
-- **Le guichet physique** : le principal canal utilisé par les clients pour exprimer leurs plaintes en se présentant directement dans les bureaux de poste ;
-- **Le courrier écrit** : adressé aux bureaux locaux ou à la Direction Générale ;
-- **Le téléphone** : pour les clients ayant accès à un numéro de contact du service client ;
-- **Les contacts informels** : plaintes transmises verbalement à des agents connus du client.
+- **Le service client téléphonique (111)** : numéro gratuit accessible 24h/24 et 7j/7, constituant le principal canal de signalement des problèmes techniques et de facturation ;
+- **Les agences Vodacom** (*Vodacom Shops*) : points de contact physiques dans les communes de Lubumbashi, où les clients peuvent se présenter en personne pour toute réclamation ;
+- **L'application Vodacom** : canal numérique permettant la gestion du compte, le signalement des problèmes et le suivi des réclamations ;
+- **Les réseaux sociaux** (Facebook, Twitter/X) : canal informel mais de plus en plus utilisé par les clients pour exprimer leurs insatisfactions et obtenir des réponses rapides ;
+- **Le courrier électronique** : pour les réclamations formelles des clients entreprises.
+
+**Points forts identifiés :**
+- Existence d'un **système informatisé** de gestion des réclamations au niveau national, permettant l'enregistrement et le suivi des tickets ;
+- Présence de **personnel dédié** au service client dans les agences de Lubumbashi ;
+- Existence de **délais de traitement officiels** communiqués aux clients pour les différentes catégories de réclamations.
 
 **Lacunes identifiées :**
-- Absence d'un **système informatisé d'enregistrement et de suivi** des plaintes ;
-- Manque de **formulaires standardisés** permettant une collecte structurée des informations sur les plaintes ;
-- Absence de **délais officiels de traitement** communiqués aux clients ;
-- Insuffisance du **personnel dédié** au traitement des réclamations ;
-- Manque de **retour d'information systématique** vers les clients après résolution de leur plainte ;
-- Faible **exploitation analytique** des données de plaintes pour l'amélioration continue du service.
+- Temps d'attente parfois long au service client téléphonique (111), en particulier en périodes de forte sollicitation ;
+- Insuffisance du **suivi proactif** des réclamations non résolues : les clients doivent souvent rappeler pour obtenir des mises à jour ;
+- Décalage entre les solutions proposées au niveau national et les réalités locales de Lubumbashi (problèmes spécifiques au réseau local, agents M-Pesa, etc.) ;
+- Faible **exploitation analytique** des données de plaintes à l'échelle locale pour l'identification des problèmes récurrents et l'amélioration continue du service.
 
 Ces lacunes constituent précisément le terrain d'investigation de la présente recherche, dont les résultats sont présentés dans le troisième chapitre.
 
@@ -222,20 +224,23 @@ Ces lacunes constituent précisément le terrain d'investigation de la présente
 
 ## CONCLUSION DU CHAPITRE
 
-Ce deuxième chapitre a fourni une présentation détaillée de la Société Congolaise des Postes et Télécommunications (SCPT), l'entreprise qui constitue le cadre empirique de notre étude. L'examen de son histoire révèle une institution dont les racines coloniales ont profondément marqué la culture organisationnelle, et dont les difficultés contemporaines s'inscrivent dans un contexte plus large de transition économique et de libéralisation sectorielle.
+Ce deuxième chapitre a fourni une présentation détaillée de Vodacom Congo S.A. et de son implantation dans la ville de Lubumbashi, entreprise qui constitue le cadre empirique de notre étude. L'examen de son histoire révèle un opérateur dont l'arrivée en RDC en 2002 a profondément transformé le paysage des télécommunications congolaises, apportant des services mobiles modernes à une population longtemps privée d'une connectivité fiable.
 
-La SCPT remplit des missions de service public essential — distribution du courrier, mandats postaux, épargne postale — tout en tentant de maintenir des activités commerciales dans un secteur des télécommunications dominé par des opérateurs privés plus agiles et mieux capitalisés. Ce contexte de concurrence accrue et de contraintes financières rend d'autant plus cruciale la question de la qualité de service et de la gestion des plaintes comme leviers de différenciation et de fidélisation.
+À Lubumbashi, Vodacom Congo occupe une position de premier plan dans le secteur des télécommunications, avec une infrastructure réseau étendue, une gamme de services diversifiée — notamment le service M-Pesa qui contribue à l'inclusion financière des populations non bancarisées — et un réseau d'agences bien implanté dans les communes de la ville. Ce contexte de forte présence locale et de concurrence accrue rend d'autant plus cruciale la question de la qualité de service et de la gestion des plaintes comme leviers de différenciation et de fidélisation dans un marché où les abonnés disposent de plusieurs alternatives.
 
-L'identification des lacunes du système actuel de gestion des plaintes prépare directement l'analyse des résultats d'enquête présentée dans le troisième chapitre, qui permettra de mesurer concrètement l'impact de ces lacunes sur la satisfaction des clients.
+L'identification des forces et des lacunes du système actuel de gestion des plaintes de Vodacom Congo à Lubumbashi prépare directement l'analyse des résultats d'enquête présentée dans le troisième chapitre, qui permettra de mesurer concrètement l'impact de ces lacunes sur la satisfaction des clients lushois.
 
 ---
 
 ## RÉFÉRENCES BIBLIOGRAPHIQUES DU CHAPITRE
 
-- ARPTC. *Rapport Annuel sur l'État du Secteur des Postes et Télécommunications en RDC*. Kinshasa : Autorité de Régulation de la Poste et des Télécommunications du Congo, 2021.
+- ARPTC. *Rapport Annuel sur l'État du Secteur des Postes et Télécommunications en RDC*. Kinshasa : Autorité de Régulation de la Poste et des Télécommunications du Congo, 2022.
 - BANQUE MONDIALE. *Republic of Democratic Congo : Telecommunications Sector Review*. Washington D.C. : World Bank Group, 2018.
-- MINISTÈRE DES PTNTIC. *Plan Stratégique de Développement du Secteur des Postes et Télécommunications 2019–2025*. Kinshasa : PTNTIC, 2019.
-- SCPT. *Rapport Annuel d'Activités*. Kinshasa : Société Congolaise des Postes et Télécommunications, 2022.
-- UNION POSTALE UNIVERSELLE (UPU). *Rapport annuel sur les performances du service postal universel en Afrique*. Berne : UPU, 2022.
+- GSMA. *Mobile Economy Sub-Saharan Africa 2023*. Londres : GSMA, 2023.
+- GSMA. *State of Mobile Money in Sub-Saharan Africa*. Londres : GSMA, 2022.
+- VODACOM CONGO. *Rapport d'Activités Annuel*. Kinshasa : Vodacom Congo S.A., 2022.
+- VODACOM GROUP. *Annual Report 2023*. Johannesburg : Vodacom Group Limited, 2023.
 - République Démocratique du Congo. *Loi n° 013/2002 du 16 octobre 2002 portant réglementation des télécommunications en RDC*. Kinshasa : Journal Officiel, 2002.
-- République Démocratique du Congo. *Loi n° 08/007 du 7 juillet 2008 portant dispositions générales relatives à la transformation des entreprises publiques*. Kinshasa : Journal Officiel, 2008.
+- République Démocratique du Congo. *Loi-cadre n° 20/017 du 25 novembre 2020 sur les télécommunications et les TIC*. Kinshasa : Journal Officiel, 2020.
+- MVUNABANDI, J. M. « Analyse de la qualité de service des opérateurs mobiles à Lubumbashi ». *Revue Congolaise des Sciences Économiques et de Gestion*, vol. 8, n°1, 2021, pp. 34–57.
+- NKOY, E. « Inclusion financière par le mobile money en RDC : le cas de M-Pesa de Vodacom Congo ». *Cahiers du CERUKI*, n°18, 2020, pp. 12–29.
